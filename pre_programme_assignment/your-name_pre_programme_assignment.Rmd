@@ -23,7 +23,7 @@ The goal is to test your software installation, to demonstrate competency in Mar
 
 You should successfully install R and R studio in your computer. We will do all of our work in this class with the open source (and free!) programming language [R](https://cran.r-project.org/). However, we will use [RStudio](https://www.rstudio.com/) as the main program to access R.
 
-You can find details on how to [install both R and R studio here](https://mam2023.netlify.app/reference/01-reference/)
+You can find details on how to [install both R and R studio here](https://am01-sep23.netlify.app//reference/01-reference/)
 
 ## Install `tidyverse`, `gapminder` and `here` packages
 
@@ -136,76 +136,7 @@ Given these trends, what can you say about life expectancy since 1952? Again, do
 
 > Type your answer after this blockquote.
 
-# Task 3: Brexit vote analysis
-
-We will have a look at the results of the 2016 Brexit vote in the UK. First we read the data using `read_csv()` and have a quick glimpse at the data
-
-```{r load_brexit_data, warning=FALSE, message=FALSE}
-
-# read data directly off github repo
-brexit_results <- read_csv("https://raw.githubusercontent.com/kostis-christodoulou/am01/master/data/brexit_results.csv")
-
-
-glimpse(brexit_results)
-```
-
-The data comes from [Elliott Morris](https://www.thecrosstab.com/), who cleaned it and made it available through his [DataCamp class on analysing election and polling data in R](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r).
-
-Our main outcome variable (or y) is `leave_share`, which is the percent of votes cast in favour of Brexit, or leaving the EU. Each row is a UK [parliament constituency](https://en.wikipedia.org/wiki/United_Kingdom_Parliament_constituencies).
-
-To get a sense of the spread, or distribution, of the data, we can plot a histogram, a density plot, and the empirical cumulative distribution function of the leave % in all constituencies.
-
-```{r brexit_histogram, warning=FALSE, message=FALSE}
-
-# histogram
-ggplot(brexit_results, aes(x = leave_share)) +
-  geom_histogram(binwidth = 2.5)
-
-# density plot-- think smoothed histogram
-ggplot(brexit_results, aes(x = leave_share)) +
-  geom_density()
-
-
-# The empirical cumulative distribution function (ECDF) 
-ggplot(brexit_results, aes(x = leave_share)) +
-  stat_ecdf(geom = "step", pad = FALSE) +
-  scale_y_continuous(labels = scales::percent)
-  
-
-
-```
-
-One common explanation for the Brexit outcome was fear of immigration and opposition to the EU's more open border policy. We can check the relationship (or correlation) between the proportion of native born residents (`born_in_uk`) in a constituency and its `leave_share`. To do this, let us get the correlation between the two variables
-
-```{r brexit_immigration_correlation}
-brexit_results %>% 
-  select(leave_share, born_in_uk) %>% 
-  cor()
-```
-
-The correlation is almost 0.5, which shows that the two variables are positively correlated.
-
-We can also create a scatterplot between these two variables using `geom_point`. We also add the best fit line, using `geom_smooth(method = "lm")`.
-
-```{r brexit_immigration_plot}
-ggplot(brexit_results, aes(x = born_in_uk, y = leave_share)) +
-  geom_point(alpha=0.3) +
-  
-  # add a smoothing line, and use method="lm" to get the best straight-line
-  geom_smooth(method = "lm") + 
-  
-  # use a white background and frame the plot with a black box
-  theme_bw() +
-  NULL
-```
-
-You have the code for the plots, I would like you to revisit all of them and use the `labs()` function to add an informative title, subtitle, and axes titles to all plots.
-
-What can you say about the relationship shown above? Again, don't just say what's happening in the graph. Tell some sort of story and speculate about the differences in the patterns.
-
-> Type your answer after, and outside, this blockquote.
-
-# Task 4: Animal rescue incidents attended by the London Fire Brigade
+# Task 3: Animal rescue incidents attended by the London Fire Brigade
 
 [The London Fire Brigade](https://data.london.gov.uk/dataset/animal-rescue-incidents-attended-by-lfb) attends a range of non-fire incidents (which we call 'special services'). These 'special services' include assistance to animals that may be trapped or in distress. The data is provided from January 2009 and is updated monthly. A range of information is supplied for each incident including some location information (postcode, borough, ward), as well as the data/time of the incidents. We do not routinely record data about animal deaths or injuries.
 
@@ -213,14 +144,15 @@ Please note that any cost included is a notional cost calculated based on the le
 
 ```{r load_animal_rescue_data, warning=FALSE, message=FALSE}
 
-url <- "https://data.london.gov.uk/download/animal-rescue-incidents-attended-by-lfb/f43b485e-fb35-419c-aa7a-fa75676e5835/Animal%20Rescue%20incidents%20attended%20by%20LFB%20from%20Jan%202009.csv"
-
+url <- "https://data.london.gov.uk/download/animal-rescue-incidents-attended-by-lfb/01007433-55c2-4b8a-b799-626d9e3bc284/Animal%20Rescue%20incidents%20attended%20by%20LFB%20from%20Jan%202009.csv"
 
 animal_rescue <- read_csv(url,
                           locale = locale(encoding = "CP1252")) %>% 
+  
+  #use janitor::clean_names() to clean names
   janitor::clean_names()
 
-
+# quick look at the dataframe- how many rows- columns, type of variables (characters, numbers, etc )
 glimpse(animal_rescue)
 ```
 One of the more useful things one can do with any data set is quick counts, namely to see how many observations fall within one category. For instance, if we wanted to count the number of incidents by year, we would either use `group_by()... summarise()` or, simply [`count()`](https://dplyr.tidyverse.org/reference/count.html)
@@ -236,9 +168,63 @@ animal_rescue %>%
 
 ```
 
+Once we `count()` how many incidents we have per year, we can pipe `%>%` the table to a ggplot and draw a simple time series chart.
+
+```{r}
+#| label: plot-by-calendar-year
+#| message: false
+#| warning: false
+#| fig-cap: Incidents over time.
+
+animal_rescue %>% 
+  count(cal_year, name="count") %>% 
+  
+  # we dont have all the data for 2023, so let us filter it out
+  filter(cal_year < 2023) %>% 
+  
+  # the result of count() is a dataframe, so we pass it to 
+  ggplot() + 
+  
+  # map year (cal_year) on the x-axis, count on the y-axis
+  aes( x = cal_year,
+       y = count)+
+  
+  # we just want a time-series, line graph
+  geom_line()+
+  
+  # also add the points to make graph easier to read
+  geom_point()+
+  
+  # make sure y-axis starts at zero
+  expand_limits(y = 0)+
+  
+  # add labels
+  labs(
+    title = "Animal rescue incidents have almost doubled post Covid-19",
+    subtitle = "Animal rescue incidents attended by the LBF",
+    x = NULL,
+    y = NULL,
+    caption = "Source: https://data.london.gov.uk/dataset/animal-rescue-incidents-attended-by-lfb") +
+  
+  theme_minimal() + 
+  
+  # change the theme, so title is left-aligned
+  theme(plot.title.position = "plot") +
+  
+  # add one final layer of NULL, so if you comment out any lines
+  # you never end up with a hanging `+` that awaits another ggplot layer
+  NULL
+
+```
+
 Let us try to see how many incidents we have by animal group. Again, we can do this either using group_by() and summarise(), or by using count()
 
-```{r, animal_group_percentages}
+```{r}
+#| label: animal_group_percentages
+#| message: false
+#| warning: false
+
+
 animal_rescue %>% 
   group_by(animal_group_parent) %>% 
   
@@ -264,7 +250,7 @@ animal_rescue %>%
 
 ```
 
-Do you see anything strange in these tables? 
+Do you see anything strange in these tables?
 
 Finally, let us have a loot at the notional cost for rescuing each of these animals. As the LFB says,
 
@@ -272,69 +258,74 @@ Finally, let us have a loot at the notional cost for rescuing each of these anim
 
 There is two things we will do:
 
-1. Calculate the mean and median `incident_notional_cost` for each `animal_group_parent`
-2. Plot a boxplot to get a feel for the distribution of `incident_notional_cost` by `animal_group_parent`.
+1.  Calculate the mean and median `incident_notional_cost_a` for each `animal_group_parent`
+2.  Plot a boxplot to get a feel for the distribution of `incident_notional_cost_a` by `animal_group_parent`.
 
+Before we go on, however, we need to fix `incident_notional_cost_a` as it is stored as a `chr`, or character, rather than a number.
 
-Before we go on, however, we need to fix `incident_notional_cost` as it is stored as a `chr`, or character, rather than a number.
+```{r}
+#| label: parse_incident_cost
+#| message: false
+#| warning: false
 
-```{r, parse_incident_cost,message=FALSE, warning=FALSE}
 
 # what type is variable incident_notional_cost from dataframe `animal_rescue`
-typeof(animal_rescue$incident_notional_cost)
+typeof(animal_rescue$incident_notional_cost_a)
 
 # readr::parse_number() will convert any numerical values stored as characters into numbers
 animal_rescue <- animal_rescue %>% 
 
   # we use mutate() to use the parse_number() function and overwrite the same variable
-  mutate(incident_notional_cost = parse_number(incident_notional_cost))
+  mutate(incident_notional_cost_a = parse_number(incident_notional_cost_a))
 
 # incident_notional_cost from dataframe `animal_rescue` is now 'double' or numeric
-typeof(animal_rescue$incident_notional_cost)
+typeof(animal_rescue$incident_notional_cost_a)
 
 ```
 
-Now that incident_notional_cost is numeric, let us quickly calculate summary statistics for each animal group. 
+Now that `incident_notional_cost_a` is numeric, let us quickly calculate summary statistics for each animal group.
 
-
-```{r, stats_on_incident_cost,message=FALSE, warning=FALSE}
+```{r}
+#| label: stats_on_incident_cost
+#| message: false
+#| warning: false
 
 animal_rescue %>% 
   
   # group by animal_group_parent
-  group_by(???) %>% 
+  group_by(animal_group_parent) %>% 
   
   # filter resulting data, so each group has at least 6 observations
   filter(n()>6) %>% 
   
   # summarise() will collapse all values into 3 values: the mean, median, and count  
   # we use na.rm=TRUE to make sure we remove any NAs, or cases where we do not have the incident cos
-  summarise(mean_incident_cost = mean (incident_notional_cost, na.rm=TRUE),
-            median_incident_cost = median (incident_notional_cost, na.rm=TRUE),
-            sd_incident_cost = sd (incident_notional_cost, na.rm=TRUE),
-            min_incident_cost = min (incident_notional_cost, na.rm=TRUE),
-            max_incident_cost = max (incident_notional_cost, na.rm=TRUE),
+  summarise(mean_incident_cost = mean (incident_notional_cost_a, na.rm=TRUE),
+            median_incident_cost = median (incident_notional_cost_a, na.rm=TRUE),
+            sd_incident_cost = sd (incident_notional_cost_a, na.rm=TRUE),
+            min_incident_cost = min (incident_notional_cost_a, na.rm=TRUE),
+            max_incident_cost = max (incident_notional_cost_a, na.rm=TRUE),
             count = n()) %>% 
   
   # sort the resulting data in descending order. You choose whether to sort by count or mean cost.
-  arrange(????)
+  arrange(desc(count))
 
 ```
 
-
-
-Compare the mean and the median for each animal group. waht do you think this is telling us?
-Anything else that stands out? Any outliers?
+Compare the mean and the median for each animal group. What do you think this is telling us? Anything else that stands out? Any outliers?
 
 Finally, let us plot a few plots that show the distribution of incident_cost for each animal group.
 
-```{r, plots_on_incident_cost_by_animal_group,message=FALSE, warning=FALSE}
+```{r}
+#| label: plots_on_incident_costs_by_animal_group
+#| message: false
+#| warning: false
 
 # base_plot
 base_plot <- animal_rescue %>% 
   group_by(animal_group_parent) %>% 
   filter(n()>6) %>% 
-  ggplot(aes(x=incident_notional_cost))+
+  ggplot(aes(x=incident_notional_cost_a))+
   facet_wrap(~animal_group_parent, scales = "free")+
   theme_bw()
 
@@ -348,10 +339,20 @@ base_plot + stat_ecdf(geom = "step", pad = FALSE) +
 
 ```
 
-Which of these four graphs do you think best communicates the variability of the `incident_notional_cost` values? Also, can you please tell some sort of story (which animals are more expensive to rescue than others, the spread of values) and speculate about the differences in the patterns.
+Which of these four graphs do you think best communicates the variability of the `incident_notional_cost_a` values? Also, can you please tell some sort of story (which animals are more expensive to rescue than others, the spread of values) and speculate about the differences in the patterns.
 
+# Bonus Question: Total LFB Animal Rescue Cost over time
+
+Using LFB's `incident_notional_cost_a`, plot a line graph showing the total incident notional cost between 2009 - 2022.
+
+```{r}
+
+
+
+```
 
 # Submit the assignment
+
 
 Knit the completed R Markdown file as an HTML document (use the "Knit" button at the top of the script editor window) and upload it to Canvas.
 
