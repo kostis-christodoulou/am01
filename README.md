@@ -1,6 +1,6 @@
 # AM01
 
-All course files (data, code, etc.) used in AM01, September 2022
+All course files (data, code, etc.) used in AM01, September 2023
 
 If you install the **usethis** package and type tyhe following in RStudio's console
 
