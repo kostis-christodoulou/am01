@@ -1,0 +1,483 @@
+---
+title: "Session 4: Homework 2"
+author: "Study group and members' names go here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    code_folding: show
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=6.75, 
+  fig.height=6.75,
+  fig.align = "center"
+)
+```
+
+```{r load-libraries, include=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(here)
+library(skimr)
+library(janitor)
+library(httr)
+library(readxl)
+library(vroom)
+library(wbstats)
+library(countrycode)
+library(patchwork)
+library(gganimate)
+library(wbstats)
+library(tictoc)
+library(DBI)
+library(dbplyr)
+library(arrow)
+library(rvest)
+library(scales)
+library(readxl)
+
+
+```
+
+# Climate change and temperature anomalies
+
+If we wanted to study climate change, we can find data on the *Combined
+Land-Surface Air and Sea-Surface Water Temperature Anomalies* in the
+Northern Hemisphere at [NASA's Goddard Institute for Space
+Studies](https://data.giss.nasa.gov/gistemp). The [tabular data of
+temperature anomalies can be found
+here](https://data.giss.nasa.gov/gistemp/tabledata_v4/NH.Ts+dSST.txt)
+
+To define temperature anomalies you need to have a reference, or base,
+period which NASA clearly states that it is the period between
+1951-1980.
+
+Run the code below to load the file:
+
+```{r weather_data, cache=TRUE}
+
+weather <- 
+  read_csv("https://data.giss.nasa.gov/gistemp/tabledata_v4/NH.Ts+dSST.csv", 
+           skip = 1, 
+           na = "***")
+
+```
+
+Notice that, when using this function, we added two options: `skip` and
+`na`.
+
+1.  The `skip=1` option is there as the real data table only starts in
+    Row 2, so we need to skip one row.
+2.  `na = "***"` option informs R how missing observations in the
+    spreadsheet are coded. When looking at the spreadsheet, you can see
+    that missing data is coded as "\*\*\*". It is best to specify this
+    here, as otherwise some of the data is not recognized as numeric
+    data.
+
+Once the data is loaded, notice that there is a object titled `weather`
+in the `Environment` panel. If you cannot see the panel (usually on the
+top-right), go to `Tools` \> `Global Options` \> `Pane Layout` and tick
+the checkbox next to `Environment`. Click on the `weather` object, and
+the dataframe will pop up on a seperate tab. Inspect the dataframe.
+
+For each month and year, the dataframe shows the deviation of
+temperature from the normal (expected). Further the dataframe is in wide
+format.
+
+You have two objectives in this section:
+
+1.  Select the year and the twelve month variables from the `weather`
+    dataset. We do not need the others (J-D, D-N, DJF, etc.) for this
+    assignment. Hint: use `select()` function.
+
+2.  Convert the dataframe from wide to 'long' format. Hint: use
+    `gather()` or `pivot_longer()` function. Name the new dataframe as
+    `tidyweather`, name the variable containing the name of the month as
+    `month`, and the temperature deviation values as `delta`.
+
+```{r tidyweather}
+
+```
+
+Inspect your dataframe. It should have three variables now, one each for
+
+1.  year,
+2.  month, and
+3.  delta, or temperature deviation.
+
+## Plotting Information
+
+Let us plot the data using a time-series scatter plot, and add a
+trendline. To do that, we first need to create a new variable called
+`date` in order to ensure that the `delta` values are plot
+chronologically.
+
+> In the following chunk of code, I used the `eval=FALSE` argument,
+> which does not run a chunk of code; I did so that you can knit the
+> document before tidying the data and creating a new dataframe
+> `tidyweather`. When you actually want to run this code and knit your
+> document, you must delete `eval=FALSE`, **not just here but in all
+> chunks were `eval=FALSE` appears.**
+
+```{r scatter_plot, eval=FALSE}
+
+tidyweather <- tidyweather %>%
+  mutate(date = ymd(paste(as.character(Year), Month, "1")),
+         month = month(date, label=TRUE),
+         year = year(date))
+
+ggplot(tidyweather, aes(x=date, y = delta))+
+  geom_point()+
+  geom_smooth(color="red") +
+  theme_bw() +
+  labs (
+    title = "Weather Anomalies"
+  )
+
+```
+
+Is the effect of increasing temperature more pronounced in some months?
+Use `facet_wrap()` to produce a seperate scatter plot for each month,
+again with a smoothing line. Your chart should human-readable labels;
+that is, each month should be labeled "Jan", "Feb", "Mar" (full or
+abbreviated month names are fine), not `1`, `2`, `3`.
+
+```{r facet_wrap, echo=FALSE}
+
+#Your code goes here...
+
+```
+
+It is sometimes useful to group data into different time periods to
+study historical data. For example, we often refer to decades such as
+1970s, 1980s, 1990s etc. to refer to a period of time. NASA calcuialtes
+a temperature anomaly, as difference form the base periof of 1951-1980.
+The code below creates a new data frame called `comparison` that groups
+data in five time periods: 1881-1920, 1921-1950, 1951-1980, 1981-2010
+and 2011-present.
+
+We remove data before 1800 and before using `filter`. Then, we use the
+`mutate` function to create a new variable `interval` which contains
+information on which period each observation belongs to. We can assign
+the different periods using `case_when()`.
+
+```{r intervals, eval=FALSE}
+
+comparison <- tidyweather %>% 
+  filter(Year>= 1881) %>%     #remove years prior to 1881
+  #create new variable 'interval', and assign values based on criteria below:
+  mutate(interval = case_when(
+    Year %in% c(1881:1920) ~ "1881-1920",
+    Year %in% c(1921:1950) ~ "1921-1950",
+    Year %in% c(1951:1980) ~ "1951-1980",
+    Year %in% c(1981:2010) ~ "1981-2010",
+    TRUE ~ "2011-present"
+  ))
+
+```
+
+Inspect the `comparison` dataframe by clicking on it in the
+`Environment` pane.
+
+Now that we have the `interval` variable, we can create a density plot
+to study the distribution of monthly deviations (`delta`), grouped by
+the different time periods we are interested in. Set `fill` to
+`interval` to group and colour the data by different time periods.
+
+```{r density_plot, eval=FALSE}
+
+
+
+```
+
+So far, we have been working with monthly anomalies. However, we might
+be interested in average annual anomalies. We can do this by using
+`group_by()` and `summarise()`, followed by a scatter plot to display
+the result.
+
+```{r averaging, eval=FALSE}
+
+#creating yearly averages
+average_annual_anomaly <- tidyweather %>% 
+  group_by(Year) %>%   #grouping data by Year
+  
+  # creating summaries for mean delta 
+  # use `na.rm=TRUE` to eliminate NA (not available) values 
+  summarise(......) 
+
+#plotting the data:
+
+
+  
+  #Fit the best fit line, using LOESS method
+
+  
+  #change theme to theme_bw() to have white background + black frame around plot
+                        
+
+
+```
+
+## Confidence Interval for `delta`
+
+[NASA points out on their
+website](https://earthobservatory.nasa.gov/world-of-change/decadaltemp.php)
+that
+
+> A one-degree global change is significant because it takes a vast
+> amount of heat to warm all the oceans, atmosphere, and land by that
+> much. In the past, a one- to two-degree drop was all it took to plunge
+> the Earth into the Little Ice Age.
+
+Your task is to construct a confidence interval for the average annual
+delta since 2011, both using a formula and using a bootstrap simulation
+with the `infer` package. Recall that the dataframe `comparison` has
+already grouped temperature anomalies according to time intervals; we
+are only interested in what is happening between 2011-present.
+
+```{r, calculate_CI_using_formula, eval=FALSE}
+
+formula_ci <- comparison %>% 
+
+  # choose the interval 2011-present
+  # what dplyr verb will you use? 
+
+  # calculate summary statistics for temperature deviation (delta) 
+  # calculate mean, SD, count, SE, lower/upper 95% CI
+  # what dplyr verb will you use? 
+
+#print out formula_CI
+formula_ci
+```
+
+> What is the data showing us? Please type your answer after (and
+> outside!) this blockquote. You have to explain what you have done, and
+> the interpretation of the result. One paragraph max, please!
+
+
+# Biden's Approval Margins
+
+As we saw in class, fivethirtyeight.com has detailed data on [all polls
+that track the president's
+approval](https://projects.fivethirtyeight.com/biden-approval-ratings)
+
+```{r, cache=TRUE}
+# Import approval polls data directly off fivethirtyeight website
+approval_polllist <- read_csv('https://projects.fivethirtyeight.com/biden-approval-data/approval_polllist.csv') 
+
+glimpse(approval_polllist)
+
+# Use `lubridate` to fix dates, as they are given as characters.
+```
+
+## Create a plot
+
+What I would like you to do is to calculate the average net approval
+rate (approve- disapprove) for each week since he got into office. I
+want you plot the net approval for each week in 2022, along with its 95%
+confidence interval. There are various dates given for each poll, please
+use `enddate`, i.e., the date the poll ended. Your plot should look
+something like this, but for all 52 weeks:
+
+```{r trump_margins, echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "biden_approval_margin.png"), error = FALSE)
+```
+
+
+# Money in UK politics
+
+[The Westminster Accounts](https://news.sky.com/story/the-westminster-accounts-12786091), a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics. It does so by combining data from three key sources: 
+
+1. [Register of Members’ Financial Interests](https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-members-financial-interests/), 
+1. [Electoral Commission records of donations to parties](http://search.electoralcommission.org.uk/English/Search/Donations), and
+1. [Register of All-Party Parliamentary Groups](https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-all-party-party-parliamentary-groups/). 
+
+You can [search and explore the results](https://news.sky.com/story/westminster-accounts-search-for-your-mp-or-enter-your-full-postcode-12771627) through the collaboration’s interactive database. Simon Willison [has extracted a database](https://til.simonwillison.net/shot-scraper/scraping-flourish) and this is what we will be working with. If you want to read more about [the project’s methodology](https://www.tortoisemedia.com/2023/01/08/the-westminster-accounts-methodology/).
+
+
+## Open a connection to the database
+
+The database made available by Simon Willison is an `SQLite` database
+
+```{r}
+sky_westminster <- DBI::dbConnect(
+  drv = RSQLite::SQLite(),
+  dbname = here::here("data", "sky-westminster-files.db")
+)
+```
+
+How many tables does the database have?
+
+```{r}
+DBI::dbListTables(sky_westminster)
+```
+
+## Which MP has received the most amount of money? 
+
+You need to work with the `payments` and `members` tables and for now we just want the total among all years. To insert a new, blank chunk of code where you can write your beautiful code (and comments!), please use the following shortcut: `Ctrl + Alt + I` (Windows) or `cmd + option + I` (mac)
+
+
+## Any `entity` that accounts for more than 5% of all donations?
+
+Is there any `entity` whose donations account for more than 5% of the total payments given to MPs over the 2020-2022 interval? Who are they and who did they give money to?
+
+## Do `entity` donors give to a single party or not?
+
+- How many distinct entities who paid money to MPS are there?
+- How many (as a number and %) donated to MPs belonging to a single party only?
+
+
+## Which party has raised the greatest amount of money in each of the years 2020-2022? 
+
+I would like you to write code that generates the following table. 
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("images", "total_donations_table.png"), error = FALSE)
+```
+
+
+... and then, based on this data, plot the following graph. 
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("images", "total_donations_graph.png"), error = FALSE)
+```
+
+This uses the default ggplot colour pallete, as I dont want you to worry about using the [official colours for each party](https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes). However, I would like you to ensure the parties are sorted according to total donations and not alphabetically. You may even want to remove some of the smaller parties that hardly register on the graph. Would facetting help you?  
+
+Finally, when you are done working with the databse, make sure you close the connection, or disconnect from the database.
+
+```{r}
+dbDisconnect(sky_westminster)
+```
+
+
+# Anonymised Covid patient data from the CDC
+
+We will be using a dataset with [anonymous Covid-19 patient data that the CDC publishes every month](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4). The file we will use was released on April 11, 2023, and has data on 98 million of patients, with 19 features. This file cannot be loaded in memory, but luckily we have the data in `parquet` format and we will use the `{arrow}` package.
+
+## Obtain the data
+
+The dataset `cdc-covid-geography` in in `parquet` format that {arrow}can handle. It is > 600Mb and too large to be hosted on Canvas or Github, so please download it from dropbox https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0 and save it in your `am01` repo, under the `data` folder
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+tic() # start timer
+cdc_data <- open_dataset(here::here("data", "cdc-covid-geography"))
+toc() # stop timer
+
+
+glimpse(cdc_data)
+```
+Can you query the database and replicate the following plot?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "covid-CFR-ICU.png"), error = FALSE)
+```
+
+The previous plot is an aggregate plot for all three years of data. What if we wanted to plot Case Fatality Ratio (CFR) over time? Write code that collects the relevant data from the database and plots the following
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-icu-overtime.png"), error = FALSE)
+```
+
+
+For each patient, the dataframe also lists the patient's states and county [FIPS code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code). The CDC also has information on the [NCHS Urban-Rural classification scheme for counties](https://www.cdc.gov/nchs/data_access/urban_rural.htm)
+
+```{r}
+urban_rural <- read_xlsx(here::here("data", "NCHSURCodes2013.xlsx")) %>% 
+  janitor::clean_names() 
+```
+
+
+Each county belongs in seix diffent categoreis, with categories 1-4 being urban areas and categories 5-6 being rural, according to the following criteria captured in `x2013_code`
+
+Category name
+
+1. Large central metro - 1 million or more population and contains the entire population of the largest principal city
+2. large fringe metro - 1 million or more poulation, but does not qualify as 1
+3. Medium metro - 250K - 1 million population
+4. Small metropolitan population < 250K
+5. Micropolitan 
+6. Noncore
+
+Can you query the database, extract the relevant information, and reproduce the following two graphs that look at the Case Fatality ratio (CFR) in different counties, according to their population?
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-county-population.png"), error = FALSE)
+```
+
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-rural-urban.png"), error = FALSE)
+```
+
+
+
+# Deliverables
+
+As usual, there is a lot of explanatory text, comments, etc. You do not
+need these, so delete them and produce a stand-alone document that you
+could share with someone. Knit the edited and completed R Markdown file
+as an HTML document (use the "Knit" button at the top of the script
+editor window) and upload it to Canvas.
+
+# Details
+
+-   Who did you collaborate with: TYPE NAMES HERE
+-   Approximately how much time did you spend on this problem set:
+    ANSWER HERE
+-   What, if anything, gave you the most trouble: ANSWER HERE
+
+**Please seek out help when you need it,** and remember the [15-minute
+rule](https://am01-sep23.netlify.app/syllabus/#the-15-minute-rule){target="_blank"}.
+You know enough R (and have enough examples of code from class and your
+readings) to be able to do this. If you get stuck, ask for help from
+others, post a question on Slack-- and remember that I am here to help
+too!
+
+> As a true test to yourself, do you understand the code you submitted
+> and are you able to explain it to someone else?
+
+# Rubric
+
+Check minus (1/5): Displays minimal effort. Doesn't complete all
+components. Code is poorly written and not documented. Uses the same
+type of plot for each graph, or doesn't use plots appropriate for the
+variables being analyzed.
+
+Check (3/5): Solid effort. Hits all the elements. No clear mistakes.
+Easy to follow (both the code and the output).
+
+Check plus (5/5): Finished all components of the assignment correctly
+and addressed both challenges. Code is well-documented (both
+self-documented and with additional comments as necessary). Used
+tidyverse, instead of base R. Graphs and tables are properly labelled.
+Analysis is clear and easy to follow, either because graphs are labeled
+clearly or you've written additional text to describe how you interpret
+the output.

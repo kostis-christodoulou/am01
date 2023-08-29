@@ -1,0 +1,29 @@
+---
+title: "R4DS exercises"
+author: "Your name goes here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    highlight: zenburn
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(lubridate)
+library(fivethirtyeight)
+```
+
+# R and ggplot2 
+
+Read [Chapter 3 of R for Data Science](http://r4ds.had.co.nz/data-visualisation.html) and complete the following exercises:
+
+- [3.2.4](http://r4ds.had.co.nz/data-visualisation.html#exercises): Questions 1–5
+- [3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1): Questions 1–5
+- [3.5.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-2): Questions 1–4
+- [3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3): Questions 1–5
+- [3.8.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-5): Questions 1 and 2
+

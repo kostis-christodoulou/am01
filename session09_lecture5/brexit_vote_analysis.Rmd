@@ -1,0 +1,361 @@
+---
+title: 'Brexi Vote Analysis'
+author: "YOUR NAME HERE"
+date: "DATE HERE"
+output:
+  html_document:
+    highlight: zenburn
+    theme: flatly
+    toc: yes
+    toc_float: yes
+  word_document:
+    toc: yes
+---
+
+
+
+```{r huxtable-stuff, include=FALSE}
+options("huxtable.knit_print_df" = FALSE)
+```
+
+
+```{r load_packages, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(moderndive)
+library(huxtable)
+library(here)
+library(broom)
+
+
+# to create a scatterplot matrix
+library(GGally)
+
+# The broom package lets us manipulate model objects and makes it easier to
+# generate predictions and plot them
+library(broom)
+
+#to check collinearity, we calculate VIF, Variance Inflation Factor
+library(car)
+```
+
+The goal is to test your software installation, to demonstrate competency in Markdown, and in the basics of `ggplot`.
+
+# Brexit voting
+
+We will have a quick look at the results of the 2016 Brexit vote in the UK. First we read the data using `read_csv()` and have a quick glimpse at the data
+
+```{r load_brexit_data, warning=FALSE, message=FALSE}
+brexit_results <- read_csv(here("data","brexit_results.csv"))
+
+
+glimpse(brexit_results)
+
+brexit_results %>% 
+  select(born_in_uk, male, unemployed, degree, age_18to24, leave_share) %>% 
+  ggpairs(aes(alpha=0.2))+
+  theme_bw()
+
+
+brexit_results %>% 
+  select(con_2015, lab_2015,ld_2015,ukip_2015, leave_share) %>% 
+  ggpairs(aes(alpha=0.2))+
+  theme_bw()
+
+
+brexit_results %>% 
+  select(born_in_uk, male, unemployed, degree, age_18to24,con_2015, lab_2015,ld_2015,ukip_2015, leave_share) %>% 
+  ggpairs(aes(alpha=0.1))+
+  theme_bw()
+
+
+
+```
+
+
+The data comes from [Elliott Morris](https://www.thecrosstab.com/), who cleaned it and made it available through his [DataCamp class on analysing election and polling data in R](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r).
+
+Our main outcome variable (or y) is `leave_share`, which is the percent of votes cast in favour of Brexit, or leaving the EU. Each row is a UK [parliament constituency](https://en.wikipedia.org/wiki/United_Kingdom_Parliament_constituencies). 
+
+To get a sense of the spread of the data, plot a histogram and a density plot of the leave share in all constituencies.
+
+```{r brexit_histogram, warning=FALSE, message=FALSE}
+ggplot(brexit_results, aes(x = leave_share)) +
+  geom_histogram(binwidth = 2.5)
+
+ggplot(brexit_results, aes(x = leave_share)) +
+  geom_density()
+
+
+```
+
+## Leave share explained by immigration
+
+One common explanation for the Brexit outcome was fear of immigration and opposition to the EU's more open border policy. We can check the relationship (or correlation) between the proportion of native born residents (`born_in_uk`) in a constituency and its `leave_share`. To do this, let us get the correlation between the two variables
+
+```{r brexit_immigration_correlation}
+brexit_results %>% 
+  select(leave_share, born_in_uk) %>% 
+  cor()
+```
+
+The correlation is almost 0.5, which shows that the two variables are positively correlated. 
+
+We can also create a scatterplot between these two variables using `geom_point`. We also add the best fit line, using  `geom_smooth(method = "lm")`. 
+
+```{r brexit_immigration_plot}
+ggplot(brexit_results, aes(x = born_in_uk, y = leave_share)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+
+A simple regression model estimates the slope, or the effect of immigrant populations on the share of leave votes:
+
+```{r brexit-model-leave-immigration}
+brexit_leave_immigration <- lm(leave_share ~ born_in_uk, data = brexit_results)
+
+get_regression_table(brexit_leave_immigration)
+get_regression_summaries(brexit_leave_immigration)
+
+mosaic::msummary(brexit_leave_immigration)
+```
+
+The intercept shows what the average leave share would be in a constituency where 0% of the population was born in the UK. There is no such constituency, so we can ignore the intercept.
+
+The slope of born in the UK ($\beta_1$) is 0.5, which means that a 1% increase in the proportion of native UK residents is associated with an increase in the leave vote share of 0.5, on average (e.g. moving from 50% leave to 50.5% leave). 
+
+The $R^2$ (the simple one, since we only have one explanatory variable) shows that this model explains 24.3% of the variation in leave votes.
+
+
+## Leave share explained by education and age
+
+Another common explanation for the Brexit outcome is that it was driven by older people with less education. Let's see if that checks out by using `degree` (which measures the percent of constituency's population with a university degree) and `age_18to24` (which measures the percent of a constituency's population between the ages of 18 and 24).
+
+First we can check the relationships on their own. First, the correlation:
+
+```{r leave-education-cor, message=FALSE, warning=FALSE}
+brexit_results %>% 
+  select(born_in_uk, degree, age_18to24, male, unemployed, leave_share) %>% 
+  # Some of these constituencies have missing data about education, so we remove
+  # rows where that's missing
+  filter(!is.na(degree), !is.na(leave_share)) %>% 
+  ggpairs()
+```
+
+The correlation between `leave_share` and `degree` is -0.9-- this is massive! As the education level of a constituency goes up, the share of leave votes goes down. It's very apparent in the scatterplot-- all points are tightly clustered around the line:
+
+```{r leave-education-plot, warning=FALSE}
+ggplot(brexit_results, aes(x = degree, y = leave_share)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method = "lm")
+```
+
+Age `age_18to24` and leave votes are moderately negatively correlated (r = -0.36). The relationship is negative, but the points aren't that tightly clustered around the line. As x increases, constituencies are actually getting *younger*, since this is measuring the proportion of the county that is between 18 and 24. A greater proportion means more people in the 18-24 age group.
+
+```{r leave-age-plot, warning=FALSE}
+ggplot(brexit_results, aes(x = age_18to24, y = leave_share)) +
+  geom_point(alpha=0.3) +
+  geom_smooth(method = "lm")
+```
+
+Let's look at the effect of both of these on the leave share with a multiple regression model:
+
+```{r brexit-model-leave-age-education}
+leave_educ_age <- lm(leave_share ~ degree + age_18to24, data = brexit_results)
+
+get_regression_table(leave_educ_age)
+get_regression_summaries(leave_educ_age)
+```
+
+If we take the age of a constituency into account, a 1% increase in the proportion of the constituency with a university degree is associated with a 1.125 point drop in the share of leave votes (e.g. moving from 50% leave to 48.875% leave). Similarly, controlling for education, a 1% increase in the proportion of the constituency that is between 18 and 24 years old is associated with a 0.456 point drop in the share of leave vote (e.g. moving from 50% leave to 49.544%). 
+
+Both age and education have a negative effect on leave votes-- constituencies that are younger and more educated had on average far fewer leave votes
+
+This model explains 84.2% of the variation in leave votes-- this is the value of the Adjusted R square `adj_r_squared` 
+
+## Leave share explained by political party
+
+One final common explanation for the Brexit outcome is the role that UKIP played (Nigel Farage's party; a far-right, populist, anti-EU party). We can see the relationship between how strong of a presence UKIP has in a constituency (based on its vote share in the 2015 parliamentary elections) and leave share.
+
+Here we can see the relationship between Conservative votes `con_2015`, Labour votes `lab_2015`, Liberal Democrats votes `ld_2015`,  and UKIP votes ukip_2015. To plot these political parties at the same time, we must use `gather()` to make a longer data frame with a column named `party` and a column named `party_pct`)
+
+```{r leave-party-plot}
+brexit_parties <- brexit_results %>% 
+  gather(party, party_pct, c(con_2015, lab_2015, ld_2015, ukip_2015))
+
+ggplot(brexit_parties, aes(x = party_pct, y = leave_share, colour = party)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(method = "lm") + 
+  theme_bw()+
+  
+  # political party colours taken from  
+  # http://www.blog.richardallen.co.uk/uk-political-party-web-colours/
+  scale_colour_manual(name  ="Political Party",
+                      breaks=c("con_2015", "lab_2015", "ld_2015", "ukip_2015"),
+                      labels=c("Conservative", "Labour", "Lib Dems", "UKIP"),
+                      values = c("#0087dc", "#d50000", "#FDBB30", "#EFE600")) +
+  labs(
+    title= "How political affiliation translated to Brexit Voting",
+    x = "Party % in the UK 2015 general election",
+    y = "Leave % in the 2016 Brexit referendum"
+  ) +
+  theme(legend.position = "bottom")+
+  theme(legend.title=element_blank())
+```
+
+The UKIP line is fairly impressive-- there's a very strong positive correlation-- the more a constituency voted for UKIP in 2015, the more it voted to leave the EU in 2016.
+
+Let's look at the model to get the slopes (or effects) for all parties
+
+```{r brexit-model-leave-party, message=FALSE, warnings=FALSE}
+
+# First a correlation scatterplot matrix
+brexit_results %>% 
+  select(con_2015, lab_2015, ld_2015, ukip_2015, leave_share) %>% 
+  ggpairs(aes(alpha = 0.2))
+
+leave_politics <- lm(leave_share ~ con_2015 + lab_2015 + ld_2015 + ukip_2015, 
+                     data = brexit_results)
+
+get_regression_table(leave_politics)
+get_regression_summaries(leave_politics)
+```
+
+If we adjust for a constituency's Labour, LibDem, and UKIP votes, a 1% increase in the votes cast for the Conservative party in 2015 is associated with a 0.018 point decrease in the share of leave votes on, average (e.g. moving from 50% to 49.982%). If you look at the confidence interval for the slope (effect) of `con_2015`, it contains 0 so there, which is pretty much a sign that there's no effect.  
+
+If we adjust for a constituency's Conservative, LibDem, and UKIP votes, a 1% increase in the votes cast for the Labour party in 2015 is associated with a 0.07 point drop in the share of leave votes, on average (e.g. moving from 50% to 49.93%). Labour constituencies were less likely to vote to leave, but only slightly; the confidence interval for the slope is [-0.114%, -0.026%]
+
+If we adjust for a constituency's Conservative, Labour, and UKIP votes, a 1% increase in the votes cast for the LibDemsin 2015 is associated with a 0.128 point drop in the share of leave votes, on average (e.g. moving from 50% to 49.872%). LibDem constituencies were less likely among the three parties (Conservatives, Labour, LibsDems) to vote to leave; the confidence interval for the slope is [-0.196%, -0.061%]
+
+However, when it comes to the estimating the UKIP effect, after contrlling for the other 3 prties, a 1% increase in the votes cast for UKIP in 2015 is associated with a 1.472 point increase in the share of leave votes (e.g. moving from 50% to 51.472%), which is quite a sizable effect. 
+
+This model explains 72.4% (adj_r_squared) of the variation in the share of leave votes, which is pretty good. Just knowing how much of a presence UKIP has in a constituency is a good predictor of how it voted in the Brexit referendum. 
+
+## Leave share explained by all variables
+
+So far we've looked at immigration, education, age, and political party as explanations of the Brexit vote. How do these explanations change when we account for all these factors at once?
+
+First, let's run a big model:
+
+```{r brexit-model-leave-everything, message=FALSE, warning=FALSE}
+# First a correlation scatterplot matrix
+brexit_results %>% 
+  select(con_2015, lab_2015, ld_2015, ukip_2015, degree, age_18to24, born_in_uk, male, unemployed, leave_share) %>% 
+  ggpairs(aes(alpha = 0.2))
+
+leave_everything <- lm(leave_share ~ con_2015 + lab_2015 + ld_2015 + ukip_2015 +
+                         degree + age_18to24 + born_in_uk + male + unemployed, data = brexit_results)
+
+get_regression_table(leave_everything)
+get_regression_summaries(leave_everything)
+```
+
+Any colinearity issues?
+
+```{r colinearity_check, message=FALSE, warning=FALSE}
+library(car)
+
+vif(leave_everything)
+
+
+#labour VIF > 10, so remove it and rerun
+leave_everything2 <- lm(leave_share ~ con_2015 + ld_2015 + ukip_2015 +
+                         degree + age_18to24 + born_in_uk + male + unemployed, data = brexit_results)
+
+get_regression_table(leave_everything2)
+get_regression_summaries(leave_everything2)
+vif(leave_everything2)
+
+```
+
+Drop insignificant? 
+`ld_2015` and `born_in_uk` are not significant, so exclude and rerun
+
+```{r drop_insignificant, message=FALSE, warning=FALSE}
+library(car)
+
+vif(leave_everything)
+
+
+#labour VIF > 10, so remove it and rerun
+final_model <- lm(leave_share ~ con_2015 +  ukip_2015 +
+                         degree + age_18to24 +  male + unemployed, data = brexit_results)
+mosaic::msummary(final_model)
+
+get_regression_table(final_model)
+get_regression_summaries(final_model)
+vif(final_model)
+
+```
+
+
+```{r plot-brexit-predict, warning=FALSE}
+
+# Here are six imaginary constituencies, all with the same variables except
+# education, which goes up by five in each row
+imaginary_constituency3 <- tibble(con_2015 = 35,
+                                      lab_2015 = 40,
+                                      ld_2015 = 6,
+                                      ukip_2015 = 15,
+                                      degree = c(5, 10, 15, 20, 25, 30),
+                                      age_18to24 = 30,
+                                      born_in_uk = 80,
+                                      male = 50,
+                                      unemployed = 6)
+# When we plug this multi-row data frame into predict(), it'll generate a
+# prediction for each row
+predict(final_model, newdata = imaginary_constituency3, interval = "prediction")
+
+# We can also use broom::augment(). It's  essentially the same thing as predict(), 
+# but it adds the predictions and confidence intervals to the imaginary constituency 
+model_predictions <- broom::augment(final_model, 
+                             newdata = imaginary_constituency3)
+
+# Now we have two new columns named .fitted and .se.fit: .fitted is the
+# predicted value and .se.fit is the standard error of the predicted value
+model_predictions
+
+# We can plot this now:
+ggplot(model_predictions, aes(x = degree, y = .fitted)) +
+  geom_line() +
+  labs(y = "Predicted leave share", 
+       x = "Proportion of constituency with a university degree")+
+  theme_bw()
+```
+
+With one final tweak, we can add 95% confidence intervals to this line.
+
+```{r plot-brexit-predict-intervalse}
+model_predictions_with_intervals <- model_predictions %>% 
+  mutate(conf_low = .fitted + (1.96 * .se.fit),
+         conf_high = .fitted - (1.96 * .se.fit))
+
+ggplot(model_predictions_with_intervals, aes(x = degree, y = .fitted)) +
+  geom_ribbon(aes(ymin = conf_low, ymax = conf_high), alpha = 0.25) +
+  geom_line() +
+  labs(y = "Predicted leave share", 
+       x = "Proportion of constituency with a university degree")+
+  theme_bw()
+```
+
+### All models side-by-side
+
+Like we did before, we can use `huxreg()` to view all these models side-by-side and compare the coefficients and the $R^2$ values:
+
+```{r hux-brexit-fake, message=FALSE, warning=FALSE, eval=FALSE}
+huxreg(brexit_leave_immigration, leave_educ_age, 
+       leave_politics, leave_everything, leave_everything2, final_model) 
+```
+
+```{r hux-brexit-real, echo=FALSE, warning=FALSE, message=FALSE, results="asis"}
+huxreg(brexit_leave_immigration, leave_educ_age, 
+       leave_politics, leave_everything,final_model,
+       statistics = c('#observations' = 'nobs', 
+                      'R squared' = 'r.squared', 
+                      'Adj. R Squared' = 'adj.r.squared', 
+                      'Residual SE' = 'sigma'), 
+       bold_signif = 0.05, 
+       stars = NULL
+) %>% 
+  set_caption('Comparison of models')
+```

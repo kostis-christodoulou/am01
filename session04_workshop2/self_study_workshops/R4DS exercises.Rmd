@@ -1,0 +1,18 @@
+---
+title: "R4DS exercises- Tidying data"
+author: "Your name goes here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    highlight: zenburn
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+Read [Chapter 12 of R for Data Science](https://r4ds.had.co.nz/tidy-data.html) and complete the following exercises:
+
+- [12.2.1](https://r4ds.had.co.nz/tidy-data.html#exercises-21): Questions 2
+- [12.3.3](https://r4ds.had.co.nz/tidy-data.html#exercises-21): Questions 1,3, 4
+- [12.6.1](https://r4ds.had.co.nz/tidy-data.html#exercises-25): Questions 1–4
+
