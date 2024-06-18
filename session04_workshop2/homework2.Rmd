@@ -279,6 +279,9 @@ approval_polllist <- read_csv('https://projects.fivethirtyeight.com/biden-approv
     year = lubridate::year(end_date),
     week = lubridate::isoweek(end_date),
     
+    # create a new column for net approval rate
+    net_approval = approve - disapprove
+    
   )
 
 glimpse(approval_polllist)
@@ -289,159 +292,153 @@ glimpse(approval_polllist)
 
 What I would like you to do is to calculate the average net approval
 rate (approve- disapprove) for each week since he got into office. I
-want you plot the net approval for each week in 2024 along with its 95%
+want you plot the net approval for each week in 2023 along with its 95%
 confidence interval. There are various dates given for each poll, please
 use `enddate`, i.e., the date the poll ended. Your plot should look
-something like this:
+something like this, and you may find `geom_ribbon()` useful:
 
 ```{r trump_margins, echo=FALSE, out.width="100%"}
 knitr::include_graphics(here::here("images", "biden_approval_margin.png"), error = FALSE)
 ```
 
-# Challenge 1: Excess rentals in TfL bike sharing
 
-Recall the TfL data on how many bikes were hired every single day. We
-can get the latest data by running the following
+# Money in UK politics
 
-```{r, get_tfl_data, cache=TRUE}
-url <- "https://data.london.gov.uk/download/number-bicycle-hires/ac29363e-e0cb-47cc-a97a-e216d900a6b0/tfl-daily-cycle-hires.xlsx"
+[The Westminster Accounts](https://news.sky.com/story/the-westminster-accounts-12786091), a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics. It does so by combining data from three key sources: 
 
-# Download TFL data to temporary file
-httr::GET(url, write_disk(bike.temp <- tempfile(fileext = ".xlsx")))
+1. [Register of Members’ Financial Interests](https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-members-financial-interests/), 
+1. [Electoral Commission records of donations to parties](http://search.electoralcommission.org.uk/English/Search/Donations), and
+1. [Register of All-Party Parliamentary Groups](https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-all-party-party-parliamentary-groups/). 
 
-# Use read_excel to read it as dataframe
-bike0 <- read_excel(bike.temp,
-                   sheet = "Data",
-                   range = cell_cols("A:B"))
+You can [search and explore the results](https://news.sky.com/story/westminster-accounts-search-for-your-mp-or-enter-your-full-postcode-12771627) through the collaboration’s interactive database. Simon Willison [has extracted a database](https://til.simonwillison.net/shot-scraper/scraping-flourish) and this is what we will be working with. If you want to read more about [the project’s methodology](https://www.tortoisemedia.com/2023/01/08/the-westminster-accounts-methodology/).
 
-# change dates to get year, month, and week
-bike <- bike0 %>% 
-  clean_names() %>% 
-  rename (bikes_hired = number_of_bicycle_hires) %>% 
-  mutate (year = year(day),
-          month = lubridate::month(day, label = TRUE),
-          week = isoweek(day))
+
+## Open a connection to the database
+
+The database made available by Simon Willison is an `SQLite` database
+
+```{r}
+sky_westminster <- DBI::dbConnect(
+  drv = RSQLite::SQLite(),
+  dbname = here::here("data", "sky-westminster-files.db")
+)
 ```
 
-We can easily create a facet grid that plots bikes hired by month and
-year since 2015
+How many tables does the database have?
 
-```{r tfl_month_year_grid, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "tfl_distributions_monthly.png"), error = FALSE)
+```{r}
+DBI::dbListTables(sky_westminster)
 ```
 
-However, the challenge I want you to work on is to reproduce the
-following two graphs.
+## Which MP has received the most amount of money? 
 
-```{r tfl_absolute_monthly_change, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "tfl_monthly.png"), error = FALSE)
+You need to work with the `payments` and `members` tables and for now we just want the total among all years. To insert a new, blank chunk of code where you can write your beautiful code (and comments!), please use the following shortcut: `Ctrl + Alt + I` (Windows) or `cmd + option + I` (mac)
+
+
+## Any `entity` that accounts for more than 5% of all donations?
+
+Is there any `entity` whose donations account for more than 5% of the total payments given to MPs over the 2020-2022 interval? Who are they and who did they give money to?
+
+## Do `entity` donors give to a single party or not?
+
+- How many distinct entities who paid money to MPS are there?
+- How many (as a number and %) donated to MPs belonging to a single party only?
+
+
+## Which party has raised the greatest amount of money in each of the years 2020-2022? 
+
+I would like you to write code that generates the following table. 
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("images", "total_donations_table.png"), error = FALSE)
 ```
 
-The second one looks at percentage changes from the expected level of
-weekly rentals. The two grey shaded rectangles correspond to Q2 (weeks
-14-26) and Q4 (weeks 40-52).
 
-```{r tfl_percent_change, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "tfl_weekly.png"), error = FALSE)
+... and then, based on this data, plot the following graph. 
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("images", "total_donations_graph.png"), error = FALSE)
 ```
 
-For both of these graphs, you have to calculate the expected number of
-rentals per week or month between 2016-2019 and then, see how each
-week/month of 2020-2022 compares to the expected rentals. Think of the
-calculation `excess_rentals = actual_rentals - expected_rentals`.
+This uses the default ggplot colour pallete, as I dont want you to worry about using the [official colours for each party](https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes). However, I would like you to ensure the parties are sorted according to total donations and not alphabetically. You may even want to remove some of the smaller parties that hardly register on the graph. Would facetting help you?  
 
-Should you use the mean or the median to calculate your expected
-rentals? Why?
+Finally, when you are done working with the databse, make sure you close the connection, or disconnect from the database.
 
-In creating your plots, you may find these links useful:
-
--   <https://ggplot2.tidyverse.org/reference/geom_ribbon.html>
--   <https://ggplot2.tidyverse.org/reference/geom_tile.html>
--   <https://ggplot2.tidyverse.org/reference/geom_rug.html>
-
-# Challenge 2: Share of renewable energy production in the world
-
-The National Bureau of Economic Research (NBER) has a a very interesting
-dataset on the adoption of about 200 technologies in more than 150
-countries since 1800. This is the[Cross-country Historical Adoption of
-Technology (CHAT) dataset](https://www.nber.org/research/data/cross-country-historical-adoption-technology).
-
-The following is a description of the variables
-
-| **variable** | **class** | **description**                |
-|--------------|-----------|--------------------------------|
-| variable     | character | Variable name                  |
-| label        | character | Label for variable             |
-| iso3c        | character | Country code                   |
-| year         | double    | Year                           |
-| group        | character | Group (consumption/production) |
-| category     | character | Category                       |
-| value        | double    | Value (related to label)       |
-
-```{r,load_technology_data}
-
-technology <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-07-19/technology.csv')
-
-#get all technologies
-labels <- technology %>% 
-  distinct(variable, label)
-
-# Get country names using 'countrycode' package
-technology <- technology %>% 
-  filter(iso3c != "XCD") %>% 
-  mutate(iso3c = recode(iso3c, "ROM" = "ROU"),
-         country = countrycode(iso3c, origin = "iso3c", destination = "country.name"),
-         country = case_when(
-           iso3c == "ANT" ~ "Netherlands Antilles",
-           iso3c == "CSK" ~ "Czechoslovakia",
-           iso3c == "XKX" ~ "Kosovo",
-           TRUE           ~ country))
-
-#make smaller dataframe on energy
-energy <- technology %>% 
-  filter(category == "Energy")
-
-# download CO2 per capita from World Bank using {wbstats} package
-# https://data.worldbank.org/indicator/EN.ATM.CO2E.PC
-co2_percap <- wb_data(country = "countries_only", 
-                      indicator = "EN.ATM.CO2E.PC", 
-                      start_date = 1970, 
-                      end_date = 2022,
-                      return_wide=FALSE) %>% 
-  filter(!is.na(value)) %>% 
-  #drop unwanted variables
-  select(-c(unit, obs_status, footnote, last_updated))
-
-# get a list of countries and their characteristics
-# we just want to get the region a country is in and its income level
-countries <-  wb_cachelist$countries %>% 
-  select(iso3c,region,income_level)
-
+```{r}
+dbDisconnect(sky_westminster)
 ```
 
-This is a very rich data set, not just for energy and CO2 data, but for many other technologies. In our case, we just need to produce a couple of graphs-- at this stage, the emphasis is on data manipulation, rather than making the graphs gorgeous.
 
-First, produce a graph with the countries with the highest and lowest % contribution of renewables in energy production. This is made up of `elec_hydro`, `elec_solar`, `elec_wind`, and `elec_renew_other`. You may want to use the *patchwork* package to assemble the two charts next to each other.
- 
-```{r min-max_renewables, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "renewables.png"), error = FALSE)
-```
-Second, you can produce an animation to explore the relationship between CO2 per capita emissions and the deployment of renewables. As the % of energy generated by renewables goes up, do CO2 per capita emissions seem to go down?
+# Anonymised Covid patient data from the CDC
 
- 
-```{r animation, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "animation.gif"), error = FALSE)
+We will be using a dataset with [anonymous Covid-19 patient data that the CDC publishes every month](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4). The file we will use was released on April 11, 2023, and has data on 98 million of patients, with 19 features. This file cannot be loaded in memory, but luckily we have the data in `parquet` format and we will use the `{arrow}` package.
+
+## Obtain the data
+
+The dataset `cdc-covid-geography` in in `parquet` format that `{arrow}` can handle. It is > 600Mb and too large to be hosted on Canvas or Github, so please download it from dropbox https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0 and save it in your `am01` repo, under the `data` folder
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+tic() # start timer
+cdc_data <- open_dataset(here::here("data", "cdc-covid-geography"))
+toc() # stop timer
+
+
+glimpse(cdc_data)
+```
+Can you query the database and replicate the following plot?
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "covid-CFR-ICU.png"), error = FALSE)
 ```
 
-To create this animation is actually straight-forward. You manipulate your date, and the create the graph in the normal ggplot way. the only `gganimate` layers you need to add to your graphs are
+The previous plot is an aggregate plot for all three years of data. What if we wanted to plot Case Fatality Ratio (CFR) over time? Write code that collects the relevant data from the database and plots the following
 
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-icu-overtime.png"), error = FALSE)
 ```
-  labs(title = 'Year: {frame_time}', 
-       x = '% renewables', 
-       y = 'CO2 per cap') +
-  transition_time(year) +
-  ease_aes('linear')
+
+
+For each patient, the dataframe also lists the patient's states and county [FIPS code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code). The CDC also has information on the [NCHS Urban-Rural classification scheme for counties](https://www.cdc.gov/nchs/data_access/urban_rural.htm)
+
+```{r}
+urban_rural <- read_xlsx(here::here("data", "NCHSURCodes2013.xlsx")) %>% 
+  janitor::clean_names() 
 ```
+
+
+Each county belongs in seix diffent categoreis, with categories 1-4 being urban areas and categories 5-6 being rural, according to the following criteria captured in `x2013_code`
+
+Category name
+
+1. Large central metro - 1 million or more population and contains the entire population of the largest principal city
+2. large fringe metro - 1 million or more poulation, but does not qualify as 1
+3. Medium metro - 250K - 1 million population
+4. Small metropolitan population < 250K
+5. Micropolitan 
+6. Noncore
+
+Can you query the database, extract the relevant information, and reproduce the following two graphs that look at the Case Fatality ratio (CFR) in different counties, according to their population?
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-county-population.png"), error = FALSE)
+```
+
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "cfr-rural-urban.png"), error = FALSE)
+```
+
+
+
+
 
 
 # Deliverables

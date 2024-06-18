@@ -196,8 +196,8 @@ Next, let's choose some stocks and their ticker symbols and download some data. 
 
 myStocks <- c("AAPL","JPM","DIS","DPZ","ANF","TSLA","XOM","SPY" ) %>%
   tq_get(get  = "stock.prices",
-         from = "2011-01-01",
-         to   = "2022-08-31") %>%
+         from = "2013-01-01",
+         to   = "2024-08-31") %>%
   group_by(symbol) 
 
 glimpse(myStocks) # examine the structure of the resulting data frame
