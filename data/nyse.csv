@@ -1,0 +1,509 @@
+symbol,name,ipo_year,sector,industry,summary_quote
+MMM,3M Company,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/mmm
+ABB,ABB Ltd,n/a,Consumer Durables,Electrical Products,https://www.nasdaq.com/symbol/abb
+ABT,Abbott Laboratories,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/abt
+ABBV,AbbVie Inc.,2012,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/abbv
+ACN,Accenture plc,2001,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/acn
+AAP,Advance Auto Parts Inc,n/a,Consumer Services,Other Specialty Stores,https://www.nasdaq.com/symbol/aap
+AFL,Aflac Incorporated,n/a,Finance,Accident &Health Insurance,https://www.nasdaq.com/symbol/afl
+A,"Agilent Technologies, Inc.",1999,Capital Goods,Biotechnology: Laboratory Analytical Instruments,https://www.nasdaq.com/symbol/a
+AEM,Agnico Eagle Mines Limited,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/aem
+APD,"Air Products and Chemicals, Inc.",n/a,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/apd
+ALC,Alcon Inc.,2019,Health Care,Ophthalmic Goods,https://www.nasdaq.com/symbol/alc
+ARE,"Alexandria Real Estate Equities, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/are
+BABA,Alibaba Group Holding Limited,2014,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/baba
+Y,Alleghany Corporation,n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/y
+AGN,Allergan plc.,2013,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/agn
+ALL,Allstate Corporation (The),n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/all
+ALLY,Ally Financial Inc.,2014,Finance,Major Banks,https://www.nasdaq.com/symbol/ally
+ATUS,"Altice USA, Inc.",2017,Consumer Services,Television Services,https://www.nasdaq.com/symbol/atus
+MO,Altria Group,n/a,Consumer Non-Durables,Farming/Seeds/Milling,https://www.nasdaq.com/symbol/mo
+ABEV,Ambev S.A.,2013,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/abev
+AMCR,Amcor plc,2019,Consumer Durables,Miscellaneous manufacturing industries,https://www.nasdaq.com/symbol/amcr
+AEE,Ameren Corporation,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/aee
+AMOV,"America Movil, S.A.B. de C.V.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/amov
+AMX,"America Movil, S.A.B. de C.V.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/amx
+AEP,"American Electric Power Company, Inc.",n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/aep
+AXP,American Express Company,n/a,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/axp
+AIG,"American International Group, Inc.",n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/aig
+AMT,American Tower Corporation (REIT),n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/amt
+AWK,American Water Works,2008,Public Utilities,Water Supply,https://www.nasdaq.com/symbol/awk
+AMP,"AMERIPRISE FINANCIAL SERVICES, INC.",n/a,Finance,Investment Managers,https://www.nasdaq.com/symbol/amp
+ABC,AmerisourceBergen Corporation (Holding Co),n/a,Health Care,Other Pharmaceuticals,https://www.nasdaq.com/symbol/abc
+APH,Amphenol Corporation,n/a,Capital Goods,Electrical Products,https://www.nasdaq.com/symbol/aph
+AME,"AMTEK, Inc.",n/a,Consumer Durables,Metal Fabrications,https://www.nasdaq.com/symbol/ame
+BUD,Anheuser-Busch Inbev SA,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/bud
+NLY,Annaly Capital Management Inc,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/nly
+ANTM,"Anthem, Inc.",n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/antm
+AON,Aon plc,n/a,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/aon
+APO,"Apollo Global Management, Inc",2011,Finance,Investment Managers,https://www.nasdaq.com/symbol/apo
+APTV,Aptiv PLC,2011,Capital Goods,Auto Parts:O.E.M.,https://www.nasdaq.com/symbol/aptv
+ARMK,Aramark,2013,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/armk
+MT,ArcelorMittal,n/a,Basic Industries,Steel/Iron Ore,https://www.nasdaq.com/symbol/mt
+ADM,Archer-Daniels-Midland Company,n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/adm
+ARNC,Arconic Inc.,n/a,Capital Goods,Metal Fabrications,https://www.nasdaq.com/symbol/arnc
+ANET,"Arista Networks, Inc.",2014,Technology,Computer Communications Equipment,https://www.nasdaq.com/symbol/anet
+AJG,Arthur J. Gallagher & Co.,n/a,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/ajg
+AZN,Astrazeneca PLC,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/azn
+T,AT&T Inc.,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/t
+ATO,Atmos Energy Corporation,n/a,Public Utilities,Oil/Gas Transmission,https://www.nasdaq.com/symbol/ato
+ATHM,Autohome Inc.,2013,Technology,EDP Services,https://www.nasdaq.com/symbol/athm
+AZO,"AutoZone, Inc.",n/a,Consumer Services,Other Specialty Stores,https://www.nasdaq.com/symbol/azo
+AVB,"AvalonBay Communities, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/avb
+AGR,"Avangrid, Inc.",2015,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/agr
+EQH,"AXA Equitable Holdings, Inc.",2018,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/eqh
+BHGE,"Baker Hughes, a GE company",2017,Energy,Metal Fabrications,https://www.nasdaq.com/symbol/bhge
+BLL,Ball Corporation,n/a,Consumer Durables,Containers/Packaging,https://www.nasdaq.com/symbol/bll
+BBVA,Banco Bilbao Viscaya Argentaria S.A.,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bbva
+BBD,Banco Bradesco Sa,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bbd
+BBDO,Banco Bradesco Sa,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bbdo
+BCH,Banco De Chile,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bch
+BSBR,Banco Santander Brasil SA,2009,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bsbr
+BSAC,Banco Santander Chile,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bsac
+SAN,"Banco Santander, S.A.",n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/san
+CIB,BanColombia S.A.,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/cib
+BAC,Bank of America Corporation,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bac
+BMO,Bank Of Montreal,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bmo
+BK,Bank Of New York Mellon Corporation (The),n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bk
+BNS,Bank of Nova Scotia (The),n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bns
+BCS,Barclays PLC,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bcs
+GOLD,Barrick Gold Corporation,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/gold
+BAX,Baxter International Inc.,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/bax
+BBT,BB&T Corporation,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/bbt
+BCE,"BCE, Inc.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/bce
+BDX,"Becton, Dickinson and Company",n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/bdx
+BBY,"Best Buy Co., Inc.",n/a,Consumer Services,Consumer Electronics/Video Chains,https://www.nasdaq.com/symbol/bby
+BHP,BHP Group Limited,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/bhp
+BBL,BHP Group Plc,n/a,Energy,Coal Mining,https://www.nasdaq.com/symbol/bbl
+BIO,"Bio-Rad Laboratories, Inc.",n/a,Capital Goods,Biotechnology: Laboratory Analytical Instruments,https://www.nasdaq.com/symbol/bio
+BLK,"BlackRock, Inc.",1999,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/blk
+BA,Boeing Company (The),n/a,Capital Goods,Aerospace,https://www.nasdaq.com/symbol/ba
+BAH,Booz Allen Hamilton Holding Corporation,2010,Consumer Services,Professional Services,https://www.nasdaq.com/symbol/bah
+BXP,"Boston Properties, Inc.",1997,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/bxp
+BSX,Boston Scientific Corporation,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/bsx
+BP,BP p.l.c.,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/bp
+BMY,Bristol-Myers Squibb Company,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/bmy
+BTI,British American Tobacco p.l.c.,n/a,Consumer Non-Durables,Farming/Seeds/Milling,https://www.nasdaq.com/symbol/bti
+BR,"Broadridge Financial Solutions, Inc.",n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/br
+BAM,Brookfield Asset Management Inc,n/a,Consumer Services,Building operators,https://www.nasdaq.com/symbol/bam
+BIP,Brookfield Infrastructure Partners LP,n/a,Consumer Services,Marine Transportation,https://www.nasdaq.com/symbol/bip
+BRO,"Brown & Brown, Inc.",n/a,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/bro
+BT,BT Group plc,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/bt
+BURL,"Burlington Stores, Inc.",2013,Consumer Services,Department/Specialty Retail Stores,https://www.nasdaq.com/symbol/burl
+CJ,"C&J Energy Services, Inc",2017,Energy,Oilfield Services/Equipment,https://www.nasdaq.com/symbol/cj
+CPT,Camden Property Trust,1993,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/cpt
+CPB,Campbell Soup Company,n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/cpb
+CM,Canadian Imperial Bank of Commerce,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/cm
+CNI,Canadian National Railway Company,n/a,Transportation,Railroads,https://www.nasdaq.com/symbol/cni
+CNQ,Canadian Natural Resources Limited,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/cnq
+CP,Canadian Pacific Railway Limited,n/a,Transportation,Railroads,https://www.nasdaq.com/symbol/cp
+CAJ,"Canon, Inc.",n/a,Miscellaneous,Industrial Machinery/Components,https://www.nasdaq.com/symbol/caj
+COF,Capital One Financial Corporation,1994,Finance,Major Banks,https://www.nasdaq.com/symbol/cof
+CAH,"Cardinal Health, Inc.",n/a,Health Care,Other Pharmaceuticals,https://www.nasdaq.com/symbol/cah
+KMX,CarMax Inc,n/a,Consumer Durables,Automotive Aftermarket,https://www.nasdaq.com/symbol/kmx
+CCL,Carnival Corporation,1987,Consumer Services,Marine Transportation,https://www.nasdaq.com/symbol/ccl
+CUK,Carnival Corporation,n/a,Consumer Services,Marine Transportation,https://www.nasdaq.com/symbol/cuk
+CVNA,Carvana Co.,2017,Consumer Durables,Automotive Aftermarket,https://www.nasdaq.com/symbol/cvna
+CAT,"Caterpillar, Inc.",n/a,Capital Goods,Construction/Ag Equipment/Trucks,https://www.nasdaq.com/symbol/cat
+CBRE,"CBRE Group, Inc.",n/a,Finance,Real Estate,https://www.nasdaq.com/symbol/cbre
+CBS,CBS Corporation,n/a,Consumer Services,Broadcasting,https://www.nasdaq.com/symbol/cbs
+CE,Celanese Corporation,2005,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/ce
+CVE,Cenovus Energy Inc,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/cve
+CNC,Centene Corporation,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/cnc
+CNP,"CenterPoint Energy, Inc.",n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/cnp
+EBR,Centrais Electricas Brasileiras S.A.- Eletrobras,2016,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/ebr
+CTL,"CenturyLink, Inc.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/ctl
+CF,"CF Industries Holdings, Inc.",2005,Basic Industries,Agricultural Chemicals,https://www.nasdaq.com/symbol/cf
+GIB,CGI Inc.,n/a,Consumer Services,Professional Services,https://www.nasdaq.com/symbol/gib
+CVX,Chevron Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/cvx
+CHWY,"Chewy, Inc.",2019,Consumer Services,Catalog/Specialty Distribution,https://www.nasdaq.com/symbol/chwy
+LFC,China Life Insurance Company Limited,2003,Finance,Life Insurance,https://www.nasdaq.com/symbol/lfc
+CHL,China Mobile (Hong Kong) Ltd.,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/chl
+SNP,China Petroleum & Chemical Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/snp
+CHA,China Telecom Corp Ltd,2002,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/cha
+CHU,China Unicom (Hong Kong) Ltd,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/chu
+CMG,"Chipotle Mexican Grill, Inc.",2006,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/cmg
+CB,Chubb Limited,n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/cb
+CHT,"Chunghwa Telecom Co., Ltd.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/cht
+CHD,"Church & Dwight Company, Inc.",n/a,Basic Industries,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/chd
+CI,Cigna Corporation,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/ci
+C,Citigroup Inc.,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/c
+CFG,"Citizens Financial Group, Inc.",2014,Finance,Major Banks,https://www.nasdaq.com/symbol/cfg
+CLX,Clorox Company (The),n/a,Consumer Durables,Specialty Chemicals,https://www.nasdaq.com/symbol/clx
+CMS,CMS Energy Corporation,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/cms
+CNA,CNA Financial Corporation,n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/cna
+CNHI,CNH Industrial N.V.,2013,Capital Goods,Construction/Ag Equipment/Trucks,https://www.nasdaq.com/symbol/cnhi
+KOF,Coca Cola Femsa S.A.B. de C.V.,1993,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/kof
+KO,Coca-Cola Company (The),n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/ko
+CCEP,Coca-Cola European Partners plc,2016,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/ccep
+CL,Colgate-Palmolive Company,n/a,Consumer Non-Durables,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/cl
+CAG,"ConAgra Brands, Inc.",n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/cag
+CXO,Concho Resources Inc.,2007,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/cxo
+COP,ConocoPhillips,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/cop
+ED,Consolidated Edison Inc,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/ed
+STZ,Constellation Brands Inc,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/stz
+CLR,"Continental Resources, Inc.",2007,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/clr
+GLW,Corning Incorporated,n/a,Basic Industries,Telecommunications Equipment,https://www.nasdaq.com/symbol/glw
+CTVA,"Corteva, Inc.",2019,Consumer Non-Durables,Farming/Seeds/Milling,https://www.nasdaq.com/symbol/ctva
+BAP,Credicorp Ltd.,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/bap
+CS,Credit Suisse Group,n/a,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/cs
+CRH,CRH PLC,n/a,Capital Goods,Building Materials,https://www.nasdaq.com/symbol/crh
+CCI,Crown Castle International Corporation,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/cci
+CMI,Cummins Inc.,n/a,Energy,Industrial Machinery/Components,https://www.nasdaq.com/symbol/cmi
+CVS,CVS Health Corporation,n/a,Health Care,Medical/Nursing Services,https://www.nasdaq.com/symbol/cvs
+DHI,"D.R. Horton, Inc.",n/a,Capital Goods,Homebuilding,https://www.nasdaq.com/symbol/dhi
+DHR,Danaher Corporation,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/dhr
+DRI,"Darden Restaurants, Inc.",n/a,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/dri
+DE,Deere & Company,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/de
+DELL,Dell Technologies Inc.,2018,Technology,Computer Manufacturing,https://www.nasdaq.com/symbol/dell
+DAL,"Delta Air Lines, Inc.",n/a,Transportation,Air Freight/Delivery Services,https://www.nasdaq.com/symbol/dal
+DB,Deutsche Bank AG,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/db
+DEO,Diageo plc,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/deo
+DLR,"Digital Realty Trust, Inc.",2004,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/dlr
+DFS,Discover Financial Services,n/a,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/dfs
+DG,Dollar General Corporation,2009,Consumer Services,Department/Specialty Retail Stores,https://www.nasdaq.com/symbol/dg
+D,"Dominion Energy, Inc.",n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/d
+DOV,Dover Corporation,n/a,Technology,Industrial Machinery/Components,https://www.nasdaq.com/symbol/dov
+DOW,Dow Inc.,2019,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/dow
+DTE,DTE Energy Company,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/dte
+DUK,Duke Energy Corporation,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/duk
+DRE,Duke Realty Corporation,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/dre
+DD,"DuPont de Nemours, Inc.",2017,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/dd
+ETN,"Eaton Corporation, PLC",n/a,Technology,Industrial Machinery/Components,https://www.nasdaq.com/symbol/etn
+ECL,Ecolab Inc.,n/a,Basic Industries,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/ecl
+EC,Ecopetrol S.A.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/ec
+EIX,Edison International,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/eix
+EW,Edwards Lifesciences Corporation,n/a,Health Care,Industrial Specialties,https://www.nasdaq.com/symbol/ew
+ELAN,Elanco Animal Health Incorporated,2018,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/elan
+LLY,Eli Lilly and Company,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/lly
+EMR,Emerson Electric Company,n/a,Energy,Consumer Electronics/Appliances,https://www.nasdaq.com/symbol/emr
+ENB,Enbridge Inc,n/a,Energy,Natural Gas Distribution,https://www.nasdaq.com/symbol/enb
+ENIA,Enel Americas S.A.,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/enia
+ET,Energy Transfer L.P.,1996,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/et
+E,ENI S.p.A.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/e
+ETR,Entergy Corporation,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/etr
+EPD,Enterprise Products Partners L.P.,n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/epd
+EOG,"EOG Resources, Inc.",n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/eog
+EPAM,"EPAM Systems, Inc.",2012,Technology,EDP Services,https://www.nasdaq.com/symbol/epam
+EFX,"Equifax, Inc.",n/a,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/efx
+EQNR,Equinor ASA,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/eqnr
+ELS,"Equity Lifestyle Properties, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/els
+EQR,Equity Residential,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/eqr
+ESS,"Essex Property Trust, Inc.",1994,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/ess
+EL,"Estee Lauder Companies, Inc. (The)",1995,Consumer Non-Durables,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/el
+RE,"Everest Re Group, Ltd.",n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/re
+EVRG,"Evergy, Inc.",2018,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/evrg
+ES,Eversource Energy,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/es
+EXC,Exelon Corporation,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/exc
+EXR,Extra Space Storage Inc,2004,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/exr
+XOM,Exxon Mobil Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/xom
+FDS,FactSet Research Systems Inc.,1996,Technology,"Computer Software: Programming, Data Processing",https://www.nasdaq.com/symbol/fds
+FICO,Fair Isaac Corporation,n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/fico
+FRT,Federal Realty Investment Trust,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/frt
+FDX,FedEx Corporation,n/a,Transportation,Air Freight/Delivery Services,https://www.nasdaq.com/symbol/fdx
+RACE,Ferrari N.V.,2015,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/race
+FCAU,Fiat Chrysler Automobiles N.V.,2014,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/fcau
+FNF,"Fidelity National Financial, Inc.",2014,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/fnf
+FIS,"Fidelity National Information Services, Inc.",n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/fis
+FE,FirstEnergy Corp.,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/fe
+FLT,"FleetCor Technologies, Inc.",2010,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/flt
+FMC,FMC Corporation,n/a,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/fmc
+FMX,Fomento Economico Mexicano S.A.B. de C.V.,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/fmx
+F,Ford Motor Company,n/a,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/f
+FTS,Fortis Inc.,2016,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/fts
+FTV,Fortive Corporation,2016,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/ftv
+FNV,Franco-Nevada Corporation,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/fnv
+BEN,"Franklin Resources, Inc.",n/a,Finance,Investment Managers,https://www.nasdaq.com/symbol/ben
+FCX,"Freeport-McMoran, Inc.",n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/fcx
+FMS,Fresenius Medical Care Corporation,n/a,Health Care,Misc Health and Biotechnology Services,https://www.nasdaq.com/symbol/fms
+IT,"Gartner, Inc.",1993,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/it
+GD,General Dynamics Corporation,n/a,Capital Goods,Marine Transportation,https://www.nasdaq.com/symbol/gd
+GE,General Electric Company,n/a,Energy,Consumer Electronics/Appliances,https://www.nasdaq.com/symbol/ge
+GIS,"General Mills, Inc.",n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/gis
+GM,General Motors Company,2010,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/gm
+GPC,Genuine Parts Company,n/a,Capital Goods,Automotive Aftermarket,https://www.nasdaq.com/symbol/gpc
+GSK,GlaxoSmithKline PLC,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/gsk
+GPN,Global Payments Inc.,n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/gpn
+GL,Globe Life Inc.,n/a,Finance,Life Insurance,https://www.nasdaq.com/symbol/gl
+GDDY,GoDaddy Inc.,2015,Technology,EDP Services,https://www.nasdaq.com/symbol/gddy
+GS,"Goldman Sachs Group, Inc. (The)",1999,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/gs
+HAL,Halliburton Company,n/a,Energy,Oilfield Services/Equipment,https://www.nasdaq.com/symbol/hal
+HIG,"Hartford Financial Services Group, Inc. (The)",n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/hig
+HCA,"HCA Healthcare, Inc.",2011,Health Care,Hospital/Nursing Management,https://www.nasdaq.com/symbol/hca
+HCP,"HCP, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/hcp
+HDB,HDFC Bank Limited,2001,Finance,Commercial Banks,https://www.nasdaq.com/symbol/hdb
+HEI,Heico Corporation,n/a,Capital Goods,Aerospace,https://www.nasdaq.com/symbol/hei
+HSY,Hershey Company (The),n/a,Consumer Non-Durables,Specialty Foods,https://www.nasdaq.com/symbol/hsy
+HES,Hess Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/hes
+HPE,Hewlett Packard Enterprise Company,2015,Technology,Computer Manufacturing,https://www.nasdaq.com/symbol/hpe
+HLT,Hilton Worldwide Holdings Inc.,2016,Consumer Services,Hotels/Resorts,https://www.nasdaq.com/symbol/hlt
+HD,"Home Depot, Inc. (The)",n/a,Consumer Services,RETAIL: Building Materials,https://www.nasdaq.com/symbol/hd
+HMC,"Honda Motor Company, Ltd.",n/a,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/hmc
+HON,Honeywell International Inc.,n/a,Capital Goods,Aerospace,https://www.nasdaq.com/symbol/hon
+HRL,Hormel Foods Corporation,n/a,Consumer Non-Durables,Meat/Poultry/Fish,https://www.nasdaq.com/symbol/hrl
+HST,"Host Hotels & Resorts, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/hst
+HPQ,HP Inc.,n/a,Technology,Computer Manufacturing,https://www.nasdaq.com/symbol/hpq
+HSBC,HSBC Holdings plc,n/a,Finance,Savings Institutions,https://www.nasdaq.com/symbol/hsbc
+HUM,Humana Inc.,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/hum
+IBN,ICICI Bank Limited,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/ibn
+IEX,IDEX Corporation,1989,Capital Goods,Fluid Controls,https://www.nasdaq.com/symbol/iex
+INFO,IHS Markit Ltd.,1996,Technology,"Computer Software: Programming, Data Processing",https://www.nasdaq.com/symbol/info
+ITW,Illinois Tool Works Inc.,n/a,Technology,Industrial Machinery/Components,https://www.nasdaq.com/symbol/itw
+INFY,Infosys Limited,n/a,Technology,EDP Services,https://www.nasdaq.com/symbol/infy
+ING,"ING Group, N.V.",1997,Finance,Commercial Banks,https://www.nasdaq.com/symbol/ing
+IR,Ingersoll-Rand plc (Ireland),n/a,Capital Goods,Auto Parts:O.E.M.,https://www.nasdaq.com/symbol/ir
+ICE,Intercontinental Exchange Inc.,2005,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/ice
+IHG,Intercontinental Hotels Group,n/a,Consumer Services,Hotels/Resorts,https://www.nasdaq.com/symbol/ihg
+IBM,International Business Machines Corporation,n/a,Technology,Computer Manufacturing,https://www.nasdaq.com/symbol/ibm
+IFF,"International Flavors & Fragrances, Inc.",n/a,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/iff
+IP,International Paper Company,n/a,Basic Industries,Paper,https://www.nasdaq.com/symbol/ip
+INVH,Invitation Homes Inc.,2017,Finance,Real Estate,https://www.nasdaq.com/symbol/invh
+IQV,"IQVIA Holdings, Inc.",2013,Health Care,Biotechnology: Commercial Physical & Biological Resarch,https://www.nasdaq.com/symbol/iqv
+ITUB,Itau Unibanco Banco Holding SA,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/itub
+JPM,J P Morgan Chase & Co,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/jpm
+SJM,J.M. Smucker Company (The),n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/sjm
+JEC,Jacobs Engineering Group Inc.,n/a,Basic Industries,Military/Government/Technical,https://www.nasdaq.com/symbol/jec
+JNJ,Johnson & Johnson,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/jnj
+JCI,Johnson Controls International plc,n/a,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/jci
+KSU,Kansas City Southern,n/a,Transportation,Railroads,https://www.nasdaq.com/symbol/ksu
+KB,KB Financial Group Inc,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/kb
+K,Kellogg Company,n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/k
+KDP,Keurig Dr Pepper Inc.,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/kdp
+KEY,KeyCorp,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/key
+KEYS,Keysight Technologies Inc.,2014,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/keys
+KMB,Kimberly-Clark Corporation,n/a,Consumer Durables,Containers/Packaging,https://www.nasdaq.com/symbol/kmb
+KMI,"Kinder Morgan, Inc.",2011,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/kmi
+KKR,KKR & Co. Inc.,n/a,Finance,Investment Managers,https://www.nasdaq.com/symbol/kkr
+PHG,Koninklijke Philips N.V.,n/a,Energy,Consumer Electronics/Appliances,https://www.nasdaq.com/symbol/phg
+KEP,Korea Electric Power Corporation,1994,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/kep
+KR,Kroger Company (The),n/a,Consumer Services,Food Chains,https://www.nasdaq.com/symbol/kr
+LHX,"L3Harris Technologies, Inc.",n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/lhx
+LH,Laboratory Corporation of America Holdings,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/lh
+LW,"Lamb Weston Holdings, Inc.",2016,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/lw
+LVS,Las Vegas Sands Corp.,2004,Consumer Services,Hotels/Resorts,https://www.nasdaq.com/symbol/lvs
+LDOS,"Leidos Holdings, Inc.",n/a,Technology,EDP Services,https://www.nasdaq.com/symbol/ldos
+LEN,Lennar Corporation,n/a,Basic Industries,Homebuilding,https://www.nasdaq.com/symbol/len
+LNC,Lincoln National Corporation,n/a,Finance,Life Insurance,https://www.nasdaq.com/symbol/lnc
+LIN,Linde plc,2018,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/lin
+LYV,"Live Nation Entertainment, Inc.",n/a,Consumer Services,Services-Misc. Amusement & Recreation,https://www.nasdaq.com/symbol/lyv
+LYG,Lloyds Banking Group Plc,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/lyg
+LMT,Lockheed Martin Corporation,n/a,Capital Goods,Military/Government/Technical,https://www.nasdaq.com/symbol/lmt
+L,Loews Corporation,n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/l
+LOW,"Lowe&#39;s Companies, Inc.",n/a,Consumer Services,RETAIL: Building Materials,https://www.nasdaq.com/symbol/low
+LYB,LyondellBasell Industries NV,n/a,Basic Industries,Major Chemicals,https://www.nasdaq.com/symbol/lyb
+MTB,M&T Bank Corporation,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/mtb
+MMP,Magellan Midstream Partners L.P.,n/a,Energy,Natural Gas Distribution,https://www.nasdaq.com/symbol/mmp
+MGA,"Magna International, Inc.",n/a,Capital Goods,Auto Parts:O.E.M.,https://www.nasdaq.com/symbol/mga
+MFC,Manulife Financial Corp,n/a,Finance,Life Insurance,https://www.nasdaq.com/symbol/mfc
+MRO,Marathon Oil Corporation,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/mro
+MPC,Marathon Petroleum Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/mpc
+MKL,Markel Corporation,1986,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/mkl
+MMC,"Marsh & McLennan Companies, Inc.",n/a,Finance,Specialty Insurers,https://www.nasdaq.com/symbol/mmc
+MLM,"Martin Marietta Materials, Inc.",1994,Basic Industries,Mining & Quarrying of Nonmetallic Minerals (No Fuels),https://www.nasdaq.com/symbol/mlm
+MAS,Masco Corporation,n/a,Basic Industries,Forest Products,https://www.nasdaq.com/symbol/mas
+MA,Mastercard Incorporated,2006,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/ma
+MKC,"McCormick & Company, Incorporated",n/a,Consumer Non-Durables,Packaged Foods,https://www.nasdaq.com/symbol/mkc
+MCD,McDonald&#39;s Corporation,n/a,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/mcd
+MCK,McKesson Corporation,n/a,Health Care,Other Pharmaceuticals,https://www.nasdaq.com/symbol/mck
+MDT,Medtronic plc,n/a,Health Care,Biotechnology: Electromedical & Electrotherapeutic Apparatus,https://www.nasdaq.com/symbol/mdt
+MRK,"Merck & Company, Inc.",n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/mrk
+MET,"MetLife, Inc.",2000,Finance,Life Insurance,https://www.nasdaq.com/symbol/met
+MTD,"Mettler-Toledo International, Inc.",1997,Capital Goods,Biotechnology: Laboratory Analytical Instruments,https://www.nasdaq.com/symbol/mtd
+MGM,MGM Resorts International,n/a,Consumer Services,Hotels/Resorts,https://www.nasdaq.com/symbol/mgm
+MAA,"Mid-America Apartment Communities, Inc.",1994,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/maa
+MUFG,Mitsubishi UFJ Financial Group Inc,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/mufg
+MFG,"Mizuho Financial Group, Inc.",n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/mfg
+TAP,Molson Coors Brewing  Company,n/a,Consumer Non-Durables,Beverages (Production/Distribution),https://www.nasdaq.com/symbol/tap
+MCO,Moody&#39;s Corporation,n/a,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/mco
+MS,Morgan Stanley,n/a,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/ms
+MSI,"Motorola Solutions, Inc.",n/a,Technology,Radio And Television Broadcasting And Communications Equipment,https://www.nasdaq.com/symbol/msi
+MPLX,MPLX LP,2012,Energy,Natural Gas Distribution,https://www.nasdaq.com/symbol/mplx
+MSCI,MSCI Inc,n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/msci
+NGG,"National Grid Transco, PLC",n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/ngg
+EDU,"New Oriental Education & Technology Group, Inc.",2006,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/edu
+NEM,Newmont Goldcorp Corporation,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/nem
+NEE,"NextEra Energy, Inc.",n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/nee
+NKE,"Nike, Inc.",n/a,Consumer Non-Durables,Shoe Manufacturing,https://www.nasdaq.com/symbol/nke
+NI,"NiSource, Inc",n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/ni
+NBL,Noble Energy Inc.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/nbl
+NOK,Nokia Corporation,1994,Technology,Radio And Television Broadcasting And Communications Equipment,https://www.nasdaq.com/symbol/nok
+NMR,Nomura Holdings Inc ADR,n/a,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/nmr
+NSC,Norfolk Southern Corporation,n/a,Transportation,Railroads,https://www.nasdaq.com/symbol/nsc
+NOC,Northrop Grumman Corporation,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/noc
+NCLH,Norwegian Cruise Line Holdings Ltd.,n/a,Consumer Services,Marine Transportation,https://www.nasdaq.com/symbol/nclh
+NVS,Novartis AG,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/nvs
+NVO,Novo Nordisk A/S,n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/nvo
+NUE,Nucor Corporation,n/a,Basic Industries,Steel/Iron Ore,https://www.nasdaq.com/symbol/nue
+NTR,Nutrien Ltd.,2018,Basic Industries,Agricultural Chemicals,https://www.nasdaq.com/symbol/ntr
+NVR,"NVR, Inc.",n/a,Capital Goods,Homebuilding,https://www.nasdaq.com/symbol/nvr
+OXY,Occidental Petroleum Corporation,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/oxy
+OMC,Omnicom Group Inc.,n/a,Technology,Advertising,https://www.nasdaq.com/symbol/omc
+OKE,"ONEOK, Inc.",n/a,Public Utilities,Oil & Gas Production,https://www.nasdaq.com/symbol/oke
+ORCL,Oracle Corporation,1986,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/orcl
+ORAN,Orange,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/oran
+IX,Orix Corp Ads,n/a,Finance,Diversified Financial Services,https://www.nasdaq.com/symbol/ix
+PAGS,PagSeguro Digital Ltd.,2018,Technology,EDP Services,https://www.nasdaq.com/symbol/pags
+PANW,"Palo Alto Networks, Inc.",2012,Technology,Computer peripheral equipment,https://www.nasdaq.com/symbol/panw
+PH,Parker-Hannifin Corporation,n/a,Capital Goods,Metal Fabrications,https://www.nasdaq.com/symbol/ph
+PAYC,"Paycom Software, Inc.",2014,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/payc
+PBA,Pembina Pipeline Corp.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/pba
+PTR,PetroChina Company Limited,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/ptr
+PBR,Petroleo Brasileiro S.A.- Petrobras,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/pbr
+PFE,"Pfizer, Inc.",n/a,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/pfe
+PM,Philip Morris International Inc,n/a,Consumer Non-Durables,Farming/Seeds/Milling,https://www.nasdaq.com/symbol/pm
+PSX,Phillips 66,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/psx
+PSXP,Phillips 66 Partners LP,2013,Energy,Natural Gas Distribution,https://www.nasdaq.com/symbol/psxp
+PNW,Pinnacle West Capital Corporation,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/pnw
+PINS,"Pinterest, Inc.",2019,Technology,"Computer Software: Programming, Data Processing",https://www.nasdaq.com/symbol/pins
+PXD,Pioneer Natural Resources Company,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/pxd
+PAA,"Plains All American Pipeline, L.P.",1998,Energy,Natural Gas Distribution,https://www.nasdaq.com/symbol/paa
+PNC,"PNC Financial Services Group, Inc. (The)",n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/pnc
+PKX,POSCO,1994,Basic Industries,Steel/Iron Ore,https://www.nasdaq.com/symbol/pkx
+PPG,"PPG Industries, Inc.",n/a,Basic Industries,Paints/Coatings,https://www.nasdaq.com/symbol/ppg
+PPL,PPL Corporation,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/ppl
+PG,Procter & Gamble Company (The),n/a,Basic Industries,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/pg
+PGR,Progressive Corporation (The),n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/pgr
+PLD,"Prologis, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/pld
+PRU,"Prudential Financial, Inc.",2001,Finance,Life Insurance,https://www.nasdaq.com/symbol/pru
+PUK,Prudential Public Limited Company,n/a,Finance,Life Insurance,https://www.nasdaq.com/symbol/puk
+TLK,"PT Telekomunikasi Indonesia, Tbk",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/tlk
+PEG,Public Service Enterprise Group Incorporated,n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/peg
+PSA,Public Storage,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/psa
+DGX,Quest Diagnostics Incorporated,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/dgx
+RJF,"Raymond James Financial, Inc.",n/a,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/rjf
+RTN,Raytheon Company,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/rtn
+O,Realty Income Corporation,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/o
+RF,Regions Financial Corporation,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/rf
+RELX,RELX PLC,2015,Consumer Services,Publishing,https://www.nasdaq.com/symbol/relx
+RSG,"Republic Services, Inc.",1998,Public Utilities,Environmental Services,https://www.nasdaq.com/symbol/rsg
+RMD,ResMed Inc.,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/rmd
+QSR,Restaurant Brands International Inc.,2014,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/qsr
+RNG,"Ringcentral, Inc.",2013,Technology,EDP Services,https://www.nasdaq.com/symbol/rng
+RIO,Rio Tinto Plc,2002,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/rio
+ROK,"Rockwell Automation, Inc.",n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/rok
+RCI,"Rogers Communication, Inc.",n/a,Consumer Services,Television Services,https://www.nasdaq.com/symbol/rci
+ROL,"Rollins, Inc.",n/a,Finance,Diversified Commercial Services,https://www.nasdaq.com/symbol/rol
+ROP,"Roper Technologies, Inc.",1992,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/rop
+RY,Royal Bank Of Canada,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/ry
+RBS,Royal Bank Scotland plc (The),n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/rbs
+RCL,Royal Caribbean Cruises Ltd.,1993,Consumer Services,Marine Transportation,https://www.nasdaq.com/symbol/rcl
+SPGI,S&P Global Inc.,n/a,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/spgi
+CRM,Salesforce.com Inc,2004,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/crm
+SAP,SAP SE,n/a,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/sap
+SSL,Sasol Ltd.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/ssl
+SLB,Schlumberger N.V.,n/a,Energy,Oilfield Services/Equipment,https://www.nasdaq.com/symbol/slb
+SE,Sea Limited,2017,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/se
+SRE,Sempra Energy,n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/sre
+NOW,"ServiceNow, Inc.",2012,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/now
+SHW,Sherwin-Williams Company (The),n/a,Consumer Services,RETAIL: Building Materials,https://www.nasdaq.com/symbol/shw
+SHG,Shinhan Financial Group Co Ltd,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/shg
+SHOP,Shopify Inc.,2015,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/shop
+SPG,"Simon Property Group, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/spg
+SKM,"SK Telecom Co., Ltd.",n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/skm
+WORK,"Slack Technologies, Inc.",2019,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/work
+SNN,"Smith & Nephew SNATS, Inc.",n/a,Health Care,Industrial Specialties,https://www.nasdaq.com/symbol/snn
+SNAP,Snap Inc.,2017,Technology,"Computer Software: Programming, Data Processing",https://www.nasdaq.com/symbol/snap
+SNE,Sony Corp Ord,n/a,Consumer Non-Durables,Consumer Electronics/Appliances,https://www.nasdaq.com/symbol/sne
+SO,Southern Company (The),n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/so
+SCCO,Southern Copper Corporation,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/scco
+LUV,Southwest Airlines Company,n/a,Transportation,Air Freight/Delivery Services,https://www.nasdaq.com/symbol/luv
+SPOT,Spotify Technology S.A.,2018,Consumer Services,Broadcasting,https://www.nasdaq.com/symbol/spot
+S,Sprint Corporation,2013,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/s
+SQ,"Square, Inc.",2015,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/sq
+SWK,"Stanley Black & Decker, Inc.",n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/swk
+STT,State Street Corporation,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/stt
+STE,STERIS plc,n/a,Health Care,Industrial Specialties,https://www.nasdaq.com/symbol/ste
+STM,STMicroelectronics N.V.,n/a,Technology,Semiconductors,https://www.nasdaq.com/symbol/stm
+SYK,Stryker Corporation,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/syk
+SMFG,Sumitomo Mitsui Financial Group Inc,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/smfg
+SUI,"Sun Communities, Inc.",1993,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/sui
+SLF,Sun Life Financial Inc.,n/a,Finance,Life Insurance,https://www.nasdaq.com/symbol/slf
+SU,Suncor Energy  Inc.,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/su
+STI,"SunTrust Banks, Inc.",n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/sti
+SYF,Synchrony Financial,2014,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/syf
+SYY,Sysco Corporation,n/a,Consumer Non-Durables,Food Distributors,https://www.nasdaq.com/symbol/syy
+TSM,Taiwan Semiconductor Manufacturing Company Ltd.,1997,Technology,Semiconductors,https://www.nasdaq.com/symbol/tsm
+TAK,Takeda Pharmaceutical Company Limited,2018,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/tak
+TAL,TAL Education Group,n/a,Consumer Services,Other Consumer Services,https://www.nasdaq.com/symbol/tal
+TGT,Target Corporation,n/a,Consumer Services,Department/Specialty Retail Stores,https://www.nasdaq.com/symbol/tgt
+TRP,TC Energy Corporation,n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/trp
+TEL,TE Connectivity Ltd.,n/a,Technology,Electronic Components,https://www.nasdaq.com/symbol/tel
+FTI,TechnipFMC plc,n/a,Energy,Metal Fabrications,https://www.nasdaq.com/symbol/fti
+TDY,Teledyne Technologies Incorporated,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/tdy
+TFX,Teleflex Incorporated,n/a,Health Care,Medical/Dental Instruments,https://www.nasdaq.com/symbol/tfx
+VIV,Telefonica Brasil S.A.,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/viv
+TEF,Telefonica SA,1988,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/tef
+TU,TELUS Corporation,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/tu
+TS,Tenaris S.A.,n/a,Basic Industries,Steel/Iron Ore,https://www.nasdaq.com/symbol/ts
+TME,Tencent Music Entertainment Group,2018,Consumer Services,Broadcasting,https://www.nasdaq.com/symbol/tme
+TXT,Textron Inc.,n/a,Capital Goods,Aerospace,https://www.nasdaq.com/symbol/txt
+AES,The AES Corporation,n/a,Basic Industries,Electric Utilities: Central,https://www.nasdaq.com/symbol/aes
+BX,The Blackstone Group Inc.,2007,Finance,Investment Managers,https://www.nasdaq.com/symbol/bx
+SCHW,The Charles Schwab Corporation,n/a,Finance,Investment Bankers/Brokers/Service,https://www.nasdaq.com/symbol/schw
+COO,"The Cooper Companies, Inc.",n/a,Health Care,Ophthalmic Goods,https://www.nasdaq.com/symbol/coo
+TRV,"The Travelers Companies, Inc.",n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/trv
+TMO,Thermo Fisher Scientific Inc,n/a,Capital Goods,Industrial Machinery/Components,https://www.nasdaq.com/symbol/tmo
+TRI,Thomson Reuters Corp,n/a,Consumer Services,Publishing,https://www.nasdaq.com/symbol/tri
+TIF,Tiffany & Co.,1987,Consumer Services,Consumer Specialties,https://www.nasdaq.com/symbol/tif
+TJX,"TJX Companies, Inc. (The)",n/a,Consumer Services,Clothing/Shoe/Accessory Stores,https://www.nasdaq.com/symbol/tjx
+TD,Toronto Dominion Bank (The),n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/td
+TOT,Total S.A.,n/a,Energy,Oil & Gas Production,https://www.nasdaq.com/symbol/tot
+TSS,"Total System Services, Inc.",n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/tss
+TM,Toyota Motor Corp Ltd Ord,n/a,Capital Goods,Auto Manufacturing,https://www.nasdaq.com/symbol/tm
+TDG,Transdigm Group Incorporated,2006,Capital Goods,Military/Government/Technical,https://www.nasdaq.com/symbol/tdg
+TRU,TransUnion,2015,Finance,Finance: Consumer Services,https://www.nasdaq.com/symbol/tru
+TWLO,Twilio Inc.,2016,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/twlo
+TWTR,"Twitter, Inc.",2013,Technology,"Computer Software: Programming, Data Processing",https://www.nasdaq.com/symbol/twtr
+TSN,"Tyson Foods, Inc.",n/a,Consumer Non-Durables,Meat/Poultry/Fish,https://www.nasdaq.com/symbol/tsn
+USB,U.S. Bancorp,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/usb
+UBER,"Uber Technologies, Inc.",2019,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/uber
+UBS,UBS AG,2014,Finance,Major Banks,https://www.nasdaq.com/symbol/ubs
+UDR,"UDR, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/udr
+UGI,UGI Corporation,n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/ugi
+UN,Unilever NV,n/a,Basic Industries,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/un
+UL,Unilever PLC,n/a,Basic Industries,Package Goods/Cosmetics,https://www.nasdaq.com/symbol/ul
+UNP,Union Pacific Corporation,n/a,Transportation,Railroads,https://www.nasdaq.com/symbol/unp
+UPS,"United Parcel Service, Inc.",1999,Transportation,Trucking Freight/Courier Services,https://www.nasdaq.com/symbol/ups
+UTX,United Technologies Corporation,n/a,Capital Goods,Aerospace,https://www.nasdaq.com/symbol/utx
+UNH,UnitedHealth Group Incorporated,n/a,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/unh
+UHS,"Universal Health Services, Inc.",n/a,Health Care,Hospital/Nursing Management,https://www.nasdaq.com/symbol/uhs
+VFC,V.F. Corporation,n/a,Consumer Non-Durables,Apparel,https://www.nasdaq.com/symbol/vfc
+VALE,VALE S.A.,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/vale
+VLO,Valero Energy Corporation,n/a,Energy,Integrated oil Companies,https://www.nasdaq.com/symbol/vlo
+VEEV,Veeva Systems Inc.,2013,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/veev
+VTR,"Ventas, Inc.",n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/vtr
+VZ,Verizon Communications Inc.,n/a,Public Utilities,Telecommunications Equipment,https://www.nasdaq.com/symbol/vz
+VICI,VICI Properties Inc.,2018,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/vici
+V,Visa Inc.,n/a,Miscellaneous,Business Services,https://www.nasdaq.com/symbol/v
+VST,Vistra Energy Corp.,n/a,Public Utilities,Electric Utilities: Central,https://www.nasdaq.com/symbol/vst
+VMW,"Vmware, Inc.",2007,Technology,Computer Software: Prepackaged Software,https://www.nasdaq.com/symbol/vmw
+VNO,Vornado Realty Trust,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/vno
+VMC,Vulcan Materials Company,n/a,Basic Industries,Mining & Quarrying of Nonmetallic Minerals (No Fuels),https://www.nasdaq.com/symbol/vmc
+WPC,W.P. Carey Inc.,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/wpc
+WRB,W.R. Berkley Corporation,n/a,Finance,Property-Casualty Insurers,https://www.nasdaq.com/symbol/wrb
+GWW,"W.W. Grainger, Inc.",n/a,Consumer Services,Office Equipment/Supplies/Services,https://www.nasdaq.com/symbol/gww
+WMT,Walmart Inc.,n/a,Consumer Services,Department/Specialty Retail Stores,https://www.nasdaq.com/symbol/wmt
+DIS,Walt Disney Company (The),n/a,Consumer Services,Services-Misc. Amusement & Recreation,https://www.nasdaq.com/symbol/dis
+WCN,"Waste Connections, Inc.",n/a,Public Utilities,Environmental Services,https://www.nasdaq.com/symbol/wcn
+WM,"Waste Management, Inc.",n/a,Public Utilities,Environmental Services,https://www.nasdaq.com/symbol/wm
+WAT,Waters Corporation,1995,Capital Goods,Biotechnology: Laboratory Analytical Instruments,https://www.nasdaq.com/symbol/wat
+W,Wayfair Inc.,2014,Consumer Services,Catalog/Specialty Distribution,https://www.nasdaq.com/symbol/w
+WEC,"WEC Energy Group, Inc.",n/a,Public Utilities,Power Generation,https://www.nasdaq.com/symbol/wec
+WCG,"WellCare Health Plans, Inc.",2004,Health Care,Medical Specialities,https://www.nasdaq.com/symbol/wcg
+WFC,Wells Fargo & Company,n/a,Finance,Major Banks,https://www.nasdaq.com/symbol/wfc
+WELL,Welltower Inc.,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/well
+WST,"West Pharmaceutical Services, Inc.",n/a,Basic Industries,Specialty Chemicals,https://www.nasdaq.com/symbol/wst
+WES,"Western Midstream Partners, LP",2012,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/wes
+WAB,Westinghouse Air Brake Technologies Corporation,n/a,Capital Goods,Railroads,https://www.nasdaq.com/symbol/wab
+WBK,Westpac Banking Corporation,n/a,Finance,Commercial Banks,https://www.nasdaq.com/symbol/wbk
+WY,Weyerhaeuser Company,n/a,Consumer Services,Real Estate Investment Trusts,https://www.nasdaq.com/symbol/wy
+WPM,Wheaton Precious Metals Corp.,n/a,Basic Industries,Precious Metals,https://www.nasdaq.com/symbol/wpm
+WMB,"Williams Companies, Inc. (The)",n/a,Public Utilities,Natural Gas Distribution,https://www.nasdaq.com/symbol/wmb
+WIT,Wipro Limited,n/a,Technology,EDP Services,https://www.nasdaq.com/symbol/wit
+WPP,WPP plc,n/a,Technology,Advertising,https://www.nasdaq.com/symbol/wpp
+XYL,Xylem Inc.,2011,Capital Goods,Fluid Controls,https://www.nasdaq.com/symbol/xyl
+YUMC,"Yum China Holdings, Inc.",2016,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/yumc
+YUM,"Yum! Brands, Inc.",n/a,Consumer Services,Restaurants,https://www.nasdaq.com/symbol/yum
+ZBH,"Zimmer Biomet Holdings, Inc.",n/a,Health Care,Industrial Specialties,https://www.nasdaq.com/symbol/zbh
+ZTS,Zoetis Inc.,2013,Health Care,Major Pharmaceuticals,https://www.nasdaq.com/symbol/zts
+ZTO,ZTO Express (Cayman) Inc.,2016,Transportation,Trucking Freight/Courier Services,https://www.nasdaq.com/symbol/zto

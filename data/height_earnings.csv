@@ -1,0 +1,1377 @@
+earn,height,age,ed_level,race,hispanic,gender
+1400,157.48,64,Elementary,white,1,Female
+2000,152.4,67,Elementary,white,1,Female
+12000,180.34,40,Elementary,white,1,Male
+2400,170.18,39,Elementary,white,1,Female
+8000,162.56,27,Elementary,white,1,Male
+6000,165.1,74,High School,white,1,Female
+0,152.4,39,High School,white,1,Female
+0,160.02,23,High School,white,1,Female
+0,152.4,48,High School,white,1,Female
+6000,162.56,36,High School,white,1,Male
+0,172.72,18,High School,white,1,Male
+0,167.64,49,High School,white,1,Female
+24000,165.1,27,High School,white,1,Female
+15000,162.56,21,High School,white,1,Female
+15000,172.72,68,High School,white,1,Female
+0,162.56,65,High School,white,1,Female
+6000,160.02,65,High School,white,1,Female
+0,157.48,63,High School,white,1,Female
+18000,157.48,63,High School,white,1,Male
+12000,152.4,51,High School,white,1,Female
+16000,160.02,46,High School,white,1,Female
+0,149.86,46,High School,white,1,Female
+5000,162.56,39,High School,white,1,Female
+4000,154.94,38,High School,white,1,Female
+13000,160.02,35,High School,white,1,Female
+22000,167.64,33,High School,white,1,Female
+30000,172.72,32,High School,white,1,Male
+12000,152.4,28,High School,white,1,Female
+20000,182.88,28,High School,white,1,Male
+17000,162.56,27,High School,white,1,Female
+10000,154.94,22,High School,white,1,Female
+12000,170.18,22,High School,white,1,Male
+11000,152.4,21,High School,white,1,Female
+1500,167.64,21,High School,white,1,Female
+13000,154.94,19,High School,white,1,Female
+50000,182.88,64,College,white,1,Male
+18000,157.48,56,College,white,1,Female
+28000,180.34,38,College,white,1,Male
+17000,180.34,36,College,white,1,Male
+41000,182.88,32,College,white,1,Male
+0,157.48,32,College,white,1,Female
+9000,162.56,22,College,white,1,Female
+10000,182.88,20,College,white,1,Male
+35000,162.56,53,College,white,1,Female
+42000,177.8,44,College,white,1,Male
+17000,167.64,43,College,white,1,Female
+26000,167.64,32,College,white,1,Female
+29000,175.26,29,College,white,1,Male
+16000,157.48,28,College,white,1,Male
+6600,152.4,28,College,white,1,Female
+22000,180.34,28,College,white,1,Male
+8000,185.42,21,College,white,1,Male
+3000,182.88,18,College,white,1,Male
+21000,182.88,62,College,white,1,Male
+0,157.48,59,College,white,1,Female
+19000,160.02,45,College,white,1,Female
+2000,167.64,23,College,white,1,Male
+2000,182.88,21,College,white,1,Male
+3000,185.42,20,College,white,1,Male
+35000,175.26,65,College,white,1,Male
+33000,165.1,62,College,white,1,Female
+15000,162.56,32,College,white,1,Female
+15000,167.64,30,College,white,1,Female
+15000,172.72,28,College,white,1,Male
+26000,182.88,25,College,white,1,Male
+17000,165.1,23,College,white,1,Female
+26000,162.56,23,College,white,1,Male
+27000,162.56,41,Some Graduate School,white,1,Female
+36000,162.56,34,Some Graduate School,white,1,Female
+20000,167.64,26,Some Graduate School,white,1,Female
+30000,160.02,54,Graduate Diploma,white,1,Female
+55000,182.88,35,Graduate Diploma,white,1,Male
+1200,167.64,64,Elementary,white,0,Female
+12000,175.26,62,Elementary,white,0,Male
+4500,147.32,85,Elementary,white,0,Female
+6000,152.4,62,Elementary,white,0,Female
+0,160.02,58,Elementary,white,0,Female
+22000,177.8,75,Elementary,white,0,Male
+7600,170.18,62,Elementary,white,0,Female
+7000,187.96,49,Elementary,white,0,Male
+0,167.64,41,Elementary,white,0,Female
+6500,152.4,83,Elementary,white,0,Female
+6000,177.8,78,Elementary,white,0,Male
+20000,152.4,77,Elementary,white,0,Female
+0,180.34,70,Elementary,white,0,Female
+5688,157.48,69,Elementary,white,0,Female
+5124,167.64,67,Elementary,white,0,Male
+4000,167.64,66,Elementary,white,0,Female
+4000,152.4,64,Elementary,white,0,Female
+0,160.02,63,Elementary,white,0,Female
+15000,149.86,61,Elementary,white,0,Female
+15000,182.88,58,Elementary,white,0,Male
+13000,162.56,58,Elementary,white,0,Female
+0,160.02,57,Elementary,white,0,Female
+0,157.48,56,Elementary,white,0,Female
+50000,175.26,53,Elementary,white,0,Male
+0,167.64,53,Elementary,white,0,Female
+12000,162.56,48,Elementary,white,0,Female
+16000,172.72,43,Elementary,white,0,Male
+20000,182.88,36,Elementary,white,0,Male
+16000,172.72,24,Elementary,white,0,Male
+3000,180.34,22,Elementary,white,0,Male
+0,182.88,20,Elementary,white,0,Male
+35000,177.8,84,High School,white,0,Male
+0,165.1,75,High School,white,0,Female
+4000,162.56,68,High School,white,0,Female
+0,162.56,63,High School,white,0,Female
+9000,187.96,61,High School,white,0,Male
+29000,172.72,58,High School,white,0,Male
+0,160.02,54,High School,white,0,Female
+3840,170.18,52,High School,white,0,Female
+11000,160.02,51,High School,white,0,Female
+25000,177.8,47,High School,white,0,Male
+38000,172.72,46,High School,white,0,Male
+600,149.86,46,High School,white,0,Female
+8000,160.02,45,High School,white,0,Female
+7000,160.02,25,High School,white,0,Female
+2000,162.56,25,High School,white,0,Female
+0,170.18,21,High School,white,0,Female
+15000,180.34,21,High School,white,0,Male
+5000,160.02,87,High School,white,0,Female
+13000,165.1,80,High School,white,0,Female
+60000,160.02,78,High School,white,0,Female
+7000,170.18,78,High School,white,0,Male
+8000,177.8,75,High School,white,0,Male
+10000,167.64,75,High School,white,0,Female
+70000,170.18,72,High School,white,0,Female
+0,152.4,68,High School,white,0,Female
+6000,157.48,68,High School,white,0,Female
+0,182.88,63,High School,white,0,Male
+20000,177.8,61,High School,white,0,Female
+25000,160.02,60,High School,white,0,Female
+11000,167.64,58,High School,white,0,Female
+0,157.48,57,High School,white,0,Female
+11000,187.96,50,High School,white,0,Male
+0,167.64,48,High School,white,0,Female
+20000,157.48,44,High School,white,0,Female
+7000,162.56,39,High School,white,0,Female
+0,167.64,38,High School,white,0,Female
+0,160.02,37,High School,white,0,Female
+0,154.94,35,High School,white,0,Female
+20000,172.72,32,High School,white,0,Male
+25000,177.8,31,High School,white,0,Male
+18000,180.34,29,High School,white,0,Female
+11000,172.72,24,High School,white,0,Female
+25000,185.42,21,High School,white,0,Male
+13000,175.26,20,High School,white,0,Male
+0,157.48,20,High School,white,0,Female
+0,162.56,19,High School,white,0,Female
+3500,182.88,18,High School,white,0,Male
+8000,154.94,72,High School,white,0,Female
+5000,157.48,71,High School,white,0,Female
+0,160.02,65,High School,white,0,Female
+7000,162.56,64,High School,white,0,Female
+25000,170.18,63,High School,white,0,Male
+15000,182.88,63,High School,white,0,Male
+2500,157.48,58,High School,white,0,Female
+0,165.1,57,High School,white,0,Female
+0,172.72,54,High School,white,0,Female
+45000,175.26,51,High School,white,0,Male
+14000,162.56,51,High School,white,0,Female
+30000,177.8,51,High School,white,0,Male
+38000,175.26,50,High School,white,0,Male
+18000,157.48,47,High School,white,0,Female
+10000,157.48,47,High School,white,0,Female
+40000,175.26,44,High School,white,0,Male
+0,165.1,38,High School,white,0,Female
+37000,172.72,37,High School,white,0,Male
+0,170.18,37,High School,white,0,Female
+30000,172.72,34,High School,white,0,Male
+9000,175.26,34,High School,white,0,Female
+35000,149.86,34,High School,white,0,Female
+30000,172.72,32,High School,white,0,Male
+10000,182.88,31,High School,white,0,Male
+0,160.02,29,High School,white,0,Female
+0,157.48,26,High School,white,0,Female
+20000,175.26,23,High School,white,0,Male
+0,172.72,21,High School,white,0,Male
+50000,175.26,18,High School,white,0,Male
+25000,170.18,89,High School,white,0,Male
+25000,175.26,82,High School,white,0,Female
+15000,167.64,81,High School,white,0,Female
+5000,157.48,78,High School,white,0,Female
+6000,160.02,78,High School,white,0,Female
+15000,154.94,77,High School,white,0,Female
+15000,170.18,77,High School,white,0,Female
+21000,162.56,77,High School,white,0,Female
+10000,170.18,77,High School,white,0,Male
+0,157.48,76,High School,white,0,Female
+25000,154.94,75,High School,white,0,Female
+12000,162.56,75,High School,white,0,Male
+5000,167.64,75,High School,white,0,Male
+13000,177.8,74,High School,white,0,Male
+45000,172.72,74,High School,white,0,Male
+10000,162.56,74,High School,white,0,Female
+30000,160.02,73,High School,white,0,Female
+7000,157.48,73,High School,white,0,Female
+14000,167.64,73,High School,white,0,Male
+18000,182.88,73,High School,white,0,Male
+4000,165.1,73,High School,white,0,Female
+35000,162.56,72,High School,white,0,Female
+8000,167.64,71,High School,white,0,Female
+15000,162.56,71,High School,white,0,Female
+36000,154.94,71,High School,white,0,Female
+12000,165.1,71,High School,white,0,Male
+14000,180.34,69,High School,white,0,Male
+32000,154.94,69,High School,white,0,Female
+33000,172.72,69,High School,white,0,Male
+8000,180.34,68,High School,white,0,Male
+4000,157.48,68,High School,white,0,Female
+10000,167.64,68,High School,white,0,Female
+6000,162.56,67,High School,white,0,Female
+7000,172.72,67,High School,white,0,Male
+17000,170.18,67,High School,white,0,Male
+18000,172.72,66,High School,white,0,Female
+20000,175.26,66,High School,white,0,Male
+40000,185.42,66,High School,white,0,Male
+0,157.48,66,High School,white,0,Female
+60000,172.72,66,High School,white,0,Male
+10000,167.64,66,High School,white,0,Female
+25000,177.8,65,High School,white,0,Male
+6000,152.4,65,High School,white,0,Female
+25000,157.48,65,High School,white,0,Female
+9500,157.48,65,High School,white,0,Female
+6108,157.48,65,High School,white,0,Female
+6000,157.48,65,High School,white,0,Female
+6000,157.48,64,High School,white,0,Female
+0,160.02,64,High School,white,0,Female
+7000,154.94,63,High School,white,0,Female
+0,162.56,63,High School,white,0,Female
+12500,160.02,63,High School,white,0,Female
+10000,152.4,62,High School,white,0,Female
+25000,165.1,62,High School,white,0,Female
+0,160.02,62,High School,white,0,Female
+14000,167.64,62,High School,white,0,Male
+0,165.1,62,High School,white,0,Female
+3500,162.56,61,High School,white,0,Female
+35000,180.34,61,High School,white,0,Male
+40000,167.64,61,High School,white,0,Male
+10000,160.02,61,High School,white,0,Female
+16000,170.18,61,High School,white,0,Female
+12000,175.26,60,High School,white,0,Female
+0,160.02,60,High School,white,0,Female
+22000,162.56,60,High School,white,0,Female
+6000,162.56,60,High School,white,0,Female
+0,162.56,60,High School,white,0,Female
+0,165.1,60,High School,white,0,Female
+0,167.64,59,High School,white,0,Female
+2000,165.1,59,High School,white,0,Female
+0,157.48,59,High School,white,0,Female
+21000,172.72,59,High School,white,0,Male
+0,167.64,59,High School,white,0,Female
+17000,165.1,59,High School,white,0,Female
+0,165.1,59,High School,white,0,Female
+17000,172.72,58,High School,white,0,Male
+27500,170.18,58,High School,white,0,Female
+0,162.56,58,High School,white,0,Female
+0,167.64,58,High School,white,0,Female
+0,172.72,58,High School,white,0,Female
+45000,172.72,58,High School,white,0,Male
+44000,175.26,58,High School,white,0,Male
+21000,165.1,57,High School,white,0,Female
+0,177.8,57,High School,white,0,Female
+10000,167.64,57,High School,white,0,Female
+12000,193.04,57,High School,white,0,Male
+8000,160.02,57,High School,white,0,Female
+33000,167.64,57,High School,white,0,Male
+20000,175.26,57,High School,white,0,Male
+0,162.56,57,High School,white,0,Female
+24000,172.72,56,High School,white,0,Male
+15000,162.56,56,High School,white,0,Female
+0,172.72,55,High School,white,0,Female
+14500,162.56,55,High School,white,0,Female
+9000,157.48,55,High School,white,0,Female
+0,165.1,55,High School,white,0,Male
+13000,157.48,53,High School,white,0,Female
+25000,177.8,53,High School,white,0,Male
+0,162.56,53,High School,white,0,Female
+10000,167.64,53,High School,white,0,Female
+10000,157.48,52,High School,white,0,Female
+30000,170.18,52,High School,white,0,Male
+12000,180.34,52,High School,white,0,Male
+5000,167.64,52,High School,white,0,Female
+0,167.64,52,High School,white,0,Female
+50000,167.64,52,High School,white,0,Male
+0,167.64,52,High School,white,0,Female
+12000,165.1,51,High School,white,0,Female
+0,182.88,51,High School,white,0,Female
+0,160.02,51,High School,white,0,Female
+0,167.64,51,High School,white,0,Female
+10000,157.48,51,High School,white,0,Female
+21000,175.26,51,High School,white,0,Male
+55000,162.56,51,High School,white,0,Female
+50000,177.8,51,High School,white,0,Male
+12000,165.1,51,High School,white,0,Female
+3500,167.64,51,High School,white,0,Female
+20000,172.72,51,High School,white,0,Male
+43000,175.26,51,High School,white,0,Male
+8000,157.48,51,High School,white,0,Female
+20000,180.34,50,High School,white,0,Male
+8000,165.1,50,High School,white,0,Female
+35000,172.72,50,High School,white,0,Male
+50000,180.34,50,High School,white,0,Male
+60000,182.88,50,High School,white,0,Male
+29000,157.48,49,High School,white,0,Female
+10000,182.88,49,High School,white,0,Male
+25000,167.64,49,High School,white,0,Female
+105000,190.5,49,High School,white,0,Male
+16000,160.02,49,High School,white,0,Female
+6000,152.4,49,High School,white,0,Female
+0,154.94,49,High School,white,0,Female
+0,157.48,48,High School,white,0,Female
+11000,162.56,48,High School,white,0,Female
+35000,185.42,48,High School,white,0,Male
+22000,157.48,48,High School,white,0,Female
+0,167.64,48,High School,white,0,Female
+12000,172.72,48,High School,white,0,Female
+10000,157.48,47,High School,white,0,Female
+23000,170.18,47,High School,white,0,Female
+40000,177.8,47,High School,white,0,Male
+11000,160.02,47,High School,white,0,Female
+1000,152.4,47,High School,white,0,Female
+30000,180.34,47,High School,white,0,Male
+19000,154.94,46,High School,white,0,Female
+14000,165.1,46,High School,white,0,Female
+17000,175.26,46,High School,white,0,Male
+28000,170.18,46,High School,white,0,Male
+1800,172.72,46,High School,white,0,Female
+18000,162.56,46,High School,white,0,Female
+40000,190.5,46,High School,white,0,Male
+19000,162.56,46,High School,white,0,Female
+17000,185.42,46,High School,white,0,Male
+17000,172.72,46,High School,white,0,Female
+0,165.1,46,High School,white,0,Female
+34000,182.88,45,High School,white,0,Male
+12000,172.72,45,High School,white,0,Female
+21000,170.18,45,High School,white,0,Female
+0,160.02,45,High School,white,0,Female
+0,162.56,45,High School,white,0,Female
+60000,182.88,45,High School,white,0,Male
+0,152.4,44,High School,white,0,Female
+16500,157.48,44,High School,white,0,Female
+1500,170.18,44,High School,white,0,Female
+8500,170.18,44,High School,white,0,Female
+28000,167.64,44,High School,white,0,Male
+12000,170.18,43,High School,white,0,Female
+30000,180.34,43,High School,white,0,Male
+600,162.56,43,High School,white,0,Female
+10000,167.64,43,High School,white,0,Female
+25000,172.72,43,High School,white,0,Female
+60000,162.56,43,High School,white,0,Female
+10000,165.1,43,High School,white,0,Female
+8000,167.64,42,High School,white,0,Female
+20000,165.1,42,High School,white,0,Female
+20000,187.96,42,High School,white,0,Male
+40000,182.88,42,High School,white,0,Male
+27000,177.8,42,High School,white,0,Male
+30000,167.64,42,High School,white,0,Male
+25000,177.8,42,High School,white,0,Male
+35000,162.56,42,High School,white,0,Female
+40000,167.64,41,High School,white,0,Female
+24000,165.1,41,High School,white,0,Female
+27000,157.48,41,High School,white,0,Female
+50000,182.88,41,High School,white,0,Male
+0,165.1,41,High School,white,0,Female
+22000,152.4,41,High School,white,0,Female
+10000,165.1,41,High School,white,0,Female
+30000,187.96,41,High School,white,0,Male
+10000,162.56,41,High School,white,0,Female
+5000,160.02,40,High School,white,0,Female
+10000,165.1,40,High School,white,0,Female
+23000,157.48,40,High School,white,0,Female
+38000,170.18,40,High School,white,0,Male
+17000,160.02,40,High School,white,0,Female
+3500,167.64,40,High School,white,0,Female
+15000,182.88,40,High School,white,0,Male
+42000,160.02,40,High School,white,0,Female
+20000,162.56,40,High School,white,0,Female
+22000,180.34,39,High School,white,0,Male
+15000,182.88,39,High School,white,0,Male
+44000,160.02,39,High School,white,0,Female
+0,157.48,39,High School,white,0,Female
+12000,162.56,39,High School,white,0,Female
+8000,162.56,39,High School,white,0,Female
+27000,193.04,39,High School,white,0,Male
+12000,170.18,39,High School,white,0,Female
+16000,170.18,39,High School,white,0,Female
+0,157.48,39,High School,white,0,Female
+10000,152.4,39,High School,white,0,Female
+10000,157.48,38,High School,white,0,Female
+30000,187.96,38,High School,white,0,Male
+15000,167.64,38,High School,white,0,Female
+69000,177.8,38,High School,white,0,Male
+43000,160.02,38,High School,white,0,Female
+11000,172.72,38,High School,white,0,Female
+4000,165.1,38,High School,white,0,Female
+20112,162.56,38,High School,white,0,Female
+0,157.48,38,High School,white,0,Female
+15000,162.56,38,High School,white,0,Female
+17000,162.56,38,High School,white,0,Female
+12000,187.96,38,High School,white,0,Male
+40000,180.34,38,High School,white,0,Male
+0,162.56,38,High School,white,0,Female
+15000,160.02,37,High School,white,0,Female
+23000,162.56,37,High School,white,0,Female
+42000,172.72,37,High School,white,0,Male
+3000,160.02,37,High School,white,0,Female
+14000,160.02,37,High School,white,0,Female
+14000,157.48,37,High School,white,0,Female
+40000,175.26,37,High School,white,0,Male
+33000,182.88,37,High School,white,0,Male
+20000,152.4,37,High School,white,0,Female
+16000,167.64,37,High School,white,0,Male
+20000,172.72,36,High School,white,0,Female
+17000,160.02,36,High School,white,0,Female
+0,162.56,36,High School,white,0,Female
+700,152.4,36,High School,white,0,Female
+16000,165.1,36,High School,white,0,Female
+25000,180.34,36,High School,white,0,Male
+0,167.64,36,High School,white,0,Female
+20000,187.96,36,High School,white,0,Male
+36000,185.42,36,High School,white,0,Male
+13000,162.56,36,High School,white,0,Female
+14000,180.34,36,High School,white,0,Male
+18000,160.02,36,High School,white,0,Female
+0,162.56,36,High School,white,0,Female
+12000,182.88,35,High School,white,0,Female
+24000,172.72,35,High School,white,0,Female
+6000,160.02,35,High School,white,0,Female
+12000,160.02,35,High School,white,0,Female
+34000,175.26,35,High School,white,0,Male
+15000,162.56,35,High School,white,0,Male
+0,162.56,35,High School,white,0,Female
+20000,170.18,35,High School,white,0,Male
+0,167.64,35,High School,white,0,Female
+9000,177.8,35,High School,white,0,Female
+32750,167.64,34,High School,white,0,Male
+15000,175.26,34,High School,white,0,Female
+12000,162.56,34,High School,white,0,Female
+30000,185.42,34,High School,white,0,Male
+0,152.4,34,High School,white,0,Female
+40000,167.64,34,High School,white,0,Male
+23000,167.64,34,High School,white,0,Male
+0,172.72,34,High School,white,0,Female
+25000,162.56,33,High School,white,0,Female
+30000,177.8,33,High School,white,0,Male
+16040,162.56,33,High School,white,0,Female
+27000,160.02,33,High School,white,0,Male
+15000,172.72,33,High School,white,0,Female
+21000,180.34,33,High School,white,0,Male
+25000,177.8,33,High School,white,0,Male
+16000,177.8,33,High School,white,0,Male
+2000,160.02,33,High School,white,0,Female
+0,157.48,33,High School,white,0,Female
+200,170.18,33,High School,white,0,Female
+0,154.94,33,High School,white,0,Female
+12000,170.18,33,High School,white,0,Female
+21000,187.96,33,High School,white,0,Male
+25000,162.56,33,High School,white,0,Female
+8000,162.56,33,High School,white,0,Female
+35000,180.34,32,High School,white,0,Male
+30000,162.56,32,High School,white,0,Female
+2000,165.1,32,High School,white,0,Female
+15000,177.8,32,High School,white,0,Male
+30000,177.8,32,High School,white,0,Male
+0,160.02,32,High School,white,0,Female
+19000,177.8,32,High School,white,0,Male
+30000,187.96,32,High School,white,0,Male
+26000,175.26,32,High School,white,0,Male
+9500,170.18,32,High School,white,0,Female
+9000,182.88,32,High School,white,0,Male
+12500,165.1,32,High School,white,0,Female
+17000,182.88,32,High School,white,0,Male
+26000,157.48,31,High School,white,0,Female
+10000,160.02,31,High School,white,0,Female
+33000,170.18,31,High School,white,0,Female
+20000,172.72,31,High School,white,0,Female
+15000,165.1,31,High School,white,0,Female
+12000,182.88,31,High School,white,0,Male
+5400,157.48,31,High School,white,0,Female
+10000,172.72,31,High School,white,0,Male
+400,160.02,31,High School,white,0,Female
+0,160.02,31,High School,white,0,Female
+15000,162.56,31,High School,white,0,Female
+25000,154.94,31,High School,white,0,Female
+21000,157.48,31,High School,white,0,Female
+25000,165.1,30,High School,white,0,Female
+18000,172.72,30,High School,white,0,Female
+27500,170.18,30,High School,white,0,Female
+17000,154.94,30,High School,white,0,Female
+32000,172.72,30,High School,white,0,Male
+0,162.56,30,High School,white,0,Female
+0,162.56,30,High School,white,0,Female
+5800,165.1,30,High School,white,0,Female
+13000,167.64,30,High School,white,0,Female
+35000,185.42,30,High School,white,0,Male
+2000,170.18,30,High School,white,0,Female
+17000,185.42,30,High School,white,0,Male
+25000,160.02,30,High School,white,0,Female
+25000,187.96,30,High School,white,0,Male
+14000,172.72,30,High School,white,0,Female
+20000,157.48,30,High School,white,0,Female
+20000,157.48,29,High School,white,0,Female
+0,167.64,29,High School,white,0,Female
+15000,170.18,29,High School,white,0,Female
+20000,162.56,29,High School,white,0,Female
+12000,185.42,29,High School,white,0,Male
+4000,157.48,29,High School,white,0,Female
+13000,170.18,29,High School,white,0,Female
+8000,162.56,29,High School,white,0,Female
+45000,180.34,29,High School,white,0,Male
+0,160.02,29,High School,white,0,Female
+0,170.18,29,High School,white,0,Female
+0,160.02,29,High School,white,0,Female
+5000,167.64,29,High School,white,0,Female
+31000,177.8,29,High School,white,0,Male
+0,157.48,29,High School,white,0,Female
+24000,165.1,29,High School,white,0,Female
+19000,182.88,29,High School,white,0,Male
+17000,180.34,28,High School,white,0,Male
+5000,162.56,28,High School,white,0,Female
+65000,165.1,28,High School,white,0,Male
+6000,165.1,28,High School,white,0,Female
+12000,167.64,28,High School,white,0,Male
+0,157.48,28,High School,white,0,Female
+7000,162.56,28,High School,white,0,Female
+22000,182.88,28,High School,white,0,Male
+10000,175.26,28,High School,white,0,Female
+32000,182.88,28,High School,white,0,Male
+0,162.56,28,High School,white,0,Female
+19000,182.88,28,High School,white,0,Male
+36000,172.72,28,High School,white,0,Male
+0,162.56,28,High School,white,0,Female
+14000,160.02,28,High School,white,0,Female
+0,165.1,28,High School,white,0,Female
+12000,172.72,27,High School,white,0,Male
+0,152.4,27,High School,white,0,Female
+27000,172.72,27,High School,white,0,Male
+25000,177.8,27,High School,white,0,Female
+43000,180.34,27,High School,white,0,Male
+12500,165.1,27,High School,white,0,Female
+15000,170.18,27,High School,white,0,Female
+21500,182.88,27,High School,white,0,Male
+0,154.94,27,High School,white,0,Female
+26000,182.88,27,High School,white,0,Male
+18000,177.8,27,High School,white,0,Male
+6000,172.72,27,High School,white,0,Male
+27000,182.88,26,High School,white,0,Male
+12000,162.56,26,High School,white,0,Female
+0,162.56,26,High School,white,0,Female
+90000,182.88,26,High School,white,0,Male
+30000,182.88,26,High School,white,0,Male
+33000,182.88,26,High School,white,0,Male
+3000,170.18,26,High School,white,0,Female
+15000,170.18,26,High School,white,0,Female
+0,167.64,26,High School,white,0,Male
+15000,175.26,26,High School,white,0,Male
+8000,180.34,25,High School,white,0,Female
+0,157.48,25,High School,white,0,Female
+0,160.02,25,High School,white,0,Female
+30000,182.88,25,High School,white,0,Male
+10000,160.02,25,High School,white,0,Female
+0,157.48,25,High School,white,0,Female
+15000,180.34,25,High School,white,0,Male
+25000,177.8,24,High School,white,0,Male
+24000,172.72,24,High School,white,0,Female
+27000,190.5,24,High School,white,0,Male
+0,167.64,24,High School,white,0,Female
+27000,187.96,24,High School,white,0,Male
+0,172.72,24,High School,white,0,Female
+14500,190.5,24,High School,white,0,Male
+22000,154.94,24,High School,white,0,Male
+12000,185.42,24,High School,white,0,Male
+0,167.64,24,High School,white,0,Female
+14000,182.88,24,High School,white,0,Male
+3000,167.64,24,High School,white,0,Female
+27000,185.42,23,High School,white,0,Male
+0,167.64,23,High School,white,0,Female
+21000,177.8,23,High School,white,0,Male
+11000,167.64,23,High School,white,0,Female
+7000,175.26,23,High School,white,0,Male
+14000,167.64,23,High School,white,0,Male
+1500,167.64,23,High School,white,0,Female
+3000,172.72,23,High School,white,0,Female
+21000,180.34,22,High School,white,0,Male
+18000,165.1,22,High School,white,0,Female
+23900,162.56,22,High School,white,0,Female
+12000,165.1,22,High School,white,0,Female
+25000,177.8,22,High School,white,0,Male
+29000,187.96,22,High School,white,0,Male
+4000,177.8,22,High School,white,0,Female
+5000,190.5,22,High School,white,0,Male
+1700,165.1,22,High School,white,0,Male
+0,162.56,21,High School,white,0,Female
+5000,157.48,21,High School,white,0,Female
+10000,185.42,21,High School,white,0,Male
+5000,190.5,21,High School,white,0,Male
+14000,160.02,21,High School,white,0,Male
+15000,160.02,21,High School,white,0,Female
+12000,180.34,21,High School,white,0,Male
+2000,175.26,21,High School,white,0,Male
+1200,167.64,20,High School,white,0,Female
+15000,170.18,20,High School,white,0,Female
+18000,172.72,20,High School,white,0,Male
+14000,160.02,20,High School,white,0,Female
+0,167.64,19,High School,white,0,Female
+13000,160.02,19,High School,white,0,Female
+16000,175.26,19,High School,white,0,Male
+15000,167.64,19,High School,white,0,Female
+1500,185.42,19,High School,white,0,Male
+1200,167.64,19,High School,white,0,Male
+4000,180.34,19,High School,white,0,Male
+15000,172.72,18,High School,white,0,Female
+1000,165.1,18,High School,white,0,Female
+5000,157.48,18,High School,white,0,Female
+1000,165.1,18,High School,white,0,Female
+0,182.88,18,High School,white,0,Male
+0,162.56,18,High School,white,0,Female
+0,170.18,18,High School,white,0,Female
+0,172.72,18,High School,white,0,Female
+0,175.26,18,High School,white,0,Male
+1000,165.1,18,High School,white,0,Male
+0,165.1,18,High School,white,0,Female
+2000,172.72,18,High School,white,0,Female
+10000,160.02,18,High School,white,0,Female
+2000,167.64,18,High School,white,0,Male
+5000,182.88,18,High School,white,0,Male
+2000,172.72,18,High School,white,0,Male
+5000,187.96,18,High School,white,0,Male
+6200,162.56,83,College,white,0,Female
+45000,167.64,82,College,white,0,Male
+19000,165.1,82,College,white,0,Female
+23000,160.02,78,College,white,0,Female
+25000,165.1,78,College,white,0,Female
+35000,187.96,76,College,white,0,Male
+15000,190.5,75,College,white,0,Female
+12000,167.64,68,College,white,0,Female
+12000,170.18,67,College,white,0,Male
+10000,160.02,64,College,white,0,Female
+0,165.1,63,College,white,0,Female
+12000,167.64,63,College,white,0,Female
+0,165.1,63,College,white,0,Female
+30000,165.1,61,College,white,0,Female
+5300,167.64,60,College,white,0,Female
+0,170.18,59,College,white,0,Female
+14000,160.02,58,College,white,0,Female
+4000,175.26,57,College,white,0,Female
+0,167.64,57,College,white,0,Male
+0,165.1,56,College,white,0,Female
+5000,170.18,55,College,white,0,Female
+60000,187.96,54,College,white,0,Male
+25000,172.72,52,College,white,0,Female
+5000,157.48,51,College,white,0,Female
+10000,167.64,51,College,white,0,Female
+24000,152.4,50,College,white,0,Female
+18000,165.1,49,College,white,0,Female
+11000,165.1,47,College,white,0,Female
+16500,157.48,46,College,white,0,Female
+60000,187.96,45,College,white,0,Male
+19000,172.72,45,College,white,0,Female
+44000,177.8,44,College,white,0,Male
+40000,162.56,44,College,white,0,Female
+0,160.02,44,College,white,0,Female
+4000,160.02,44,College,white,0,Female
+6000,165.1,44,College,white,0,Female
+33000,170.18,43,College,white,0,Female
+30000,157.48,43,College,white,0,Female
+8000,175.26,43,College,white,0,Female
+7000,167.64,43,College,white,0,Female
+16000,172.72,43,College,white,0,Female
+0,154.94,42,College,white,0,Female
+24000,172.72,42,College,white,0,Female
+18000,157.48,41,College,white,0,Female
+20000,149.86,41,College,white,0,Female
+15000,162.56,41,College,white,0,Female
+41000,170.18,40,College,white,0,Female
+12000,177.8,40,College,white,0,Male
+21000,172.72,39,College,white,0,Female
+0,160.02,39,College,white,0,Female
+48000,167.64,39,College,white,0,Female
+10000,167.64,38,College,white,0,Female
+49000,177.8,37,College,white,0,Male
+15000,152.4,37,College,white,0,Female
+12000,162.56,37,College,white,0,Female
+30000,157.48,36,College,white,0,Female
+17000,175.26,35,College,white,0,Female
+6000,167.64,34,College,white,0,Female
+26000,177.8,33,College,white,0,Female
+9000,170.18,33,College,white,0,Male
+4000,165.1,33,College,white,0,Female
+18700,165.1,32,College,white,0,Female
+25000,157.48,32,College,white,0,Female
+19000,160.02,32,College,white,0,Female
+18000,167.64,32,College,white,0,Male
+23000,162.56,32,College,white,0,Male
+5000,154.94,31,College,white,0,Female
+0,157.48,31,College,white,0,Female
+10000,162.56,31,College,white,0,Female
+20000,162.56,31,College,white,0,Female
+15000,160.02,31,College,white,0,Female
+24000,162.56,30,College,white,0,Female
+21000,167.64,30,College,white,0,Male
+30000,165.1,28,College,white,0,Female
+35000,175.26,28,College,white,0,Male
+6000,152.4,28,College,white,0,Female
+15000,154.94,28,College,white,0,Female
+23000,182.88,28,College,white,0,Male
+23500,172.72,27,College,white,0,Female
+10000,165.1,27,College,white,0,Male
+21000,162.56,27,College,white,0,Female
+5000,160.02,26,College,white,0,Female
+23000,162.56,26,College,white,0,Female
+0,167.64,26,College,white,0,Female
+0,167.64,24,College,white,0,Female
+6000,160.02,23,College,white,0,Female
+16000,182.88,23,College,white,0,Male
+8000,177.8,22,College,white,0,Female
+12000,167.64,22,College,white,0,Female
+100000,182.88,22,College,white,0,Male
+5000,172.72,20,College,white,0,Male
+0,175.26,20,College,white,0,Male
+0,175.26,19,College,white,0,Female
+8000,172.72,19,College,white,0,Female
+8000,162.56,19,College,white,0,Female
+4000,185.42,18,College,white,0,Male
+2000,157.48,18,College,white,0,Female
+25000,177.8,81,College,white,0,Male
+7500,154.94,78,College,white,0,Female
+0,157.48,78,College,white,0,Female
+34000,187.96,78,College,white,0,Male
+30000,177.8,76,College,white,0,Male
+15000,152.4,75,College,white,0,Female
+35000,175.26,74,College,white,0,Male
+14000,152.4,72,College,white,0,Female
+4000,177.8,71,College,white,0,Female
+20000,165.1,69,College,white,0,Female
+12000,172.72,69,College,white,0,Female
+25000,177.8,69,College,white,0,Male
+10000,165.1,67,College,white,0,Female
+7200,182.88,66,College,white,0,Male
+60000,175.26,66,College,white,0,Male
+15000,165.1,66,College,white,0,Female
+26000,154.94,65,College,white,0,Female
+25000,172.72,64,College,white,0,Male
+60000,170.18,63,College,white,0,Male
+10000,165.1,63,College,white,0,Female
+35000,167.64,63,College,white,0,Male
+15000,149.86,62,College,white,0,Female
+19000,180.34,61,College,white,0,Male
+16000,165.1,59,College,white,0,Female
+16000,162.56,59,College,white,0,Female
+123000,154.94,58,College,white,0,Female
+50000,180.34,58,College,white,0,Male
+80000,182.88,58,College,white,0,Male
+20000,175.26,58,College,white,0,Male
+11000,167.64,57,College,white,0,Female
+40000,162.56,56,College,white,0,Female
+10000,162.56,56,College,white,0,Female
+14000,172.72,55,College,white,0,Female
+50000,182.88,55,College,white,0,Male
+0,167.64,55,College,white,0,Female
+90000,167.64,55,College,white,0,Female
+25000,175.26,55,College,white,0,Female
+40000,182.88,54,College,white,0,Male
+13800,180.34,54,College,white,0,Male
+62000,177.8,54,College,white,0,Male
+19000,162.56,52,College,white,0,Female
+60000,187.96,52,College,white,0,Male
+40000,180.34,51,College,white,0,Male
+0,160.02,50,College,white,0,Female
+15000,152.4,49,College,white,0,Female
+24000,172.72,49,College,white,0,Male
+30000,175.26,48,College,white,0,Male
+13000,172.72,48,College,white,0,Female
+5000,157.48,48,College,white,0,Female
+18000,182.88,48,College,white,0,Male
+23000,165.1,48,College,white,0,Female
+22000,185.42,45,College,white,0,Female
+18000,154.94,45,College,white,0,Female
+25000,162.56,45,College,white,0,Female
+80000,175.26,44,College,white,0,Male
+16500,162.56,43,College,white,0,Female
+30000,162.56,43,College,white,0,Female
+35000,182.88,43,College,white,0,Male
+35000,170.18,43,College,white,0,Male
+8000,167.64,43,College,white,0,Female
+0,160.02,43,College,white,0,Female
+20000,167.64,43,College,white,0,Female
+21000,160.02,41,College,white,0,Female
+20000,180.34,41,College,white,0,Male
+0,154.94,41,College,white,0,Female
+0,165.1,41,College,white,0,Female
+9000,172.72,41,College,white,0,Female
+2000,165.1,41,College,white,0,Female
+32000,175.26,40,College,white,0,Female
+32000,182.88,40,College,white,0,Male
+20000,180.34,40,College,white,0,Male
+14000,162.56,40,College,white,0,Female
+17000,165.1,39,College,white,0,Female
+20000,165.1,39,College,white,0,Female
+30000,182.88,39,College,white,0,Male
+0,160.02,39,College,white,0,Female
+31000,157.48,39,College,white,0,Female
+0,162.56,38,College,white,0,Female
+12000,162.56,38,College,white,0,Female
+0,162.56,37,College,white,0,Female
+20000,152.4,37,College,white,0,Female
+57000,185.42,37,College,white,0,Male
+35000,172.72,37,College,white,0,Male
+25000,167.64,37,College,white,0,Female
+15000,160.02,37,College,white,0,Female
+80000,154.94,37,College,white,0,Female
+40000,177.8,36,College,white,0,Male
+20000,154.94,36,College,white,0,Female
+28000,162.56,36,College,white,0,Female
+70000,177.8,35,College,white,0,Male
+14000,177.8,35,College,white,0,Male
+31500,165.1,35,College,white,0,Male
+0,170.18,35,College,white,0,Female
+6000,160.02,35,College,white,0,Female
+22000,175.26,35,College,white,0,Male
+22000,162.56,34,College,white,0,Female
+35000,187.96,34,College,white,0,Male
+12000,160.02,34,College,white,0,Female
+30000,162.56,34,College,white,0,Female
+15000,182.88,33,College,white,0,Male
+25000,180.34,32,College,white,0,Male
+70000,182.88,32,College,white,0,Male
+10000,170.18,32,College,white,0,Female
+10000,162.56,32,College,white,0,Female
+27000,180.34,32,College,white,0,Male
+10000,175.26,32,College,white,0,Female
+15000,180.34,31,College,white,0,Male
+17000,170.18,31,College,white,0,Male
+8000,160.02,31,College,white,0,Female
+16000,165.1,31,College,white,0,Female
+0,162.56,31,College,white,0,Female
+33000,175.26,30,College,white,0,Male
+26000,170.18,30,College,white,0,Male
+7000,177.8,30,College,white,0,Female
+40000,172.72,29,College,white,0,Female
+24000,157.48,29,College,white,0,Female
+0,160.02,29,College,white,0,Female
+27000,172.72,29,College,white,0,Female
+32000,165.1,28,College,white,0,Female
+28000,195.58,28,College,white,0,Male
+16500,167.64,28,College,white,0,Female
+40000,177.8,28,College,white,0,Male
+35000,175.26,28,College,white,0,Male
+16000,160.02,27,College,white,0,Female
+3000,180.34,27,College,white,0,Female
+96000,160.02,27,College,white,0,Female
+27000,162.56,26,College,white,0,Female
+1000,162.56,26,College,white,0,Female
+30000,185.42,26,College,white,0,Male
+20000,193.04,26,College,white,0,Male
+53000,180.34,26,College,white,0,Female
+15000,162.56,25,College,white,0,Female
+20000,172.72,25,College,white,0,Female
+65000,170.18,25,College,white,0,Male
+20000,170.18,25,College,white,0,Male
+15000,172.72,25,College,white,0,Male
+0,167.64,24,College,white,0,Female
+24000,165.1,24,College,white,0,Female
+5000,175.26,24,College,white,0,Female
+35000,175.26,24,College,white,0,Female
+25000,187.96,24,College,white,0,Male
+20000,177.8,23,College,white,0,Male
+17000,170.18,23,College,white,0,Female
+12000,162.56,23,College,white,0,Female
+15000,162.56,23,College,white,0,Female
+5500,170.18,22,College,white,0,Male
+15000,162.56,22,College,white,0,Female
+15000,182.88,22,College,white,0,Male
+1200,165.1,22,College,white,0,Female
+10000,187.96,22,College,white,0,Female
+14000,160.02,21,College,white,0,Female
+0,182.88,21,College,white,0,Male
+16000,182.88,21,College,white,0,Male
+1000,162.56,20,College,white,0,Female
+20000,157.48,20,College,white,0,Female
+3000,180.34,20,College,white,0,Male
+5000,170.18,19,College,white,0,Female
+3000,167.64,19,College,white,0,Female
+25000,149.86,83,College,white,0,Female
+6000,187.96,73,College,white,0,Male
+12000,162.56,71,College,white,0,Female
+15000,170.18,69,College,white,0,Female
+10000,167.64,67,College,white,0,Female
+3600,165.1,67,College,white,0,Female
+11000,160.02,66,College,white,0,Female
+3000,170.18,65,College,white,0,Female
+85000,177.8,65,College,white,0,Male
+52000,152.4,50,College,white,0,Male
+70000,182.88,48,College,white,0,Male
+50000,185.42,48,College,white,0,Male
+0,160.02,48,College,white,0,Female
+35000,165.1,47,College,white,0,Female
+35000,182.88,45,College,white,0,Male
+10000,162.56,42,College,white,0,Female
+20000,172.72,42,College,white,0,Male
+40000,182.88,41,College,white,0,Male
+5000,162.56,40,College,white,0,Female
+50000,157.48,40,College,white,0,Female
+75000,162.56,40,College,white,0,Female
+35000,157.48,39,College,white,0,Female
+20000,162.56,39,College,white,0,Female
+16000,154.94,38,College,white,0,Female
+35000,167.64,38,College,white,0,Female
+18000,162.56,37,College,white,0,Female
+18000,172.72,36,College,white,0,Male
+9000,185.42,34,College,white,0,Male
+25000,157.48,33,College,white,0,Female
+0,160.02,33,College,white,0,Female
+16000,193.04,32,College,white,0,Male
+16000,160.02,32,College,white,0,Female
+26000,162.56,32,College,white,0,Female
+6500,162.56,31,College,white,0,Female
+20000,160.02,29,College,white,0,Female
+1000,167.64,28,College,white,0,Female
+17000,177.8,27,College,white,0,Female
+9000,162.56,26,College,white,0,Female
+20000,162.56,26,College,white,0,Female
+17000,149.86,26,College,white,0,Female
+10000,154.94,25,College,white,0,Female
+20000,167.64,24,College,white,0,Male
+4000,185.42,24,College,white,0,Male
+6000,167.64,22,College,white,0,Female
+2500,167.64,21,College,white,0,Female
+4000,182.88,21,College,white,0,Male
+35000,175.26,21,College,white,0,Male
+265,167.64,21,College,white,0,Female
+5000,167.64,20,College,white,0,Male
+5000,165.1,20,College,white,0,Female
+8000,162.56,20,College,white,0,Female
+25000,165.1,86,College,white,0,Male
+18000,177.8,75,College,white,0,Male
+38000,185.42,74,College,white,0,Male
+20000,157.48,73,College,white,0,Female
+20000,170.18,71,College,white,0,Male
+45000,170.18,69,College,white,0,Female
+6530,177.8,65,College,white,0,Male
+0,167.64,65,College,white,0,Male
+18000,162.56,63,College,white,0,Female
+0,167.64,63,College,white,0,Female
+0,162.56,62,College,white,0,Female
+0,167.64,62,College,white,0,Female
+19000,180.34,61,College,white,0,Male
+27000,162.56,60,College,white,0,Female
+7000,162.56,59,College,white,0,Female
+10000,185.42,59,College,white,0,Male
+40000,167.64,59,College,white,0,Female
+60000,167.64,58,College,white,0,Female
+30000,170.18,58,College,white,0,Female
+15000,167.64,57,College,white,0,Female
+40000,187.96,56,College,white,0,Male
+50000,167.64,54,College,white,0,Female
+200,152.4,53,College,white,0,Female
+50000,182.88,53,College,white,0,Male
+36000,175.26,51,College,white,0,Male
+90000,182.88,50,College,white,0,Male
+50000,170.18,49,College,white,0,Male
+44000,172.72,48,College,white,0,Male
+6000,167.64,48,College,white,0,Female
+175000,180.34,48,College,white,0,Male
+25000,165.1,47,College,white,0,Female
+24000,162.56,46,College,white,0,Female
+65000,172.72,46,College,white,0,Male
+44000,182.88,46,College,white,0,Male
+50000,187.96,45,College,white,0,Male
+18000,180.34,45,College,white,0,Male
+0,162.56,45,College,white,0,Female
+36000,160.02,45,College,white,0,Female
+4000,162.56,45,College,white,0,Female
+0,165.1,44,College,white,0,Female
+40000,157.48,44,College,white,0,Female
+45000,167.64,43,College,white,0,Female
+35000,172.72,43,College,white,0,Female
+31000,172.72,43,College,white,0,Female
+24000,172.72,42,College,white,0,Female
+35900,187.96,42,College,white,0,Male
+10000,172.72,42,College,white,0,Female
+4000,167.64,42,College,white,0,Female
+50000,180.34,41,College,white,0,Male
+0,172.72,41,College,white,0,Female
+89000,195.58,41,College,white,0,Male
+20000,167.64,41,College,white,0,Female
+40000,177.8,41,College,white,0,Male
+40000,182.88,41,College,white,0,Male
+30000,177.8,41,College,white,0,Male
+28000,160.02,41,College,white,0,Female
+10000,157.48,40,College,white,0,Female
+0,154.94,40,College,white,0,Female
+12000,162.56,40,College,white,0,Female
+28000,162.56,40,College,white,0,Female
+18000,170.18,40,College,white,0,Female
+28000,162.56,39,College,white,0,Female
+25000,170.18,39,College,white,0,Male
+36000,177.8,39,College,white,0,Male
+0,175.26,39,College,white,0,Female
+50000,182.88,38,College,white,0,Male
+70000,157.48,38,College,white,0,Female
+45000,185.42,38,College,white,0,Male
+3000,157.48,37,College,white,0,Female
+36000,185.42,37,College,white,0,Male
+25000,167.64,36,College,white,0,Male
+38000,177.8,36,College,white,0,Male
+10000,177.8,36,College,white,0,Female
+22000,167.64,35,College,white,0,Female
+60000,162.56,35,College,white,0,Female
+0,160.02,35,College,white,0,Female
+40000,167.64,34,College,white,0,Female
+45000,170.18,34,College,white,0,Female
+26000,165.1,34,College,white,0,Female
+33000,167.64,34,College,white,0,Male
+40000,187.96,34,College,white,0,Male
+58000,162.56,34,College,white,0,Female
+19005,165.1,34,College,white,0,Female
+30000,180.34,34,College,white,0,Male
+41000,195.58,33,College,white,0,Male
+35000,170.18,33,College,white,0,Male
+25000,160.02,33,College,white,0,Female
+20000,172.72,33,College,white,0,Male
+40000,182.88,33,College,white,0,Male
+32000,167.64,33,College,white,0,Male
+13000,167.64,33,College,white,0,Female
+30000,167.64,33,College,white,0,Female
+700,172.72,32,College,white,0,Female
+0,157.48,32,College,white,0,Female
+32000,165.1,32,College,white,0,Female
+12000,172.72,32,College,white,0,Female
+24000,165.1,32,College,white,0,Female
+35000,165.1,32,College,white,0,Female
+15000,160.02,31,College,white,0,Female
+60000,185.42,31,College,white,0,Male
+30000,170.18,31,College,white,0,Male
+40000,170.18,31,College,white,0,Male
+7000,165.1,31,College,white,0,Female
+17000,187.96,31,College,white,0,Male
+32000,195.58,30,College,white,0,Male
+35000,177.8,30,College,white,0,Male
+27000,165.1,30,College,white,0,Female
+17600,162.56,30,College,white,0,Female
+30000,180.34,30,College,white,0,Male
+4100,165.1,30,College,white,0,Male
+36000,177.8,30,College,white,0,Female
+7000,175.26,30,College,white,0,Male
+30000,162.56,29,College,white,0,Female
+25000,175.26,29,College,white,0,Male
+15000,162.56,29,College,white,0,Female
+30000,190.5,29,College,white,0,Male
+27000,180.34,29,College,white,0,Male
+15000,162.56,29,College,white,0,Female
+0,160.02,29,College,white,0,Female
+3000,167.64,29,College,white,0,Female
+17000,167.64,28,College,white,0,Female
+40000,182.88,28,College,white,0,Male
+22000,160.02,28,College,white,0,Female
+35000,167.64,28,College,white,0,Female
+21000,170.18,28,College,white,0,Female
+26000,167.64,27,College,white,0,Female
+20000,177.8,27,College,white,0,Male
+25000,170.18,27,College,white,0,Female
+16000,162.56,27,College,white,0,Female
+30000,170.18,27,College,white,0,Female
+24000,172.72,26,College,white,0,Male
+15000,162.56,26,College,white,0,Female
+18600,165.1,26,College,white,0,Female
+25000,170.18,26,College,white,0,Male
+20000,160.02,26,College,white,0,Female
+18000,172.72,26,College,white,0,Female
+28000,182.88,26,College,white,0,Male
+12000,160.02,26,College,white,0,Female
+20000,177.8,25,College,white,0,Male
+24000,177.8,25,College,white,0,Male
+10000,175.26,25,College,white,0,Female
+23000,187.96,25,College,white,0,Male
+25000,172.72,25,College,white,0,Male
+37000,187.96,25,College,white,0,Male
+5000,172.72,24,College,white,0,Male
+18000,177.8,24,College,white,0,Male
+26000,185.42,24,College,white,0,Male
+4500,162.56,23,College,white,0,Female
+2400,157.48,22,College,white,0,Female
+13000,177.8,22,College,white,0,Male
+3000,165.1,22,College,white,0,Female
+5000,175.26,22,College,white,0,Male
+0,165.1,22,College,white,0,Female
+2000,167.64,21,College,white,0,Female
+10000,154.94,79,Some Graduate School,white,0,Female
+20000,182.88,77,Some Graduate School,white,0,Male
+20000,177.8,68,Some Graduate School,white,0,Male
+45000,180.34,62,Some Graduate School,white,0,Male
+30000,177.8,56,Some Graduate School,white,0,Male
+38000,170.18,55,Some Graduate School,white,0,Female
+100000,182.88,54,Some Graduate School,white,0,Male
+25000,167.64,50,Some Graduate School,white,0,Female
+34000,172.72,49,Some Graduate School,white,0,Female
+20000,162.56,49,Some Graduate School,white,0,Female
+25000,172.72,47,Some Graduate School,white,0,Female
+21000,182.88,47,Some Graduate School,white,0,Male
+32000,185.42,46,Some Graduate School,white,0,Male
+28000,180.34,46,Some Graduate School,white,0,Male
+38000,172.72,44,Some Graduate School,white,0,Female
+15000,167.64,43,Some Graduate School,white,0,Female
+35000,187.96,43,Some Graduate School,white,0,Male
+26000,175.26,43,Some Graduate School,white,0,Female
+30000,165.1,43,Some Graduate School,white,0,Female
+42000,187.96,43,Some Graduate School,white,0,Male
+23000,177.8,42,Some Graduate School,white,0,Female
+60000,195.58,42,Some Graduate School,white,0,Male
+21000,177.8,41,Some Graduate School,white,0,Male
+0,167.64,41,Some Graduate School,white,0,Female
+0,160.02,41,Some Graduate School,white,0,Female
+40000,172.72,41,Some Graduate School,white,0,Male
+65000,172.72,40,Some Graduate School,white,0,Male
+33000,187.96,40,Some Graduate School,white,0,Male
+43000,190.5,40,Some Graduate School,white,0,Male
+51000,160.02,39,Some Graduate School,white,0,Female
+75000,182.88,39,Some Graduate School,white,0,Male
+33000,160.02,39,Some Graduate School,white,0,Female
+21000,167.64,39,Some Graduate School,white,0,Female
+80000,177.8,39,Some Graduate School,white,0,Male
+50000,172.72,39,Some Graduate School,white,0,Female
+1000,167.64,38,Some Graduate School,white,0,Female
+32000,175.26,37,Some Graduate School,white,0,Female
+22000,180.34,36,Some Graduate School,white,0,Female
+50000,172.72,34,Some Graduate School,white,0,Male
+24000,157.48,34,Some Graduate School,white,0,Female
+27000,170.18,34,Some Graduate School,white,0,Female
+26000,170.18,34,Some Graduate School,white,0,Female
+25000,165.1,33,Some Graduate School,white,0,Female
+27000,172.72,31,Some Graduate School,white,0,Male
+10000,172.72,30,Some Graduate School,white,0,Female
+0,162.56,30,Some Graduate School,white,0,Female
+15000,177.8,30,Some Graduate School,white,0,Male
+20000,157.48,30,Some Graduate School,white,0,Female
+25000,175.26,29,Some Graduate School,white,0,Male
+25000,180.34,29,Some Graduate School,white,0,Male
+30000,162.56,28,Some Graduate School,white,0,Female
+17000,160.02,26,Some Graduate School,white,0,Female
+17500,167.64,26,Some Graduate School,white,0,Female
+8000,172.72,25,Some Graduate School,white,0,Male
+28000,162.56,25,Some Graduate School,white,0,Female
+21000,172.72,25,Some Graduate School,white,0,Female
+20000,157.48,24,Some Graduate School,white,0,Female
+10000,175.26,23,Some Graduate School,white,0,Male
+3000,185.42,23,Some Graduate School,white,0,Male
+15000,154.94,82,Graduate Diploma,white,0,Female
+55000,175.26,71,Graduate Diploma,white,0,Male
+23000,175.26,69,Graduate Diploma,white,0,Male
+24000,167.64,69,Graduate Diploma,white,0,Female
+20000,175.26,69,Graduate Diploma,white,0,Male
+60000,175.26,63,Graduate Diploma,white,0,Female
+40000,172.72,63,Graduate Diploma,white,0,Male
+26000,152.4,63,Graduate Diploma,white,0,Female
+25000,165.1,61,Graduate Diploma,white,0,Female
+30000,172.72,61,Graduate Diploma,white,0,Male
+30000,165.1,59,Graduate Diploma,white,0,Female
+100000,177.8,57,Graduate Diploma,white,0,Male
+0,160.02,55,Graduate Diploma,white,0,Female
+60000,180.34,53,Graduate Diploma,white,0,Male
+58000,177.8,53,Graduate Diploma,white,0,Male
+95000,167.64,52,Graduate Diploma,white,0,Male
+24000,170.18,51,Graduate Diploma,white,0,Female
+55000,170.18,51,Graduate Diploma,white,0,Female
+35000,185.42,50,Graduate Diploma,white,0,Male
+52000,167.64,50,Graduate Diploma,white,0,Female
+60000,177.8,50,Graduate Diploma,white,0,Male
+28000,162.56,48,Graduate Diploma,white,0,Female
+22000,157.48,47,Graduate Diploma,white,0,Female
+57000,162.56,47,Graduate Diploma,white,0,Female
+70000,182.88,47,Graduate Diploma,white,0,Male
+30000,177.8,46,Graduate Diploma,white,0,Male
+43000,177.8,46,Graduate Diploma,white,0,Female
+28000,160.02,46,Graduate Diploma,white,0,Female
+0,162.56,46,Graduate Diploma,white,0,Female
+125000,187.96,45,Graduate Diploma,white,0,Male
+170000,180.34,45,Graduate Diploma,white,0,Male
+0,154.94,45,Graduate Diploma,white,0,Female
+62000,177.8,44,Graduate Diploma,white,0,Male
+45000,167.64,44,Graduate Diploma,white,0,Female
+28000,160.02,44,Graduate Diploma,white,0,Female
+27000,154.94,43,Graduate Diploma,white,0,Female
+42000,175.26,43,Graduate Diploma,white,0,Male
+40000,172.72,43,Graduate Diploma,white,0,Male
+47000,177.8,43,Graduate Diploma,white,0,Male
+70000,175.26,42,Graduate Diploma,white,0,Male
+25000,160.02,42,Graduate Diploma,white,0,Female
+0,152.4,41,Graduate Diploma,white,0,Female
+30000,185.42,41,Graduate Diploma,white,0,Male
+35000,162.56,40,Graduate Diploma,white,0,Female
+100000,177.8,40,Graduate Diploma,white,0,Male
+45000,170.18,40,Graduate Diploma,white,0,Male
+6000,172.72,39,Graduate Diploma,white,0,Female
+16000,172.72,39,Graduate Diploma,white,0,Female
+148000,170.18,38,Graduate Diploma,white,0,Male
+28000,190.5,38,Graduate Diploma,white,0,Male
+110000,167.64,37,Graduate Diploma,white,0,Male
+100000,185.42,37,Graduate Diploma,white,0,Male
+30000,180.34,37,Graduate Diploma,white,0,Male
+26000,162.56,36,Graduate Diploma,white,0,Female
+24000,172.72,36,Graduate Diploma,white,0,Male
+25000,170.18,35,Graduate Diploma,white,0,Female
+48000,160.02,34,Graduate Diploma,white,0,Female
+200000,177.8,34,Graduate Diploma,white,0,Male
+35000,187.96,30,Graduate Diploma,white,0,Male
+55000,190.5,30,Graduate Diploma,white,0,Male
+32000,170.18,29,Graduate Diploma,white,0,Female
+20000,170.18,29,Graduate Diploma,white,0,Female
+42000,162.56,29,Graduate Diploma,white,0,Female
+22000,165.1,29,Graduate Diploma,white,0,Female
+23000,167.64,28,Graduate Diploma,white,0,Female
+0,165.1,26,Graduate Diploma,white,0,Female
+26000,187.96,26,Graduate Diploma,white,0,Male
+1000,185.42,25,Graduate Diploma,white,0,Male
+26000,175.26,25,Graduate Diploma,white,0,Male
+30000,175.26,37,High School,black,0,Male
+12000,167.64,34,College,black,0,Female
+0,162.56,19,College,black,0,Female
+1200,157.48,73,Elementary,black,0,Female
+0,167.64,51,Elementary,black,0,Female
+0,165.1,67,Elementary,black,0,Female
+3000,187.96,62,Elementary,black,0,Male
+19000,180.34,57,Elementary,black,0,Male
+13000,170.18,56,Elementary,black,0,Male
+14000,162.56,51,Elementary,black,0,Female
+9000,167.64,35,Elementary,black,0,Female
+10000,172.72,62,High School,black,0,Female
+28000,190.5,55,High School,black,0,Male
+13000,180.34,50,High School,black,0,Male
+18720,160.02,36,High School,black,0,Female
+20000,154.94,66,High School,black,0,Male
+30000,175.26,51,High School,black,0,Male
+3192,190.5,34,High School,black,0,Male
+15000,172.72,31,High School,black,0,Female
+0,167.64,29,High School,black,0,Female
+8000,157.48,23,High School,black,0,Female
+3000,180.34,18,High School,black,0,Male
+4700,167.64,78,High School,black,0,Female
+15000,152.4,76,High School,black,0,Female
+12000,162.56,73,High School,black,0,Female
+11000,167.64,62,High School,black,0,Male
+1000,147.32,58,High School,black,0,Female
+40000,147.32,56,High School,black,0,Female
+7000,162.56,55,High School,black,0,Female
+22000,167.64,50,High School,black,0,Female
+31000,152.4,48,High School,black,0,Female
+35000,162.56,47,High School,black,0,Female
+33000,167.64,45,High School,black,0,Female
+30000,185.42,44,High School,black,0,Male
+0,149.86,43,High School,black,0,Female
+15000,167.64,42,High School,black,0,Female
+17000,175.26,42,High School,black,0,Male
+11000,175.26,41,High School,black,0,Female
+10000,154.94,39,High School,black,0,Female
+0,167.64,37,High School,black,0,Female
+10000,157.48,36,High School,black,0,Female
+10000,160.02,35,High School,black,0,Female
+23000,177.8,35,High School,black,0,Male
+12000,175.26,35,High School,black,0,Female
+20000,165.1,35,High School,black,0,Female
+25000,182.88,35,High School,black,0,Male
+20000,160.02,33,High School,black,0,Female
+30000,165.1,32,High School,black,0,Female
+31000,182.88,31,High School,black,0,Male
+8000,165.1,31,High School,black,0,Female
+12000,160.02,29,High School,black,0,Female
+15000,165.1,28,High School,black,0,Female
+10000,157.48,27,High School,black,0,Female
+20000,182.88,26,High School,black,0,Male
+22000,185.42,24,High School,black,0,Male
+17000,167.64,23,High School,black,0,Male
+0,172.72,22,High School,black,0,Female
+2100,157.48,21,High School,black,0,Female
+16400,162.56,21,High School,black,0,Female
+0,185.42,20,High School,black,0,Male
+0,185.42,19,High School,black,0,Male
+600,177.8,18,High School,black,0,Female
+8500,172.72,71,College,black,0,Male
+43000,172.72,44,College,black,0,Male
+20000,162.56,39,College,black,0,Female
+26000,160.02,37,College,black,0,Female
+35000,170.18,37,College,black,0,Female
+17000,175.26,37,College,black,0,Female
+53000,185.42,35,College,black,0,Male
+0,167.64,30,College,black,0,Female
+6000,157.48,26,College,black,0,Female
+21500,182.88,24,College,black,0,Male
+12000,162.56,22,College,black,0,Male
+12000,185.42,21,College,black,0,Male
+22000,160.02,73,College,black,0,Female
+28000,162.56,63,College,black,0,Male
+0,157.48,61,College,black,0,Female
+25000,160.02,54,College,black,0,Female
+21000,185.42,46,College,black,0,Male
+32000,157.48,44,College,black,0,Female
+24000,160.02,40,College,black,0,Female
+25000,162.56,36,College,black,0,Female
+40000,167.64,34,College,black,0,Male
+32000,170.18,32,College,black,0,Male
+10000,180.34,32,College,black,0,Female
+30000,170.18,31,College,black,0,Female
+0,167.64,31,College,black,0,Female
+15000,170.18,30,College,black,0,Female
+24000,167.64,29,College,black,0,Female
+8000,180.34,27,College,black,0,Male
+25000,170.18,26,College,black,0,Male
+10000,160.02,25,College,black,0,Female
+7000,182.88,24,College,black,0,Male
+4000,177.8,21,College,black,0,Male
+28000,167.64,60,College,black,0,Female
+23000,167.64,54,College,black,0,Female
+18000,162.56,46,College,black,0,Female
+35000,165.1,42,College,black,0,Female
+36000,165.1,39,College,black,0,Female
+32000,177.8,33,College,black,0,Male
+28000,182.88,30,College,black,0,Male
+4000,160.02,22,College,black,0,Female
+30000,172.72,48,College,black,0,Female
+60000,167.64,43,College,black,0,Female
+12000,187.96,41,College,black,0,Male
+20000,177.8,41,College,black,0,Male
+40000,193.04,38,College,black,0,Male
+22000,167.64,37,College,black,0,Male
+0,157.48,36,College,black,0,Female
+29000,172.72,36,College,black,0,Male
+30000,160.02,36,College,black,0,Female
+32000,160.02,34,College,black,0,Female
+5000,165.1,30,College,black,0,Female
+24000,162.56,27,College,black,0,Female
+0,160.02,23,College,black,0,Female
+3000,165.1,23,College,black,0,Female
+1000,160.02,19,College,black,0,Female
+10000,182.88,62,Some Graduate School,black,0,Male
+21000,162.56,43,Some Graduate School,black,0,Female
+27000,157.48,33,Some Graduate School,black,0,Female
+5000,162.56,33,Some Graduate School,black,0,Male
+50000,165.1,65,Graduate Diploma,black,0,Female
+30000,165.1,64,Graduate Diploma,black,0,Female
+10000,172.72,56,Graduate Diploma,black,0,Female
+28000,177.8,38,Graduate Diploma,black,0,Male
+20000,185.42,33,Graduate Diploma,black,0,Male
+10500,170.18,42,High School,asian,0,Male
+35000,172.72,30,College,asian,0,Male
+8000,167.64,60,High School,asian,0,Male
+20000,170.18,28,High School,asian,0,Male
+0,180.34,20,High School,asian,0,Male
+25000,157.48,37,College,asian,0,Male
+17000,175.26,33,College,asian,0,Male
+15000,165.1,21,College,asian,0,Male
+28000,167.64,40,College,asian,0,Male
+25000,162.56,37,College,asian,0,Female
+15000,154.94,34,College,asian,0,Female
+0,167.64,32,College,asian,0,Female
+18000,157.48,27,College,asian,0,Male
+0,157.48,26,Some Graduate School,asian,0,Female
+110000,167.64,48,Graduate Diploma,asian,0,Female
+32000,167.64,35,Graduate Diploma,asian,0,Female
+40000,152.4,35,Graduate Diploma,asian,0,Female
+8000,162.56,82,High School,Native American,0,Female
+21000,172.72,50,High School,Native American,0,Female
+3000,167.64,35,High School,Native American,0,Female
+6000,160.02,31,High School,Native American,0,Female
+4000,165.1,28,High School,Native American,0,Female
+15000,162.56,33,College,Native American,0,Female
+5000,177.8,22,College,Native American,0,Male
+20000,152.4,88,College,Native American,0,Female
+28000,190.5,34,College,Native American,0,Male
+38000,170.18,54,Some Graduate School,Native American,0,Male
+22000,160.02,59,Graduate Diploma,Native American,0,Female
+0,154.94,23,College,other,0,Female
+53000,160.02,32,Some Graduate School,other,0,Female
+18000,167.64,26,Some Graduate School,other,0,Male
+4416,157.48,72,Elementary,other,0,Female
+0,160.02,52,Elementary,other,0,Female

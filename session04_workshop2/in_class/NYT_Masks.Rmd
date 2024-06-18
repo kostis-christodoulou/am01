@@ -1,0 +1,165 @@
+---
+title: "NYT Mask Use Acceptance"
+author: "Your name goes here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    highlight: zenburn
+    theme: flatly
+    toc: yes
+    toc_float: yes
+  word_document:
+    toc: yes
+---
+
+
+
+```{r, setup, echo=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=6.75, 
+  fig.height=6.75,
+  fig.align = "center"
+)
+```
+
+
+```{r load-libraries,echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(janitor)
+library(skimr)
+library(vroom)
+library(mosaic)
+library(here)
+
+#remotes::install_github("kjhealy/socviz")
+library(socviz)
+```
+
+
+## NYT mask use
+
+Github source for data https://github.com/nytimes/covid-19-data/tree/master/mask-use
+
+
+## Getting the data 
+
+```{r, read_data}
+#Source for data url <- "https://github.com/nytimes/covid-19-data/raw/master/mask-use/mask-use-by-county.csv"
+
+nyt_mask_survey <- read_csv(here::here("data", "nyt_mask_survey.csv"))
+
+nyt_mask_survey <- nyt_mask_survey %>%
+  clean_names() %>% 
+  mutate(
+    mostly_yes= frequently+always,
+    mostly_no = never+rarely,
+    delta = mostly_yes-mostly_no
+  )
+
+glimpse(nyt_mask_survey)
+```
+
+## Choropleth map
+
+The FIPS code is a federal code that numbers states and territories of the US. It extends to the county level with an additional four digits, so every county in the US has a unique six-digit identifier, where the first two digits represent the state. 
+
+We will be using Kieran Healy's `socviz` package which among other things contains `county_map` and `county_data`  
+
+```{r}
+# America’s choropleths; use county_map that has all polygons 
+# and county data with demographics/election data from socviz datafile
+# The id field is the FIPS code for the county
+county_map %>% 
+  sample_n(5)
+
+county_data %>%
+    sample_n(5)
+
+
+glimpse(county_data)
+# we have data on 3195 FIPS....
+
+glimpse(county_map)
+# ... but to create a map, we translate these 3195 counties to 191,382 polygons!
+
+
+
+
+```
+
+## Joing the files
+
+We have three files
+
+1. `nyt_mask_survey`, our NYT survey data, 
+1. `county_map` that has all polygons that define a county
+1. `county_data` with demographics/election data.
+
+
+
+```{r, join_data}
+
+
+county_full <- left_join(county_map, county_data, by = "id")
+
+county_masks_full <- left_join(county_full, nyt_mask_survey, 
+                                by = c("id"="countyfp"))
+```
+
+## Building our choropleth plot
+
+```{r, plot_choropleths, cache=TRUE}
+
+p <- ggplot(data = county_masks_full,
+            mapping = aes(x = long, y = lat,
+                          fill = delta, 
+                          group = group))
+
+p1 <- p + 
+  geom_polygon(color = "gray90", size = 0.05) + 
+  coord_equal()
+
+
+
+p2 <- p1 + 
+  scale_fill_gradient(low = '#ffffcc', high= '#006837')
+
+p3 <- p1 + 
+  scale_fill_gradient2()
+
+# get different colours from https://colorbrewer2.org/
+# the one shown here is https://colorbrewer2.org/#type=diverging&scheme=BrBG&n=6
+p4 <- p1 + 
+  scale_fill_gradientn(colours = c('#8c510a','#d8b365','#f6e8c3','#c7eae5','#5ab4ac','#01665e'))
+
+p1
+p2
+p3
+p4
+
+
+p4 + labs(fill = "Mask acceptance, (Mostly Yes - Mostly No)", 
+          caption = "Estimates from The New York Times, based on roughly 250,000 interviews \nconducted by Dynata from July 2 to July 14, 2020") +
+  guides(fill = guide_legend(nrow = 1)) + 
+  theme_map() + 
+  theme(legend.position = "bottom")
+```
+
+## Checking for relationships
+
+Does mask use acceptance have any relation with some demographics? Let us explore the relationship between country household income, population, and % who voted republican in 2016
+
+```{r, ggpairs, cache=TRUE}
+county_masks_full %>% 
+  select(hh_income, pop, per_gop_2016, delta) %>% 
+  GGally::ggpairs()+
+  theme_minimal()
+```

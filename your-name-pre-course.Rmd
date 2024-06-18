@@ -1,0 +1,244 @@
+---
+title: "AM01 Pre-course assignment"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    code_folding: show
+editor: visual
+---
+
+```{r}
+#| label: load-libraries
+#| echo: false # This option disables the printing of code (only output is displayed).
+#| message: false
+#| warning: false
+
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(janitor)
+library(nycflights13)
+```
+
+The goal is to test your software installation, to demonstrate competency in Markdown, and in the basics of `ggplot`.
+
+# Install R and RStudio
+
+You should successfully install R and R studio in your computer. We will do all of our work in this class with the open source (and free!) programming language [R](https://cran.r-project.org/). However, we will use [RStudio](https://www.rstudio.com/) as the main program to access R.
+
+You can find details on how to [install both R and R studio here](https://am01-sep24.netlify.app/reference/01-reference/)
+
+## Install `tidyverse`, `janitor` and `nycflights13` packages
+
+A clean installation of R is known as **base R**. We need to install a collection of packages named `tidyverse`. Go to the packages panel in the bottom right of RStudio, click on "Install," type `tidyverse`,`janitor`, `nycflights13` and press enter. You'll see a bunch of output in the RStudio console as all the packages are installed and, depending on the speed of your computer, this may take a while. You can also just paste and run the following
+
+-   `install.packages("tidyverse")`
+-   `install.packages("janitor")`
+-   `install.packages("nycflights13")`
+
+in the `console` (bottom left in RStudio) instead of using the packages panel.
+
+You can find details on [installing the tidyverse here](https://am01-sep23.netlify.app/reference/02-reference/)
+
+## Practice using Markdown
+
+Assignments will be submitted using `Markdown` is a lightweight text formatting language that easily converts between file formats. It is integrated directly into [Quarto Markdown](https://quarto.org/docs/get-started/hello/rstudio.html), which combines R code, output, and written text into a single document (`.qmd`). You can [find more about markdown here](https://am01-sep23.netlify.app/reference/03-reference/).
+
+Quarto allows you to use a `Visual` editor, much like using word-processing software, but you can always switch back to `Source`.
+
+## Pandoc
+
+[Pandoc](http://pandoc.org) is a program that converts Markdown files into basically anything else. It was created by [John MacFarlane](https://johnmacfarlane.net), a philosophy professor at the University of California, Berkeley and is widely used as a writing tool and as a basis for publishing workflow. Kieran Healy's [Plain Text Social Science workflow](http://plain-text.co) describes how to use Markdown and then convert your Markdown document to HTML, PDF, word, etc.
+
+You should change the file name from `your-name-pre-course.Rmd` to your own name; if I were submitting, my file would be called `Kostis_Christodoulou.Rmd`
+
+# Task 1: Short bio written using markdown
+
+You should write within this `qmd` file a brief biography of yourself using markdown syntax. I know you have already achieved a lot, but a couple of paragraphs is more than enough.
+
+To achieve full marks, you should include at least 4 of the following elements:
+
+-   Headers
+-   Emphasis (italics or bold)
+-   Lists
+-   Links
+-   Embedding images
+
+> Please delete all the intro text I wrote and start writing your short biography after this blockquote.
+
+
+# Task 2: `gapminder` country comparison
+
+You have seen the `gapminder` dataset that has data on life expectancy, population, and GDP per capita for 142 countries from 1952 to 2007. To get a glimpse of the dataframe, namely to see the variable names, variable types, etc., we use the `glimpse` function. We also want to have a look at the first 20 rows of data.
+
+```{r}
+glimpse(gapminder)
+
+head(gapminder, 20) # look at the first 20 rows of the dataframe
+
+```
+
+Your task is to produce two graphs of how life expectancy has changed over the years for the `country` and the `continent` you come from.
+
+I have created the `country_data` and `continent_data` with the code below.
+
+```{r}
+country_data <- gapminder %>% 
+            filter(country == "Greece") # just choosing Greece, as this is where I come from
+
+continent_data <- gapminder %>% 
+            filter(continent == "Europe")
+```
+
+First, create a plot of life expectancy over time for the single country you chose. Map `year` on the x-axis, and `lifeExp` on the y-axis. You should also use `geom_point()` to see the actual data points and `geom_smooth(se = FALSE)` to plot the underlying trendlines. You need to remove the comments **\#** from the lines below for your code to run.
+
+```{r, lifeExp_one_country}
+# plot1 <- ggplot(data = ??, mapping = aes(x = ??, y = ??))+
+#   geom_??() +
+#   geom_smooth(se = FALSE)+
+#   NULL 
+
+# plot1
+```
+
+Next we need to add a title. Create a new plot, or extend plot1, using the `labs()` function to add an informative title to the plot.
+
+```{r, lifeExp_one_country_with_label}
+# plot1<- plot1 +
+#   labs(title = " ",
+#       x = " ",
+#       y = " ") +
+#   NULL
+
+
+# plot1
+```
+
+Secondly, produce a plot for all countries in the *continent* you come from. (Hint: map the `country` variable to the colour aesthetic. You also want to map `country` to the `group` aesthetic, so all points for each country are grouped together).
+
+```{r lifeExp_one_continent}
+# ggplot(gapminder, mapping = aes(x =  , y =  , colour= , group =))+
+#   geom_?? + 
+#   geom_smooth(se = FALSE) +
+#   NULL
+```
+
+Finally, using the original `gapminder` data, produce a life expectancy over time graph, grouped (or faceted) by continent. We will remove all legends, adding the `theme(legend.position="none")` in the end of our ggplot.
+
+```{r lifeExp_facet_by_continent}
+# ggplot(data = gapminder , mapping = aes(x =  , y =  , colour= ))+
+#   geom_??? + 
+#   geom_smooth(se = FALSE) +
+#   facet_wrap(~continent) +
+#   theme(legend.position="none") + #remove all legends
+#   NULL
+```
+
+Given these trends, what can you say about life expectancy since 1952? Again, don't just say what's happening in the graph. Tell some sort of story and speculate about the differences in the patterns.
+
+> Type your answer after this blockquote.
+
+
+
+
+# Task 3: The `nycflights13` package
+
+The `nycflights13` package contains all US domestic flights that departed out of three New York airports (JFK,Newark, La Guardia) in 2013. The package is made up of five tables which are as follows:
+
+-   `airlines` Airline names.
+-   `airports` Airport metadata
+-   `flights` Flights data
+-   `planes` Plane metadata.
+-   `weather` Hourly weather data
+
+## Problem 1: Use logical operators and the `flights` table to find flights that:
+
+-   Had an arrival delay of two or more hours (\> 120 minutes)
+-   Flew to Houston (IAH or HOU)
+-   Were operated by United (`UA`), American (`AA`), or Delta (`DL`)
+-   Departed in summer (July, August, and September)
+-   Arrived more than two hours late, but didn't leave late
+
+```{r}
+#| label: problem-1
+
+glimpse(flights)
+
+# Had an arrival delay of two or more hours (> 120 minutes)
+flights %>% 
+  filter(arr_delay > 120)
+
+# Flew to Houston (IAH or HOU)
+
+
+# Were operated by United (`UA`), American (`AA`), or Delta (`DL`)
+
+
+# Departed in summer (July, August, and September)
+
+
+# Arrived more than two hours late, but didn't leave late
+
+  
+
+```
+
+## Problem 2: The `nycflights13` package includes a table (`weather`) that describes the weather during 2013. Use that table to answer the following questions:
+
+-   What is the distribution of temperature (`temp`) in July 2013?
+-   Identify any important outliers in terms of the `wind_speed` variable.
+-   What is the relationship between `dewp` and `humid`?
+-   What is the relationship between `precip` and `visib`?
+
+```{r}
+#| label: problem-2
+
+glimpse(weather)
+
+#   What is the distribution of temperature (`temp`) in July 2013? 
+
+
+#   Identify any important outliers in terms of the `wind_speed` variable.
+
+
+#   What is the relationship between `dewp` and `humid`? Use a scatter plot geom_point()
+
+
+#   What is the relationship between `precip` and `visib`?
+  
+
+```
+
+## Problem 3: Use the `flights` table to answer the following questions:
+
+-   What is the median `arr_delay` on a month-by-month basis in each `origin` airport?
+-   For each `carrier`, plot the median `arr_delay` (arrival delay) for each `month` and `origin` airport.
+
+```{r}
+#| label: problem-3
+
+glimpse(flights)
+
+#  What is the median `arr_delay` on a month-by-month basis in each `origin` airport?
+  
+  
+#  For each `carrier`, plot the median arrival delay for each month and `origin` airport.
+  
+
+```
+
+
+# Submit the assignment
+
+Render the completed R Markdown file as an HTML document (use the "Knit" button at the top of the script editor window) and email me your work.
+
+## Details
+
+If you want to, please answer the following
+
+-   Who did you collaborate with: TYPE NAMES HERE
+-   Approximately how much time did you spend on this problem set: ANSWER HERE
+-   What, if anything, gave you the most trouble: ANSWER HERE

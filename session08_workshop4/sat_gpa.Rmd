@@ -1,0 +1,119 @@
+---
+title: "SAT scores and first year GPA"
+author: "Your name goes here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    toc: yes
+    toc_float: yes
+---
+
+
+# Load and wrangle data
+
+```{r load-libraries-data, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(moderndive)
+library(here)
+
+# I pre-wrangled and pre-manipulated this data for you
+# so you only have to load it here
+sat_gpa <- read_csv(here::here("data", "sat_gpa.csv"))
+```
+
+
+# Answer questions
+
+How well do SAT scores correlate with freshman GPA?
+
+```{r sat-gpa-correlation}
+sat_gpa %>% 
+  get_correlation(gpa_fy ~ sat_total)
+```
+
+How well does high school GPA correlate with freshman GPA?
+
+```{r hs-gpa-correlation}
+
+```
+
+Is the correlation between SAT scores and freshman GPA stronger for men or for women?
+
+```{r sat-gpa-correlation-sex}
+# The get_correlation() function that comes with library(moderndive) can't work
+# with groups. Instead, you'll need to use group_by() and summarize() and use
+# the cor() function, which is R's official function for calculating correlation
+sat_gpa %>% 
+  group_by(sex) %>% 
+  summarize(correlation = cor(sat_total, gpa_fy))
+```
+
+Is the correlation between high school GPA and freshman GPA stronger for men or for women?
+
+```{r hs-gpa-correlation-sex}
+
+```
+
+
+Use `GGally::ggpairs()` to get a scatterplot-correlation matrix
+
+```{r ggpairs-correlations, message=FALSE, warning=FALSE}
+library(GGally)
+sat_gpa %>%
+  ggpairs(aes(colour=sex, alpha =0.2))
+```
+
+
+Are there any sex-based differences in SAT scores? Are sex-based score differences larger in the verbal test or the math test? (hint: group by sex and use summarize() to calculate the average verbal SAT score and math SAT score for each sex)
+
+```{r sat-score-sex}
+
+```
+
+Do SAT scores predict (or explain variation in) freshman GPAs? If so, how much college GPA change is associated with changes in SAT scores? (i.e. interpret the slope for the SAT coefficient) How much of the variation in college GPA is explained by this model?
+
+```{r model-sat-gpa}
+model_sat_gpa <- lm(gpa_fy ~ sat_total, data = sat_gpa)
+
+model_sat_gpa %>% get_regression_table()
+model_sat_gpa %>% get_regression_summaries()
+```
+
+Does a certain type of SAT score have a larger effect on freshman GPAs? (hint: instead of including `sat_total`, use `sat_math` and `sat_verbal` as your explanatory variables)
+
+```{r model-sat-math-verbal}
+
+```
+
+1. Do high school GPAs predict (or explain variation in) freshman GPAs? If so, how much? 
+1. How much of the variation in college GPA is explained by this model?
+
+```{r model-hs-college-gpa}
+
+```
+
+1. Does the effect of SAT scores on college GPA change when controlling for sex? 
+1. What is the effect of SAT scores in this model? 
+1. What is the effect of sex in this model? 
+1. How much of the variation in college GPA is explained by this model?
+
+```{r model-sat-sex}
+
+```
+
+1. Does the effect of SAT scores on college GPA change when controlling for both high school GPA and sex? 
+1. What is the effect of SAT scores in this model? 
+1. What is the effect of high school GPA in this model? 
+1. What is the effect of sex in this model? 
+1. How much of the variation in college GPA is explained by this model?
+
+```{r model-sat-hs-sex}
+
+```
+
+1. Which model best predicts freshman GPA? How do you know?
+1. Do women's SAT scores underpredict their freshman GPAs?
+1. Should SAT scores be used for college admissions?
+1. What else might statistically predict freshman GPA? What else should be taken into account when admitting students?

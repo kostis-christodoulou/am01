@@ -1,0 +1,235 @@
+year,engine,miles,price,town,region,colour
+2017,1798,3200,20995,Hornchurch,London,white
+2015,1798,50000,12950,Wembley Park,London,white
+2009,1497,130000,3495,Romford,London,silver
+2013,1798,66000,10400,Seven Sisters,London,white
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2007,1497,175000,1700,Southwark,London,white
+2013,1798,79000,12000,Woodford Green,London,white
+2009,1798,123000,6450,Chessington,Surrey,silver
+2015,1798,49000,14800,Woodford Green,London,black
+2016,1798,10200,18590,Ealing Brodway,London,grey
+2008,1497,190000,2490,Harrow,London,silver
+2008,1497,160000,2390,Harrow,London,white
+2011,1798,151000,7150,Chessington,Surrey,black
+2008,1497,110000,3650,Newham,London,black
+2012,1798,93178,9480,North London,London,black
+2009,1497,180000,2600,Dagenham,London,black
+2016,1798,8000,15995,Harrow,London,grey
+2014,1798,78000,12300,Woodford Green,London,silver
+2006,1497,161876,1950,Tower Hamlets,London,silver
+2008,1497,60000,5500,Canvey Island,Essex,silver
+2009,1798,98668,5995,Tower Hamlets,London,black
+2007,1497,134123,2199,Northampton,Northamptonshire,grey
+2008,1497,63000,4399,Lewisham,London,silver
+2006,1497,134000,2895,Bradford,West Yorkshire,silver
+2005,1497,114921,3490,Nelson,Lancashire,silver
+2012,1798,96000,9480,North London,London,white
+2005,1497,105237,2999,Loanhead,Midlothian,grey
+2006,1497,100000,3695,Brighton,East Sussex,silver
+2008,1497,132000,2890,Wembley,London,silver
+2017,1798,3200,20995,Hornchurch,London,white
+2009,1798,163950,5195,Croydon,London,red
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2015,1798,21052,9600,Camden,London,white
+2013,1798,66000,10400,Seven Sisters,London,silver
+2009,1497,110150,4450,Newham,London,black
+2014,1798,57892,12980,Ilford,London,black
+2011,1798,190000,5500,Heathrow,London,blue
+2009,1798,173000,4995,Whitechapel,London,black
+2013,1798,59248,12490,Ilford,London,white
+2004,1497,53000,3995,Chesham,Buckinghamshire,black
+2012,1798,141000,7995,Southfields,London,silver
+2001,1497,184000,650,London Colney,Hertfordshire,black
+2014,1798,116000,10795,Southfields,London,silver
+2010,1798,260000,4450,Bradford,West Yorkshire,black
+2014,1798,85000,13300,Woodford Green,London,black
+2008,1497,103900,5750,Sighthill,Edinburgh,silver
+2009,1798,179000,4000,Croydon,London,black
+2013,1798,81000,12000,Woodford Green,London,red
+2008,1497,118000,3495,Roath,Cardiff,blue
+2014,1798,99000,12300,Kingsbury,London,red
+2007,1497,70000,4255,Woodley,Berkshire,black
+2009,1497,242000,2200,Grays,Essex,blue
+2008,1497,264000,2000,Bradford,West Yorkshire,blue
+2016,1798,49600,17695,Hornchurch,London,grey
+2015,1798,57700,11995,Hornchurch,London,silver
+2016,1798,8900,17995,Hornchurch,London,black
+2017,1798,13800,20295,Hornchurch,London,white
+2015,1798,34400,12495,Hornchurch,London,black
+2009,1497,94800,6450,Sighthill,Edinburgh,blue
+2015,1798,50000,12950,Wembley Park,London,white
+2013,1798,66000,10400,Seven Sisters,London,silver
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2010,1497,130000,3495,Romford,London,silver
+2016,1798,54800,16995,Hornchurch,London,white
+2005,1497,134000,3695,Chalfont St Giles,Buckinghamshire,blue
+2005,1497,74161,3450,Barking,London,blue
+2008,1497,269000,2300,Manor Park,London,black
+2011,1798,88000,8995,Portsmouth,Hampshire,blue
+2010,1798,170000,6999,Barking,London,black
+2007,1497,240000,1395,Blackburn,Lancashire,silver
+2012,1798,71000,10100,Hackney,London,red
+2005,1497,170000,2500,Heathrow,London,white
+2008,1497,220452,2295,Bradford,West Yorkshire,black
+2005,1497,145000,2600,Bolton,Manchester,silver
+2010,1798,77000,8990,Wembley,London,silver
+2009,1798,70900,8695,Wandhurst,East Sussex,blue
+2009,1798,168000,4200,Golders Green,London,blue
+2015,1798,47000,12999,Dartford ,Kent,black
+2006,1497,165150,2500,Cambridge,Cambridheshire,grey
+2014,1798,73000,10990,Edgware,London,black
+2008,1497,79514,4790,Ilford,London,blue
+2011,1798,69986,10420,Reddish,Manchester,silver
+2008,1497,52286,5790,Ilford,London,black
+2014,1798,63000,11895,Southfields,London,silver
+2009,1497,120000,4100,Barking,London,grey
+2013,1798,77500,13000,Sighthill,Edinburgh,black
+2007,1497,55000,4995,Crawley,West Sussex,grey
+2013,1798,66000,10400,Seven Sisters,London,silver
+2009,1798,163950,5195,Croydon,London,red
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2015,1798,50000,12950,Wembley Park,London,white
+2017,1798,3200,20995,Hornchurch,London,white
+2011,1798,77000,9200,Hackney,London,black
+2016,1798,8244,15500,Norbury,London,black
+2011,1798,82000,10200,Islington,London,black
+2008,1497,115820,4595,Kilburn,London,grey
+2008,1497,110000,2890,Wembley,London,silver
+2005,1497,117000,2190,Wembley,London,black
+2011,1798,69000,9990,Dagenham,London,white
+2015,1798,63000,13500,Redbridge,London,black
+2004,1497,87000,2190,Wembley,London,silver
+2012,1798,51275,12990,Southall,London,black
+2015,1798,51750,12991,Southall,London,silver
+2013,1798,41000,14500,Woodford Green,London,black
+2009,1798,99000,7995,Bradford,West Yorkshire,blue
+2015,1798,81000,14500,Woodford Green,London,black
+2014,1798,90000,13900,Woodford Green,London,red
+2005,1497,91000,2390,Wembley,London,black
+2010,1798,75700,8000,Wimbledon,London,silver
+2010,1798,88236,8799,Dunstable,Bedfordshire,grey
+2010,1798,125000,6300,Wandsworth,London,red
+2009,1798,153000,5200,Wandsworth,London,silver
+2010,1798,89804,7499,Dunstable,Bedfordshire,grey
+2015,1798,22350,12991,Southall,London,silver
+2005,1497,149930,2450,Barking,London,silver
+2014,1798,65000,14500,Woodford Green,London,white
+2015,1798,8000,17899,Croydon,London,blue
+2017,1798,3200,20995,Hornchurch,London,white
+2009,1497,130000,3495,Romford,London,silver
+2013,1798,66000,10400,Seven Sisters,London,silver
+2009,1497,94800,6450,Sighthill,Edinburgh,blue
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2009,1798,38244,9980,Ilford,London,silver
+2013,1798,73600,11500,Chessington,Surrey,black
+2007,1497,189000,2850,Cloucester,Gloucestershire,grey
+2010,1798,195000,6100,Ilford,London,white
+2007,1497,248000,1500,Leicester,Leicestershire,silver
+2015,1798,53000,13399,Barking,London,white
+2012,1798,88000,9200,Plaistow,London,white
+2010,1798,83000,7800,Acton,London,blue
+2009,1497,94800,6450,Sighthill,Edinburgh,blue
+2010,1798,125000,6390,Potters Bar,Hertfordshire,grey
+2011,1798,150000,6500,Bolton,Manchester,black
+2005,1798,169000,2095,Walthamstow,London,white
+2012,1497,70000,10750,Bournemouth,Dorset,silver
+2009,1798,93000,7395,Bradford,West Yorkshire,silver
+2008,1798,37700,5995,Bolton,Manchester,silver
+2012,1798,140000,8499,West Ealing ,London,black
+2013,1798,23700,15990,Wadhurst,East Sussex,grey
+2005,1497,52000,4999,Brentford,London,white
+2010,1798,121000,6400,Southfields,London,red
+2013,1798,68000,11600,Woodford Green,London,grey
+2014,1798,100000,12000,Woodford Green,London,black
+2013,1798,31000,13000,Woodford Green,London,black
+2007,1497,101000,4295,Leytonstone,London,blue
+2016,1798,37000,16000,Woodford Green,London,silver
+2009,1798,190000,3600,Plaistow,London,blue
+2015,1798,21052,9600,Camden,London,white
+2009,1798,163950,5195,Croydon,London,red
+2013,1798,66000,10400,Seven Sisters,London,silver
+2015,1798,50000,12950,Wembley Park,London,white
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2010,1798,128535,5980,North London,London,blue
+2014,1798,91000,13500,Woodford Green,London,silver
+2016,1798,40000,19500,Woodford Green,London,silver
+2005,1497,225073,1595,Nelson,Lancashire,grey
+2007,1497,107100,3974,Blackburn,Lancashire,red
+2014,1798,22000,15500,Woodford Green,London,silver
+2010,1798,122000,6400,Heathrow,London,black
+2015,1798,60000,12500,Kinston,London,black
+2015,1798,67000,13990,Wandsworth,London,grey
+2017,1798,3200,20995,Hornchurch,London,white
+2010,1798,146250,5000,Ealing ,London,silver
+2007,1497,94000,3995,West Hampstead,London,blue
+2016,1798,6500,14995,Tooting,London,white
+2004,1497,151000,1975,Bradford,West Yorkshire,blue
+2007,1497,134000,2199,Lozells,West Midlands,silver
+2013,1798,98000,11200,Woodford Green,London,silver
+2013,1798,74000,11800,Woodford Green,London,blue
+2008,1497,90000,5000,Canvey Island,Essex,blue
+2014,1798,79000,12995,West Hampstead,London,black
+2013,1798,85076,12295,Tornbridge,Kent,blue
+2009,1798,100000,7695,Dukinfield,Manchester,white
+2008,1497,152000,2900,Beckton,London,red
+2011,1798,83000,8700,Sheldon,West Midlands,grey
+2012,1798,122000,9350,Ilford,London,white
+2017,1798,3200,20995,Hornchurch,London,white
+2013,1798,66000,10400,Seven Sisters,London,silver
+2015,1798,50000,12950,Wembley Park,London,white
+2009,1497,130000,3495,Romford,London,silver
+2009,1798,163950,5195,Croydon,London,red
+2009,1497,130000,3495,Romford,London,silver
+2008,1497,100460,4795,West Hampstead,London,black
+2011,1798,33000,11495,Bolton,Manchester,white
+2010,1798,99000,6995,Redbridge,London,black
+2010,1798,160164,5990,Shepherd's Bush,London,white
+2008,1497,73000,3190,Wembley,London,black
+2006,1497,143000,2250,Docklands,London,grey
+2009,1798,139000,5990,Craigentinny,Edinburgh,grey
+2015,1798,28000,13990,Willesden Green,London,blue
+2010,1798,159000,5500,Bethnal Green,London,silver
+2006,1497,168000,1200,Eastleigh,Hampshire,silver
+2008,1497,60000,6295,Portobello,Edinburgh,black
+2015,1798,26891,13995,Romford,London,black
+2008,1497,105000,4899,Chigwell,Essex,white
+2013,1798,80000,11695,Hayes,London,silver
+2012,1497,122000,8999,Ilford,London,black
+2006,1798,153000,3100,Manor Park,London,blue
+2008,1497,256000,2150,Ilford,London,silver
+2009,1497,155228,3100,Sandwell,West Midlands,black
+2008,1497,178000,2000,Kingston,London,grey
+2015,1798,103293,11950,Leyton,London,black
+2005,1497,187000,1695,Bradford,West Yorkshire,grey
+2008,1497,238000,2495,Forest Gate,London,grey
+2012,1798,70000,11995,Stratford,London,black
+2015,1798,81000,14500,Forest Gate,London,black
+2017,1798,3200,20995,Hornchurch,London,white
+2009,1798,163950,5195,Croydon,London,red
+2015,1798,50000,12950,Wembley Park,London,white
+2015,1798,21052,9600,Camden,London,white
+2013,1798,66000,10400,Seven Sisters,London,silver
+2011,1798,114500,8750,Forest Gate,London,white
+2010,1798,187000,5450,Hemel Hempstead,London,black
+2010,1798,83000,7800,Ealing,London,black
+2009,1798,80000,4500,Isleworth,London,red
+2012,1798,59350,9500,Bradford,West Yorkshire,black
+2011,1798,130500,7000,Paisley,Refrewshire,white
+2008,1497,165000,3250,Stratford,London,black
+2014,1798,89000,11650,Paisley,Refrewshire,white
+2010,1798,162000,5890,Paisley,Refrewshire,white
+2009,1497,250000,2500,Stratford,London,black
+2004,1497,147000,1200,Stratford,London,black
+2009,1798,163950,5195,Croydon,London,red
+2010,1798,135000,5750,Harrow,London,blue
+2011,1798,89000,7750,East London,London,blue
+2005,1497,91000,3695,Stratford,London,grey
+2009,1798,210000,4300,Finsbury Park,London,silver
+2013,1798,61118,10500,Leyton,London,grey
+2008,1497,104000,3500,Toxheth,Merseyside,silver
+2007,1497,136000,3199,Bradford,West Yorkshire,black
+2006,1497,41000,5499,Bradford,West Yorkshire,blue
+2007,1497,36000,750,Enfield,London,blue
+2002,1497,156400,1300,Sandwell,West Midlands,blue
+2013,1798,32000,13250,Hampstead,London,black

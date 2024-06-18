@@ -1,0 +1,335 @@
+---
+title: "Functional Programming"
+author: "Kostis Christodoulou"
+date: "2020-11-07"
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(scipen=999)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.align = "center"
+)
+
+```
+
+
+```{r load-packages, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(purrr)
+library(broom)
+library(gapminder)
+library(forcats)
+```
+
+According to Wikipedia, [*functional programming is a programming paradigm [...] that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm in that programming is done with expressions or declarations instead of statements.*](https://en.wikipedia.org/wiki/Functional_programming)
+
+The main difference between the functional programming paradigm and other paradigms is that functional programming uses functions rather than statements to express ideas. This difference means that instead of writing a precise set of steps to solve a problem (think like a recipe for building a cake), you use pre-, or user-defined functions, and don’t worry about how the language performs the task.
+In *imperative programming*, another example of a programming paradigm, data moves through a series of steps in a specific order to produce a particular result.
+
+This may sound esoteric, but let us consider the simplest example from Excel, with which most people are familiar, where you have been using functional programming all along without realising it! Suppose you had a collection of twenty data points in cells A1:A20 and wanted to calculate the sum of these numbers. 
+
+- With imperative programming, you would write a `for` loop, declare that `sum = 0`, take the next value, add it to the value of `sum` and keep track of the running sum, until you have looped all of the values, in whcih case you would just print out the value of `sum`. You can actualyl write such a loop, even in Excel, but I don't think anyone has even bothered
+- With functional programming, you would use Excel's built in `=SUM()` function and apply the function to the cells that contain your data; namely `=SUM(A1:A20)`. 
+
+This idea of applying a **function** into an array (or vector) is something that is really useful in R. A function can be an Excel-like function of sum, median, etc., but far more importantly R allows us to apply the same thing, say a linear regression model (`lm` in R talk) into an entire dataframe.
+
+# The `map()` function
+
+You frequently need to iterate over vectors or data frames, perform an operation on each element, and save the results somewhere. `for` loops may at first seem more intuitive to use because you are explicitly identifying each component and step of the process. However, you have to track the value over which you are iterating, you need to explicitly create a vector to store the output, you have to assign the output of each iteration to the appropriate element in the output vector, etc.
+
+The `purrr` package and its `map` functions allow us to concentrate on the operation being performed (e.g. `mean()`, `median()`, `max()`), not all the extra code needed to make the operation work. The `map` family of functions mirrors `for` loops, as they:
+
+* Loop over a vector
+* Do something to each element
+* Save the results
+
+The arguments of `map( .x, .f, ...)` are
+
+- `.x` can be a vector, a list, or a tidy dataframe, as we can apply something to each column. In general, we want to operate on each value/element of `.x`
+- `.f`. specifies what to do with each piece. It can be, among others, either
+  - A function, like `mean()`.
+  - A formula, which is converted to an anonymous function, so that ~ lm(lifeExp ~ year, data = .) is shorthand for function(x) lm(lifeExp ~ year, data = x).
+
+Map functions come in a few variants based on their inputs and output:
+
+* `map()` returns a list.
+* `map_lgl()` returns a vector of logical values (TRUE/FALSE).
+* `map_int()` returns a vector of integers `int`.
+* `map_dbl()` returns a vector of real numbers `dbl`.
+* `map_chr()` returns a vector of characters `chr`.
+
+As an example, let us define a dataframe `df` that contains three variables/columns with 100 random numbers drawn from a Normal distribution with a mean of 0 and standard deviation of 1.
+
+```{r, df-rnorm}
+df <- tibble(
+  x = rnorm(100),
+  y = rnorm(100),
+  z = rnorm(100)
+)
+```
+
+Like all functions in the `tidyverse`, the first argument is the data object, and the second argument is the function to be applied. Additional arguments for the function to be applied can be specified like this:
+
+```{r map}
+# take the tidy dataframe df, and apply the function 'mean' to each element (column), and remove NAs
+map_dbl(df, mean, na.rm = TRUE)
+
+# take the tidy dataframe df, and apply the function 'median' to each element (column), and remove NAs
+map_dbl(df, median)
+
+# take the tidy dataframe df, and apply the function 'sd' to each element (column), and remove NAs
+map_dbl(df, sd)
+```
+
+
+Or we can use the pipe operator ` %>%`, starting with the dataframe and then applying the `map_dbl` function to it
+
+```{r map-pipe}
+df %>%
+  map_dbl(mean, na.rm = TRUE)
+```
+
+
+## Mean of numeric columns in `gapminder`
+
+Let us use a `map()` function that calculates the arithmetic mean for every numeric column in `gapminder`. Given that the dataset also has years, countries and continents, we first select the numeric columns of interest, and then apply the mean function
+
+
+```{r gapminder_map_mean}
+gapminder %>% 
+  # select only numeric variables/columns
+  dplyr::select_if(is.numeric) %>% 
+  
+  #apply the mean function- map_dbl() returns a vector of real numbers.
+  map_dbl(mean,  na.rm = TRUE)
+
+
+gapminder %>% 
+  # select only numeric variables/columns
+  dplyr::select_if(is.numeric) %>% 
+  
+  #apply the mean function- map() returns a list
+  map(mean,  na.rm = TRUE)
+
+```
+  
+
+# Running many regressions
+
+Suppose we wanted to study how life expectancy increased over time on the `gapminder` dataset. We can plot the relationship for every single country as shown below:
+
+```{r,lifeExp_on_time_all}
+ggplot(gapminder, aes(x=year, y=lifeExp, group=country))+
+geom_line(aes(colour=continent))+
+  labs(x = "Year", 
+       y = "Life expectancy", 
+       title = "Life Expectancy 1952-2007") +
+  theme_minimal()
+```
+
+
+Most of these look like linear relationships and we would like to know the `intercept`, namely life expectancy in 1952, the first year we have data for, and `slope`, or the average improvement of life expectancy for each additional year. Let us run a simple regression for one country:
+
+```{r, single_lm_model}
+options(digits = 3)
+yearMin <- 1952
+
+tempCountry <- "Greece"  # Just a random example
+tempData <- gapminder %>% 
+  filter(country== tempCountry)
+
+ggplot(tempData, aes(x=year, y=lifeExp))+
+  geom_point() +
+  geom_smooth(method='lm', se=FALSE)+
+  labs(x = "Year", 
+       y = "Life expectancy", 
+       title = glue::glue({tempCountry},": Life Expectancy improvement 1952-2007")) +
+  theme_minimal()
+
+
+# fit a linear regression model
+model1 <- lm(lifeExp ~ I(year - yearMin), data=tempData) 
+
+# show the coefficients of the regression model
+model1 %>% 
+  tidy()
+
+
+```
+
+The intercept of 67 is what our model predicts life expectancy was in 1952-- the actual value was 65.9. 
+The slope of 0.242 means that every year between 1952 and 2007, life expectancy increased on average by 0.242 years.
+
+Now, what if we wanted to manipulate the entire `gapminder` dataframe and running 100s of regressions at once? This is where `purrr` and `map` become really useful.
+
+
+First, we use `group_by` and `nest` to create a dataframe that contains dataframes for each country, and then use `map` to run a regression for each country. Finally, we get the coefficients and all the regression details. 
+
+```{r, many_models}
+library(broom) # to simplify regression output
+yearMin <- 1952
+
+many_models <- gapminder %>% 
+  # create a dataframe containing a separate dataframe for each country
+  group_by(country,continent) %>% 
+  
+  # nesting creates a list-column of data frames; 
+  # we will use the list to fit a regression model for every country
+  nest()  %>% 
+  
+  # Run a simple regression model for every country in the dataframe
+  mutate(simple_model = data %>% 
+           map(~lm(lifeExp ~ I(year - yearMin), data = .))) %>% 
+  
+  # extract coefficients and model details with broom::tidy() and broom::details()
+  mutate(coefs = simple_model %>% map(~ tidy(., conf.int = TRUE)),
+         details = simple_model %>% map(glance)) %>% 
+  ungroup()
+
+head(many_models, 10)
+
+```
+The resulting dataframe `many_models` contains for every country the country `data`, the regression model `simple_model`, the model coefficients `coefs`, as well as all the regression `details`. As discussed earlier, the intercept is the predicted life expectancy in 1952 and the slope is the average yearly improvement in life expectancy. 
+
+We will take our `many_models` dataframe, unnest the coefs and extract the interecept and slope for each country. 
+
+```{r, many_models_coeffs}
+
+intercepts <- 
+  many_models %>% 
+  
+  # Unnesting flattens a list-column of data frames back into regular columns
+  unnest(coefs) %>% 
+  filter(term == "(Intercept)") %>% 
+  arrange(estimate) %>% 
+  mutate(country = fct_inorder(country)) %>% 
+  select(country, continent, estimate, std.error, conf.low, conf.high)
+
+# let us look at the first 20 intercepts, or life expectancy in 1952
+head(intercepts,20)
+
+slopes <- many_models %>% 
+  unnest(coefs) %>% 
+  filter(term == "I(year - yearMin)") %>% 
+  arrange(estimate) %>% 
+  mutate(country = fct_inorder(country)) %>% 
+  select(country, continent, estimate, std.error, conf.low, conf.high)
+
+# let us look at the first 20 slopes, or average improvement in life exepctancy per year
+head(slopes,20)
+```
+
+We can plot the estimates for the intercept and the slope for all countries, faceted by continent.
+
+```{r,many_models_coeffs_plot}
+
+  ggplot(data = intercepts, 
+         aes(x = country, y = estimate, fill=continent))+
+  geom_col()+
+  coord_flip()+
+  theme_minimal(6)+
+  facet_wrap(~continent, scales="free")+
+  labs(title = 'Life expectancy in 1952',
+       caption = 'Source: Gapminder package',
+       x = NULL,
+       y = NULL) +
+  theme(legend.position="none")
+
+
+  ggplot(data = slopes, 
+         aes(x = country, y = estimate, fill = continent))+
+  geom_col()+
+  coord_flip()+
+  theme_minimal(6)+
+  facet_wrap(~continent, scales="free")+
+  labs(title = 'Average yearly improvement in life expectancy, 1952-2007',
+       caption = 'Source: Gapminder package', 
+       x = NULL,
+       y = NULL) +
+  theme(legend.position="none")
+
+```
+
+Finally, as in every regression model, the slopes are **estimates** for the yearly improvement in life expectancy. If we wanted to, we can plot the confidence interval for each country's improvement.
+
+
+```{r,many_models_coeffs_plot_interval}
+
+ggplot(data = slopes, 
+       aes(x = country, y = estimate, colour = continent))+
+  geom_pointrange(aes(ymin = conf.low, ymax = conf.high))+
+  coord_flip()+
+  theme_minimal(6)+
+  facet_wrap(~continent, scales="free")+
+  labs(title = 'Average yearly improvement in life expectancy, 1952-2007',
+       caption = 'Source: Gapminder package', 
+       x = NULL,
+       y = NULL) +
+  theme(legend.position="none")
+
+```
+
+## Function to plot a given `gapminder` variable over time
+
+Create a new directory using the fs package. Call it `figures`
+
+Write a function to plot a line plot of a given variable in gapminder over time, faceted by continent. 
+Use `aes_string()` so you don't need the curly-curly `{{}}` syntax to pass a variable.
+Then, save the plot (using `ggsave`). 
+
+
+```{r}
+# create new directory using the fs package. Call it `figures`
+fs::dir_create("figures")
+
+ggsave_gapminder_plot <- function(variable) {
+
+  plot <- ggplot(
+    gapminder,
+    
+    # using `aes_string()` we don't need the curly-curly {{}} syntax
+    aes_string(x = "year", y = variable, colour = "country") )+
+    geom_line() +
+    scale_color_manual(values = country_colors) +
+    facet_wrap(~continent) +
+    theme_bw()+
+    theme(legend.position = "none")
+  
+  #now save the plot
+  ggsave(
+
+    # create its file name
+    filename = paste0("figures/", variable, ".png"),
+    plot = plot,
+    dpi = 600
+  ) }
+
+
+vars <- c("lifeExp", "pop", "gdpPercap")
+purrr::walk(vars, ggsave_gapminder_plot)
+
+
+```
+
+
+
+
+## Further Resources
+* [R4DS Chapter 25 on `purrr` and `map` functions](http://r4ds.had.co.nz/many-models.html)
+* [`purrr` and functional programming ](https://purrr.tidyverse.org/index.html)

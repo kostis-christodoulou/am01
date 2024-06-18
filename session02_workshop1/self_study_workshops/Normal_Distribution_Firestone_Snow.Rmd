@@ -1,0 +1,398 @@
+---
+title: "The Normal distribution"
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    code_folding: show
+---
+
+
+```{r, setup}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=6.75, 
+  fig.height=6.75,
+  fig.align = "center"
+)
+```
+
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(lubridate)
+library(mosaic)
+library(ggridges)
+library(kableExtra)
+library(here)
+library(skimr)
+library(janitor)
+```
+
+In this exercise we'll investigate the probability distribution that is most central to statistics: the normal distribution.  If we are confident that our data are  nearly normal, that opens the door to many powerful statistical methods.  Here  we'll use the graphical tools of R to assess the normality of our data and also  learn how to generate random numbers from a normal distribution.
+
+# The Data
+
+In order to promote their snow tyres, Firestone are offering to refund customers if the snowfall in their area is less than average over the coming winter according to the following refund scheme:
+
+- Snowfall less than 20% of average --> 100% refund
+- Snowfall less than 30% of average	-->  75% refund
+- Snowfall less than 40% of average	-->  50% refund
+- Snowfall more than 40% of average	-->  no refund
+
+
+
+```{r firestone, echo=FALSE, out.width="50%"}
+knitr::include_graphics(here::here("images", "firestone.png"), error = FALSE)
+```
+
+
+The historical data fror snowfall for Toronto has been downloaded from the [Canadian government weather data service ](http://climate.weather.gc.ca/historical_data/search_historic_data_e.html).
+
+The purpose of this exercise is to work out the probability of having to award refunds in a specific area, namely the area around Toronto; from these probabilities we can also calculate the expected cost of the refunds in this area (which will presumably be used by the insurance company to determine the premium which they will charge to cover the refund scheme). 
+The following provides a guideline to follow in carrying out the analysis; if you have any problems or questions please ask for help.
+
+
+```{r load_data}
+
+toronto <- read_csv(here::here("data", "toronto_snow.csv")) %>% 
+    clean_names() %>% 
+  #add a new column with month_name rather than number
+  #uses lubridate::month() function
+  mutate(month_name=month(month, label = TRUE))
+
+```
+
+
+```{r inspect-data}
+glimpse(toronto)
+skim(toronto)
+```
+
+How has snowfall chnaged over the years? How much does it snow in each month?
+
+```{r}
+toronto %>% 
+  group_by(year) %>% 
+  summarise(total_snowfall = sum(snowfall)) %>% 
+  
+  ggplot(aes(x=year, y= total_snowfall))+
+  geom_line()+
+  geom_smooth()
+
+
+ggplot(toronto, aes(x=month_name, y = snowfall))+
+  geom_boxplot()+
+  coord_flip()+
+  theme_bw()
+
+
+```
+
+
+What months are snow-free? Which month typically has the highest expected snowfall? Let us calcualte summary statistics by month, using `mosaic::favstats()`
+
+
+```{r}
+# Univariate statistics make little sense here, but still
+favstats(~snowfall, data = toronto) 
+
+#Much better to get statistics by month
+favstats(snowfall~month_name, data = toronto) 
+```
+
+```{r message=FALSE, warnings=FALSE}
+
+ggplot(toronto, aes(x=month_name, y = snowfall))+
+  geom_boxplot()+
+  labs(title = 'Snowfall in Toronto, 1843-2006', 
+       x= "",
+       y= "Monthly snowfall in cms")+
+  theme_bw()
+
+#use ggridges package to get an approximate visual density plot of all months
+ggplot(data=toronto, aes(x = snowfall, y = month_name))+
+  geom_density_ridges(scale = 0.9) +
+  theme_bw()+
+  NULL
+
+#let us add some colour
+ggplot(data=filter(toronto, year>1980), aes(x = snowfall, y = month_name, fill = ..x..))+
+  geom_density_ridges_gradient(scale = .95, rel_min_height = 0.01) +
+  scale_fill_viridis_c(option = "plasma") +
+  labs(title = 'Snowfall in Toronto, 1843-2006', 
+       x= "Monthly snowfall in cms",
+       y= " ")+
+  theme_bw() + 
+  NULL
+```
+
+
+
+The refund scheme is calculated on yearly snowfall so we need to aggregate the monthly data. We will calculate the yearly totals in the original tidy, long dataframe. We first need to group by `year` and then use `mutate()` to generate a new column `total`, which is the sum of the yearly snowfall. 
+
+```{r}
+snow_totals <- toronto %>% 
+  group_by(year) %>% 
+  summarise(total = sum(snowfall))
+
+skimr::skim(snow_totals)
+```
+
+To calculate summary statistics for yearly snowfall figures, we will use `mosaic::favstats()`. Since we will need the mean and SD, we will also calculate and save them as separate variables. We will also plot the histogram and density plot for the total snowfall.
+
+```{r eda_snowfall, echo=FALSE, message=FALSE, warnings=FALSE}
+
+favstats(~total, data=snow_totals)
+
+mean_snow <- mean(snow_totals$total, na.rm=TRUE) 
+sd_snow <- sd(snow_totals$total, na.rm=TRUE) 
+
+
+ggplot(snow_totals, aes(x=total))+
+  geom_density()+
+  
+  #add a red vertical line at the mean value
+  geom_vline(xintercept = mean_snow, colour = "red") +
+  theme_bw()+
+  NULL
+
+ggplot(snow_totals, aes(x=total))+
+  geom_histogram()+
+  
+  #add a red vertical line at the mean value
+  geom_vline(xintercept = mean_snow, colour = "red")+
+  theme_bw()+
+  NULL
+
+```
+
+
+# The Normal distribution
+
+In your description of the distributions, did you use words like *bell-shaped* 
+or *normal*?  It's tempting to say so when faced with a unimodal symmetric 
+distribution.
+
+To see how accurate that description is, we can plot a normal distribution curve on top of a histogram to see how closely the data follow a normal distribution. This normal curve should have the same mean and standard deviation as the sample data. 
+
+
+```{r actual_normal}
+ggplot(snow_totals, aes(total)) +
+  geom_density()+
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = mean_snow, sd = sd_snow), 
+    lwd = 2, 
+    col = 'red'
+  )+
+  xlim(0,300)+
+    labs(title = 'Snowfall in Toronto, 1843-2006', 
+       x= "Annual snowfall in cms",
+       y= " ")+
+  theme_bw() + 
+  NULL
+
+
+```
+
+After plotting the density histogram with the first command, we ask ggplot to plot the Normal distribution in red with a height mean and SD equal to the ones calculated from the `snow_totals` dataset. 
+
+2.  Based on the this plot, does it appear that the data follow a nearly normal distribution?
+
+
+## Evaluating the normal distribution
+
+Eyeballing the shape of the histogram is one way to determine if the data appear
+to be nearly normally distributed, but it can be frustrating to decide just how 
+close the histogram is to the curve. An alternative approach involves 
+constructing a normal probability plot, also called a normal Q-Q plot for 
+"quantile-quantile".
+
+```{r, warning=FALSE, error=FALSE}
+
+ggplot(snow_totals) + 
+  geom_qq(aes(sample = total))
+
+
+```
+
+A data set that is nearly normal will result in a Q-Q plot where the 
+points closely follow a line.  Any deviations from normality leads to 
+deviations of these points from the line.  The plot for total yearly snowfall shows 
+points that tend to follow the line but with some errant points towards the 
+tails.  We're left with the same problem that we encountered with the histogram 
+above: how close is close enough?
+
+A useful way to address this question is to rephrase it as: what do probability 
+plots look like for data that I *know* came from a normal distribution?  We can 
+answer this by simulating data from a normal distribution using `rnorm`.
+
+```{r sim-norm}
+set.seed(1234)
+sim_norm <- tibble(total = rnorm(n = length(snow_totals$total), 
+                                 mean = mean_snow, 
+                                 sd = sd_snow))
+```
+
+The first argument indicates how many numbers you'd like to generate, which we 
+specify to be the same number of heights in the data set using the 
+`length` function.  The last two arguments determine the mean and standard 
+deviation of the normal distribution from which the simulated sample will be 
+generated.  We can take a look at the shape of our simulated data set, `sim_norm`, 
+as well as its normal probability plot.
+
+3.  Make a normal probability plot of `sim_norm`.  Do all of the points fall on 
+    the line?  How does this plot compare to the probability plot for the real 
+    data?
+
+Even better than comparing the original plot to a single plot generated from a 
+normal distribution is to compare it to many more plots using the following 
+function. It may be helpful to click the zoom button in the plot window.
+
+```{r qqnormsim}
+
+ggplot(sim_norm, aes(total)) +
+  geom_density()+
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = mean_snow, sd = sd_snow), 
+    lwd = 2, 
+    col = 'red'
+  )
+
+
+ggplot(sim_norm) + 
+  geom_qq(aes(sample = total))
+
+```
+
+4.  Does the normal probability plot for `total` look similar to the plots 
+    created for the simulated data?  That is, do plots provide evidence that 
+    annual snowfalls are nearly normal?
+
+5.  Using the same technique, determine whether or not annual snowfalls appear to 
+    come from a normal distribution.
+
+# Normal probabilities
+
+Okay, so now you have a slew of tools to judge whether or not a variable is 
+normally distributed.  Why should we care?
+
+It turns out that statisticians know a lot about the normal distribution.  Once 
+we decide that a random variable is approximately normal, we can answer all 
+sorts of questions about that variable related to probability.  Take, for 
+example, the question of, "What is the probability that in a random year total snowfall will be greater than 150 cm?" 
+
+If we assume that total yearly snowfalls are normally distributed (a very close 
+approximation is also okay), we can find this probability by calculating a Z 
+score and consulting a Z table (also called a normal probability table).  In R, 
+this is done in one step with the function `pnorm`. Alternatively, we can use `mosaic::xpnorm()` to calculate the same probability and visualise the results.
+
+```{r pnorm}
+
+1 - pnorm(q = 150, mean = mean_snow, sd = sd_snow)
+
+
+mosaic::xpnorm(150, mean = mean_snow, sd = sd_snow)
+
+```
+
+Now that we know the average we can calculate the thresholds below which the different levels of refund apply:
+
+```{r}
+refund100 <- 0.2 * mean_snow
+refund75  <- 0.3 * mean_snow
+refund50  <- 0.4 * mean_snow
+```
+
+
+This means that if yearly snowfall is below `refund100` level of `r refund100` cm, the company will offer a full refund, etc.
+
+```{r}
+xpnorm(refund100, mean = mean_snow, sd = sd_snow)
+xpnorm(refund75, mean = mean_snow, sd = sd_snow)
+xpnorm(refund50, mean = mean_snow, sd = sd_snow)
+
+
+text_tbl <- data.frame(
+  Refund_Levels = c(100, 75, 50),
+  Snowfall_Below = c("20% of Average", "30% of Average","40% of Average"),
+  Snowfall_cm = c(refund100, refund75,refund50),
+  Probability = c(pnorm(q = refund100, mean = mean_snow, sd = sd_snow),
+                  pnorm(q = refund75, mean = mean_snow, sd = sd_snow),
+                  pnorm(q = refund50, mean = mean_snow, sd = sd_snow))
+)
+  
+
+kable(text_tbl) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, border_right = T)%>%
+  column_spec(2, border_right = T)%>%
+  column_spec(3, bold = T, border_right = T)%>%
+  column_spec(4, bold = T, border_right = T)
+
+
+```
+
+The probabilities for refunds are very small - but non-zero and  represent much more realistic estimates of the refund probabilities.
+
+# Calculating the expected refund per $ of sales
+
+As a final step we can estimate a fair insurance premium, or the Expected cost of refund per $.
+
+
+```{r, message=FALSE}
+#for the lower levels of refund we subtract the probability of a higher refund
+# in order to avoid “double counting". We will calculate row-wise differences
+# by using lag(Probability, default=0), so we keep the first entry
+
+insurance_premium <- text_tbl %>% 
+  mutate(weight = Probability - lag(Probability, default = 0),
+         insurance_premium = Refund_Levels*Probability/100) %>% 
+  summarise(total=sum(insurance_premium)) %>% 
+  pull()
+
+```
+
+We can view this as the expected amount (in dollars) of refund per dollar. This number would form the basis of the premium which the insurance company would charge (plus margin of course!) in order to cover the financial risk which is contained in the refund option.
+
+# Concluding notes
+
+Note how the actual cost of the refund to the company is very low, but this is much less obvious to the customer who might well feel that they are getting a very good deal. The fact that the company is well aware of this can be seen in the penultimate paragraph of the case description.
+Although we are using fairly basic statistical concepts, this is a realistic example which illustrates the basis for calculating insurance premia. In fact, similar ideas form the basis of pricing financial derivatives such as options.
+
+
+# Exercises
+
+We should now investigate the sensitivity of the results to the accuracy of our parameters (i.e. mean and standard deviation of the annual snowfall).
+
+How would the refund probabilities alter if the official “average” on which the offer is based was different  to our sample average (as could happen if the average was calculated on a shorter or longer sample for instance) ?
+
+  - what if the “official” average was lower than our value of 150?
+  - what if the official average was higher than our value ?
+
+It is also possible that our sample misrepresents the true variability of the data - perhaps snowfalls have been more consistent than usual, or more variable than usual.
+
+  - how would the refund probabilities be affected if the true variability was higher than in our sample (standard deviation of more than our SD of 46) ?
+  - what if the true variability were lower (standard deviation of less than 46) ?
+
+```{r}
+#We get 50% refund if the snowfall is 40% of average or roughly 60cm
+xpnorm(0.40*mean_snow, mean = mean_snow, sd = sd_snow)
+
+#what happens is SD (46) is hald as large (32)?
+xpnorm(0.4*mean_snow, mean = mean_snow, sd = 0.5*sd_snow)
+
+
+```
