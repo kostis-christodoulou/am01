@@ -1,5 +1,5 @@
 ---
-title: "Session 6: Homework 3"
+title: "Study Group XX Final Group Assignment"
 author: "Your name goes here"
 date: "`r Sys.Date()`"
 output:
