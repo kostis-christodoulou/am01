@@ -41,19 +41,13 @@ A clean installation of R is known as **base R**. We need to install a collectio
 
 in the `console` (bottom left in RStudio) instead of using the packages panel.
 
-You can find details on [installing the tidyverse here](https://am01-sep23.netlify.app/reference/02-reference/)
+You can find details on [installing the tidyverse here](https://am01-sep24.netlify.app/reference/02-reference/)
 
 ## Practice using Markdown
 
-Assignments will be submitted using `Markdown` is a lightweight text formatting language that easily converts between file formats. It is integrated directly into [Quarto Markdown](https://quarto.org/docs/get-started/hello/rstudio.html), which combines R code, output, and written text into a single document (`.qmd`). You can [find more about markdown here](https://am01-sep23.netlify.app/reference/03-reference/).
+Assignments will be submitted using `Markdown` is a lightweight text formatting language that easily converts between file formats. It is integrated directly into [Quarto Markdown](https://quarto.org/docs/get-started/hello/rstudio.html), which combines R code, output, and written text into a single document (`.qmd`). You can [find more about markdown here](https://am01-sep24.netlify.app/reference/03-reference/).
 
-Quarto allows you to use a `Visual` editor, much like using word-processing software, but you can always switch back to `Source`.
-
-## Pandoc
-
-[Pandoc](http://pandoc.org) is a program that converts Markdown files into basically anything else. It was created by [John MacFarlane](https://johnmacfarlane.net), a philosophy professor at the University of California, Berkeley and is widely used as a writing tool and as a basis for publishing workflow. Kieran Healy's [Plain Text Social Science workflow](http://plain-text.co) describes how to use Markdown and then convert your Markdown document to HTML, PDF, word, etc.
-
-You should change the file name from `your-name-pre-course.Rmd` to your own name; if I were submitting, my file would be called `Kostis_Christodoulou.Rmd`
+You can use a `Visual` editor, much like using word-processing software, but you can always switch back to `Source`.
 
 # Task 1: Short bio written using markdown
 
@@ -68,7 +62,6 @@ To achieve full marks, you should include at least 4 of the following elements:
 -   Embedding images
 
 > Please delete all the intro text I wrote and start writing your short biography after this blockquote.
-
 
 # Task 2: `gapminder` country comparison
 
@@ -140,9 +133,6 @@ Finally, using the original `gapminder` data, produce a life expectancy over tim
 Given these trends, what can you say about life expectancy since 1952? Again, don't just say what's happening in the graph. Tell some sort of story and speculate about the differences in the patterns.
 
 > Type your answer after this blockquote.
-
-
-
 
 # Task 3: The `nycflights13` package
 
@@ -229,7 +219,6 @@ glimpse(flights)
   
 
 ```
-
 
 # Submit the assignment
 
