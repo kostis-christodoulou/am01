@@ -39,85 +39,6 @@ library(vroom)
 library(tidyquant)
 ```
 
-# Rents in San Francsisco 2000-2018
-
-[Kate Pennington](https://www.katepennington.org/data) created a panel of historic Craigslist rents by scraping posts archived by the Wayback Machine. You can read more about her work here
-
-[What impact does new housing have on rents, displacement, and gentrification in the surrounding neighborhood? Read our interview with economist Kate Pennington about her article, "Does Building New Housing Cause Displacement?:The Supply and Demand Effects of Construction in San Francisco."](https://matrix.berkeley.edu/research-article/kate-pennington-on-gentrification-and-displacement-in-san-francisco/)
-
-In our case, we have a clean(ish) dataset with about 200K rows that correspond to Craigslist listings for renting properties in the greater SF area. The data dictionary is as follows
-
-| variable    | class     | description           |
-|-------------|-----------|-----------------------|
-| post_id     | character | Unique ID             |
-| date        | double    | date                  |
-| year        | double    | year                  |
-| nhood       | character | neighborhood          |
-| city        | character | city                  |
-| county      | character | county                |
-| price       | double    | price in USD          |
-| beds        | double    | n of beds             |
-| baths       | double    | n of baths            |
-| sqft        | double    | square feet of rental |
-| room_in_apt | double    | room in apartment     |
-| address     | character | address               |
-| lat         | double    | latitude              |
-| lon         | double    | longitude             |
-| title       | character | title of listing      |
-| descr       | character | description           |
-| details     | character | additional details    |
-
-The dataset was used in a recent [tidyTuesday](https://github.com/rfordatascience/tidytuesday) project.
-
-```{r}
-# download directly off tidytuesdaygithub repo
-
-rent <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-07-05/rent.csv')
-
-```
-
-What are the variable types? Do they all correspond to what they really are? Which variables have most missing values?
-
-```{r skim_data}
-# YOUR CODE GOES HERE
-skimr::skim(rent)
-
-```
-
-Make a plot that shows the top 20 cities in terms of % of classifieds between 2000-2018. You need to calculate the number of listings by city, and then convert that number to a %.
-
-The final graph should look like this![](images/top_cities.png)
-
-```{r top_cities}
-# YOUR CODE GOES HERE
-
-
-```
-
-Make a plot that shows the evolution of median prices in San Francisco for 0, 1, 2, and 3 bedrooms listings. The final graph should look like this
-
-![](images/sf_rentals.png)
-
-```{r sf_median_prices}
-
-# YOUR CODE GOES HERE
-
-
-```
-
-Finally, make a plot that shows median rental prices for the top 12 cities in the Bay area. Your final graph should look like this
-
-![](images/one_bed_bay_area.png)
-
-```{r spirit_plot}
-# YOUR CODE GOES HERE
-
-```
-
-What can you infer from these plots? Don't just explain what's in the graph, but speculate or tell a short story (1-2 paragraphs max).
-
-> TYPE YOUR ANSWER AFTER (AND OUTSIDE!) THIS BLOCKQUOTE.
-
 
 # Analysis of movies- IMDB dataset
 
@@ -169,7 +90,7 @@ Besides the obvious variables of `title`, `genre`, `director`, `year`, and `dura
 
 # Returns of financial stocks
 
-> You may find useful the material on [finance data sources](https://mam2023.netlify.app/reference/finance_data/).
+> You may find useful the material on [finance data sources](https://am01-sep24.netlify.app/reference/finance_data/).
 
 We will use the `tidyquant` package to download historical data of stock prices, calculate returns, and examine the distribution of returns.
 
@@ -267,16 +188,86 @@ What can you infer from this plot? Are there any stocks which, while being riski
 > TYPE YOUR ANSWER AFTER (AND OUTSIDE!) THIS BLOCKQUOTE.
 
 
-# Challenge 1: Replicating a chart
 
-The purpose of this exercise is to reproduce a plot using your `dplyr` and `ggplot2` skills. It builds on exercise 1, the San Francisco rentals data.
+# Rents in San Francsisco 2000-2018
 
-You have to create a graph that calculates the cumulative % change in median rental prices for 0-, 1-, and 2-bed flats between 2000 and 2018 for the top twelve cities in Bay Area, by number of ads that appeared in Craigslist. Your final graph should look like this
+[Kate Pennington](https://www.katepennington.org/data) created a panel of historic Craigslist rents by scraping posts archived by the Wayback Machine. You can read more about her work here
 
+[What impact does new housing have on rents, displacement, and gentrification in the surrounding neighborhood? Read our interview with economist Kate Pennington about her article, "Does Building New Housing Cause Displacement?:The Supply and Demand Effects of Construction in San Francisco."](https://matrix.berkeley.edu/research-article/kate-pennington-on-gentrification-and-displacement-in-san-francisco/)
 
-```{r challenge1, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "challenge1.png"), error = FALSE)
+In our case, we have a clean(ish) dataset with about 200K rows that correspond to Craigslist listings for renting properties in the greater SF area. The data dictionary is as follows
+
+| variable    | class     | description           |
+|-------------|-----------|-----------------------|
+| post_id     | character | Unique ID             |
+| date        | double    | date                  |
+| year        | double    | year                  |
+| nhood       | character | neighborhood          |
+| city        | character | city                  |
+| county      | character | county                |
+| price       | double    | price in USD          |
+| beds        | double    | n of beds             |
+| baths       | double    | n of baths            |
+| sqft        | double    | square feet of rental |
+| room_in_apt | double    | room in apartment     |
+| address     | character | address               |
+| lat         | double    | latitude              |
+| lon         | double    | longitude             |
+| title       | character | title of listing      |
+| descr       | character | description           |
+| details     | character | additional details    |
+
+The dataset was used in a recent [tidyTuesday](https://github.com/rfordatascience/tidytuesday) project.
+
+```{r}
+# download directly off tidytuesdaygithub repo
+
+rent <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-07-05/rent.csv')
+
 ```
+
+What are the variable types? Do they all correspond to what they really are? Which variables have most missing values?
+
+```{r skim_data}
+# YOUR CODE GOES HERE
+skimr::skim(rent)
+
+```
+
+Make a plot that shows the top 20 cities in terms of % of classifieds between 2000-2018. You need to calculate the number of listings by city, and then convert that number to a %.
+
+The final graph should look like this![](images/top_cities.png)
+
+```{r top_cities}
+# YOUR CODE GOES HERE
+
+
+```
+
+Make a plot that shows the evolution of median prices in San Francisco for 0, 1, 2, and 3 bedrooms listings. The final graph should look like this
+
+![](images/sf_rentals.png)
+
+```{r sf_median_prices}
+
+# YOUR CODE GOES HERE
+
+
+```
+
+Finally, make a plot that shows median rental prices for the top 12 cities in the Bay area. Your final graph should look like this
+
+![](images/one_bed_bay_area.png)
+
+```{r spirit_plot}
+# YOUR CODE GOES HERE
+
+```
+
+What can you infer from these plots? Don't just explain what's in the graph, but speculate or tell a short story (1-2 paragraphs max).
+
+> TYPE YOUR ANSWER AFTER (AND OUTSIDE!) THIS BLOCKQUOTE.
+
 
 
 # Deliverables
