@@ -201,6 +201,3 @@ ggplot(bike, aes(x=pressure, y= bikes_hired))+
   geom_smooth(method = "lm")+
   theme_bw()+
   NULL
-
-# weather features
-# https://www.ecad.eu/dailydata/datadictionarycountry.php?43il4bgek4lvi88fdri9d8sn97
