@@ -220,13 +220,13 @@ avocado |>
   
 avocado |> 
   filter(geography != "Total U.S.") |> 
-  group_by(type, geography) |> 
+  group_by(date, type, geography) |> 
   summarise(total_volume = sum(total_volume)) |> 
   mutate(percent = total_volume / sum(total_volume)) |> 
   arrange(desc(total_volume)) |> 
   
   # calc cmulative percent of sales
-  mutate(cumulative_percent = cumsum(percent)) 
+  mutate(cumulative_percent = cumsum(percent)) |> 
 
 # what does the 0.108 for West and 0.106 for South Central mean?  
 ggplot()+
