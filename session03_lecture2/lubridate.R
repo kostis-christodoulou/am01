@@ -1,6 +1,6 @@
 library(lubridate)
 
-date <- ymd("2022-12-25")
+date <- ymd("2024-12-25")
 today <- Sys.Date() #reads system's current date
 
 year(date)
