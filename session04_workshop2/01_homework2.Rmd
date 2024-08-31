@@ -46,6 +46,7 @@ library(wbstats)
 library(countrycode)
 library(patchwork)
 library(gganimate)
+library(arrow)
 ```
 
 # Climate change and temperature anomalies
