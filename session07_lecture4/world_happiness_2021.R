@@ -21,40 +21,40 @@ httr::GET(url, write_disk(happiness.temp <- tempfile(fileext = ".xls")))
 # Use read_excel to read it as dataframe
 world_happiness <- read_excel(happiness.temp,
                     sheet = "Sheet1",
-                    range = cell_cols("A:K")) %>% 
+                    range = cell_cols("A:I")) %>% 
   janitor::clean_names()
 
 # inspect dataframe; how many observations, kinds of variables, etc.
 glimpse(world_happiness)
 
 # produce scatterplot-correlation matrix for 2019 using GGally::ggpairs()
-world_happiness_19 <- world_happiness %>%
-  filter(year==2019) 
+world_happiness_20 <- world_happiness %>%
+  filter(year==2020) 
 
-world_happiness_19 %>% 
+world_happiness_20 %>% 
   select(-c(country_name,year)) %>% 
   ggpairs(alpha = 0.3)
 
 
 # produce summary statistics for life_ladder, a measure of happiness score
-world_happiness_19 %>% 
+world_happiness_20 %>% 
   select(life_ladder) %>% 
   skim()
 
 # fit 3 models, with model1 being just the average happiness
-model1 <- lm(life_ladder ~ 1, data = world_happiness_19)
+model1 <- lm(life_ladder ~ 1, data = world_happiness_20)
 mosaic::msummary(model1)
 
-model2 <- lm(life_ladder ~ freedom_to_make_life_choices, data = world_happiness_19)
+model2 <- lm(life_ladder ~ freedom_to_make_life_choices, data = world_happiness_20)
 mosaic::msummary(model2)
 
-model3 <- lm(life_ladder ~ log_gdp_per_capita + freedom_to_make_life_choices, data = world_happiness_19)
+model3 <- lm(life_ladder ~ log_gdp_per_capita + freedom_to_make_life_choices, data = world_happiness_20)
 mosaic::msummary(model3)
 
-model4 <- lm(life_ladder ~ log_gdp_per_capita + social_support + freedom_to_make_life_choices, data = world_happiness_19)
+model4 <- lm(life_ladder ~ log_gdp_per_capita + social_support + freedom_to_make_life_choices, data = world_happiness_20)
 mosaic::msummary(model4)
 
-model5 <- lm(life_ladder ~ log_gdp_per_capita + healthy_life_expectancy_at_birth + social_support + freedom_to_make_life_choices, data = world_happiness_19)
+model5 <- lm(life_ladder ~ log_gdp_per_capita + healthy_life_expectancy_at_birth + social_support + freedom_to_make_life_choices, data = world_happiness_20)
 mosaic::msummary(model5)
 
 
@@ -82,3 +82,7 @@ huxreg(model1, model2, model3, model4,model5,
 car::vif(model3)
 car::vif(model4)
 car::vif(model5)
+
+library(performance)
+
+check_model(model4)
