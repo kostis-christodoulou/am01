@@ -3,6 +3,7 @@
 .Rhistory
 .RData
 .Ruserdata
+/data/cdc-covid-geography
 /work_in_progress
 /website
 .gitignore

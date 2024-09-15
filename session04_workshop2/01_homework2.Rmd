@@ -47,6 +47,7 @@ library(countrycode)
 library(patchwork)
 library(gganimate)
 library(arrow)
+library(tictoc)
 ```
 
 # Climate change and temperature anomalies

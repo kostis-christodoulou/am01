@@ -44,7 +44,7 @@ medals <- map(tables, . %>%
 
 
 # list of medals
-olympics_2020_medals <- medals[[3]] %>% # the third table on the page contains the list of all opinions polls
+olympics_2020_medals <- medals[[4]] %>% # the fourth table on the page contains the list of all opinions polls
     slice(1:(n()-1))  # drop the last row that contains grand total of medals
 
 # if we try to join the tables, we will not succeed... the wikipedia page with gold medals has, e.g., Grat Britain (GBR)
